@@ -184,23 +184,23 @@ const D = /* DATA_START */{
   "dropins": 133,
   "dropins_prev": 148,
   "inngang": 24929.76,
-  "inngang_prev": 27075.81,
+  "inngang_prev": 26987.42,
   "leie": 6560.8,
   "leie_prev": 6940.56,
   "driftsomsetning": 38390.68,
   "driftsomsetning_prev": 41022.87,
-  "merknad": null,
+  "merknad": "Bursdagsdata utilgjengelig (BRP-sesjon utløpt). Rapporten viser salgsdata og abonnementer.",
   "bursdager": [],
   "bursdag_uke": 0,
   "bursdag_mnd_antall": 0,
   "bursdag_mnd_sum": 0,
-  "bursdag_mnd_label": "1–5. april",
+  "bursdag_mnd_label": "1.5. april",
   "bursdag_typer": [],
-  "bursdag_prev_periode": "Mars 1–5",
+  "bursdag_prev_periode": "Mars 1-5",
   "bursdag_prev_antall": 0,
   "bursdag_prev_sum": 0,
-  "aktive_ab": 704,
-  "aktive_ab_mnd_start": 696,
+  "aktive_ab": 703,
+  "aktive_ab_mnd_start": 700,
   "ab_typer": [],
   "produkter": [
     {
@@ -215,7 +215,7 @@ const D = /* DATA_START */{
       "g": "Be-Kind",
       "p": "Be-Kind Caramel & Sea Salt",
       "qty": 5,
-      "v": 116.0,
+      "v": 116,
       "qty_prev": 1,
       "v_prev": 23.2
     },
@@ -231,9 +231,9 @@ const D = /* DATA_START */{
       "g": "Kaffe",
       "p": "Cappuccino Dobbel",
       "qty": 9,
-      "v": 324.0,
+      "v": 324,
       "qty_prev": 2,
-      "v_prev": 54.0
+      "v_prev": 54
     },
     {
       "g": "Drikke",
@@ -263,7 +263,7 @@ const D = /* DATA_START */{
       "g": "Kaffe",
       "p": "Cortado Dobbel",
       "qty": 1,
-      "v": 36.0,
+      "v": 36,
       "qty_prev": 0,
       "v_prev": 0
     },
@@ -279,17 +279,17 @@ const D = /* DATA_START */{
       "g": "Kaffe",
       "p": "Dagens Kaffe",
       "qty": 18,
-      "v": 476.0,
+      "v": 476,
       "qty_prev": 15,
-      "v_prev": 420.0
+      "v_prev": 420
     },
     {
       "g": "Kaffe",
       "p": "Dagens Kaffe Medlem",
       "qty": 9,
-      "v": 180.0,
+      "v": 180,
       "qty_prev": 6,
-      "v_prev": 120.0
+      "v_prev": 120
     },
     {
       "g": "Inngang",
@@ -321,7 +321,7 @@ const D = /* DATA_START */{
       "qty": 9,
       "v": 2152.8,
       "qty_prev": 10,
-      "v_prev": 2392.0
+      "v_prev": 2392
     },
     {
       "g": "Drikke",
@@ -359,9 +359,9 @@ const D = /* DATA_START */{
       "g": "Kaffe",
       "p": "Latte Dobbel",
       "qty": 2,
-      "v": 72.0,
+      "v": 72,
       "qty_prev": 1,
-      "v_prev": 36.0
+      "v_prev": 36
     },
     {
       "g": "Leie av Utstyr",
@@ -375,7 +375,7 @@ const D = /* DATA_START */{
       "g": "Leie av Utstyr",
       "p": "Leie av Klatresko",
       "qty": 15,
-      "v": 790.0,
+      "v": 790,
       "qty_prev": 24,
       "v_prev": 1358.8
     },
@@ -415,7 +415,7 @@ const D = /* DATA_START */{
       "g": "Drikke",
       "p": "Powerade",
       "qty": 1,
-      "v": 0.0,
+      "v": 0,
       "qty_prev": 4,
       "v_prev": 124.8
     },
@@ -519,7 +519,7 @@ const D = /* DATA_START */{
       "g": "Wabba",
       "p": "Wabba Cinnamon Bun",
       "qty": 1,
-      "v": 36.0,
+      "v": 36,
       "qty_prev": 0,
       "v_prev": 0
     },
@@ -527,7 +527,7 @@ const D = /* DATA_START */{
       "g": "Wabba",
       "p": "Wabba Dark Chocolate",
       "qty": 1,
-      "v": 36.0,
+      "v": 36,
       "qty_prev": 0,
       "v_prev": 0
     },
@@ -535,7 +535,7 @@ const D = /* DATA_START */{
       "g": "Wabba",
       "p": "Wabba Sea Salt",
       "qty": 1,
-      "v": 36.0,
+      "v": 36,
       "qty_prev": 0,
       "v_prev": 0
     },
@@ -543,7 +543,7 @@ const D = /* DATA_START */{
       "g": "Wabba",
       "p": "Wabba Sriracha",
       "qty": 1,
-      "v": 36.0,
+      "v": 36,
       "qty_prev": 0,
       "v_prev": 0
     }
@@ -647,7 +647,7 @@ document.getElementById('d-qty-t').textContent=tQ;document.getElementById('d-rev
 document.getElementById('m-big').textContent=D.aktive_ab;const aD=D.aktive_ab-D.aktive_ab_mnd_start;document.getElementById('m-delta').innerHTML=`<span class="${aD>=0?'up':'down'}">${aD>=0?'↑':'↓'} ${aD>=0?'+':''}${aD} (${((aD/D.aktive_ab_mnd_start)*100).toFixed(1)}%)</span>`;document.getElementById('m-vs').textContent=`vs. ${fmtN(D.aktive_ab_mnd_start)} per 1. mnd`;document.getElementById('m-th-curr').textContent=D.dato_lang;
 document.getElementById('abTyperBody').innerHTML=D.ab_typer.map(t=>{const d=t.antall-t.forrige;return`<tr><td>${t.navn}</td><td class="num highlight">${t.antall}</td><td class="num">${t.forrige}</td><td class="num ${d>=0?'up':'down'}">${d>=0?'+':''}${d}</td></tr>`;}).join('');
 const tA=D.ab_typer.reduce((s,t)=>s+t.antall,0),tAP=D.ab_typer.reduce((s,t)=>s+t.forrige,0),tAD=tA-tAP;document.getElementById('m-tot-curr').textContent=D.aktive_ab;document.getElementById('m-tot-prev').textContent=D.aktive_ab_mnd_start;document.getElementById('m-tot-delta').innerHTML=`<span class="${tAD>=0?'up':'down'}">${tAD>=0?'+':''}${tAD}</span>`;
-if(D.ab_produkter&&D.ab_produkter.length>0){const aS=D.ab_produkter.reduce((s,p)=>s+p.v,0),aSP=D.ab_produkter.reduce((s,p)=>s+(p.v_prev||0),0),aQ=D.ab_produkter.reduce((s,p)=>s+p.qty,0),aQP=D.ab_produkter.reduce((s,p)=>s+(p.qty_prev||0),0);document.getElementById('ab-fornyelser-wrap').innerHTML<`<div class="abonnement-header"><div><strong>RCP-fornyelser ${D.dato_lang} — NOK ${fmtN(aS)}</strong><div class="abonnement-note">Treffer tilfeldig på ulike dager og reflekterer ikke daglig drift direkte</div></div><div style="margin-left:auto;text-align:right"><div style="font-size:11px;color:#4a7a4a;">vs. ${D.prev_dato_lang}</div><div style="font-size:14px;font-weight:600;color:#86efac;">NOK ${fmtN(aSP)}</div></div></div><div class="abonnement-table-wrap"><table><thead><tr><th>Produkt</th><th class="num">Ant. ${D.dato_kort}</th><th class="num">Omsetn. ${D.dato_kort}</th><th class="num">Ant. ${D.prev_dato_kort}</th><th class="num">Omsetn. ${D.prev_dato_kort}</th></tr></thead><tbody>${D.ab_produkter.map(p=>`<tr><td>${p.p}</td><td class="num">${p.qty}</td><td class="num">NOK ${fmtN(p.v)}</td><td class="num">${p.qty_prev||'—'}</td><td class="num">${p.v_prev?'NOK '+fmtN(p.v_prev):'—'}</td></tr>`).join('')}</tbody><tfoot><tr><td>Totalt abonnementer</td><td class="num">${aQ}</td><td class="num">NOK ${fmtN(aS)}</td><td class="num">${aQP||'—'}</td><td class="num">${aSP?'NOK '+fmtN(aSP):'—'}</td></tr></tfoot></table></div>`;}
+if(D.ab_produkter&&D.ab_produkter.length>0){const aS=D.ab_produkter.reduce((s,p)=>s+p.v,0),aSP=D.ab_produkter.reduce((s,p)=>s+(p.v_prev||0),0),aQ=D.ab_produkter.reduce((s,p)=>s+p.qty,0),aQP=D.ab_produkter.reduce((s,p)=>s+(p.qty_prev||0),0);document.getElementById('ab-fornyelser-wrap').innerHTML=`<div class="abonnement-header"><div><strong>RCP-fornyelser ${D.dato_lang} — NOK ${fmtN(aS)}</strong><div class="abonnement-note">Treffer tilfeldig på ulike dager og reflekterer ikke daglig drift direkte</div></div><div style="margin-left:auto;text-align:right"><div style="font-size:11px;color:#4a7a4a;">vs. ${D.prev_dato_lang}</div><div style="font-size:14px;font-weight:600;color:#86efac;">NOK ${fmtN(aSP)}</div></div></div><div class="abonnement-table-wrap"><table><thead><tr><th>Produkt</th><th class="num">Ant. ${D.dato_kort}</th><th class="num">Omsetn. ${D.dato_kort}</th><th class="num">Ant. ${D.prev_dato_kort}</th><th class="num">Omsetn. ${D.prev_dato_kort}</th></tr></thead><tbody>${D.ab_produkter.map(p=>`<tr><td>${p.p}</td><td class="num">${p.qty}</td><td class="num">NOK ${fmtN(p.v)}</td><td class="num">${p.qty_prev||'—'}</td><td class="num">${p.v_prev?'NOK '+fmtN(p.v_prev):'—'}</td></tr>`).join('')}</tbody><tfoot><tr><td>Totalt abonnementer</td><td class="num">${aQ}</td><td class="num">NOK ${fmtN(aS)}</td><td class="num">${aQP||'—'}</td><td class="num">${aSP?'NOK '+fmtN(aSP):'—'}</td></tr></tfoot></table></div>`;}
 </script>
 </body>
 </html>
