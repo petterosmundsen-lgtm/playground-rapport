@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Playground — Ukentlig salgsrapport uke 14, 2026</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0d0d0d;
+    color: #e8e8e8;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 14px;
+    min-height: 100vh;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* ── HEADER ── */
+  .header {
+    padding: 22px 32px 16px;
+    border-bottom: 1px solid #1e1e1e;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .header-left h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #f5f5f5;
+    letter-spacing: -0.3px;
+  }
+  .header-left .subtitle {
+    color: #888;
+    font-size: 12px;
+    margin-top: 3px;
+  }
+  .compare-btn {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 12px;
+    color: #aaa;
+    white-space: nowrap;
+    cursor: default;
+  }
+
+  /* ── SECTIONS ── */
+  .section { padding: 24px 32px; }
+  .section + .section { border-top: 1px solid #191919; }
+
+  .section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #181818;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #bbb;
+    margin-bottom: 18px;
+  }
+
+  /* ── METRIC CARDS ── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  .cards-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+  }
+  .card {
+    background: #131313;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 18px 20px;
+  }
+  .card-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .card-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: #f0f0f0;
+    line-height: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+  }
+  .card-value .nok {
+    font-size: 14px;
+    font-weight: 600;
+    color: #a78bfa;
+    margin-right: 2px;
+  }
+  .card-delta {
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .card-delta.up { color: #4ade80; }
+  .card-delta.down { color: #f87171; }
+  .card-vs {
+    font-size: 11px;
+    color: #555;
+    margin-top: 3px;
+  }
+
+  /* ── SUMMARY BAR ── */
+  .summary-bar {
+    display: flex;
+    gap: 0;
+    background: #131313;
+    border: 1px solid #222;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .summary-seg {
+    flex: 1;
+    padding: 14px 18px;
+    border-right: 1px solid #1e1e1e;
+  }
+  .summary-seg:last-child { border-right: none; }
+  .summary-seg-label { font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }
+  .summary-seg-value { font-size: 18px; font-weight: 700; color: #f0f0f0; margin-top: 4px; }
+  .summary-seg-value .nok { font-size: 11px; color: #a78bfa; margin-right: 2px; }
+  .summary-seg-delta { font-size: 11px; font-weight: 600; margin-top: 2px; }
+  .summary-seg-delta.up { color: #4ade80; }
+  .summary-seg-delta.down { color: #f87171; }
+
+  /* ── CHARTS ── */
+  .charts-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .chart-card {
+    background: #131313;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .chart-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 16px;
+  }
+  .chart-wrap { position: relative; height: 240px; }
+
+  /* ── TOP PRODUCTS ── */
+  .product-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .product-bar-rank {
+    font-size: 11px;
+    color: #555;
+    width: 16px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .product-bar-name {
+    font-size: 12px;
+    color: #ccc;
+    width: 200px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .product-bar-track {
+    flex: 1;
+    height: 6px;
+    background: #1e1e1e;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .product-bar-fill {
+    height: 100%;
+    background: #6366f1;
+    border-radius: 3px;
+  }
+  .product-bar-value {
+    font-size: 12px;
+    color: #aaa;
+    width: 80px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* ── TABLE ── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  .data-table th {
+    text-align: left;
+    padding: 8px 12px;
+    color: #666;
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #222;
+    font-weight: 600;
+  }
+  .data-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #1a1a1a;
+    color: #ccc;
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr.total-row td {
+    font-weight: 700;
+    color: #f0f0f0;
+    border-top: 1px solid #333;
+    border-bottom: none;
+    padding-top: 12px;
+  }
+  .data-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .data-table .delta-up { color: #4ade80; }
+  .data-table .delta-down { color: #f87171; }
+
+  /* ── YOY COMPARISON TABLE ── */
+  .yoy-table {
+    background: #131313;
+    border: 1px solid #222;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  /* ── NOTE BANNER ── */
+  .note-banner {
+    background: #1a1400;
+    border: 1px solid #3a2e00;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 12px;
+    color: #c9a227;
+    margin-bottom: 18px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .cards-grid { grid-template-columns: repeat(2, 1fr); }
+    .cards-grid-5 { grid-template-columns: repeat(2, 1fr); }
+    .charts-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <h1>Playground — Ukentlig salgsrapport</h1>
+    <div class="subtitle">Uke 14 · 30. mars – 5. april 2026 · Generert 6. april 2026</div>
+  </div>
+  <div class="compare-btn">↔ vs. uke 14 · 31. mars – 6. april 2025</div>
+</div>
+
+<!-- UKENTLIG DRIFT -->
+<div class="section">
+  <div class="section-badge">⚡ Ukentlig drift</div>
+
+  <div class="cards-grid-5" style="margin-bottom:14px;">
+
+    <!-- Total omsetning -->
+    <div class="card">
+      <div class="card-label">Total omsetning</div>
+      <div class="card-value"><span class="nok">NOK</span>352 248</div>
+      <div class="card-delta up">↑ +NOK 178 672 (+102,9%)</div>
+      <div class="card-vs">vs NOK 173 576 uke 14-25</div>
+    </div>
+
+    <!-- Drop-ins -->
+    <div class="card">
+      <div class="card-label">Drop-ins (inngangstransaksjoner)</div>
+      <div class="card-value">971</div>
+      <div class="card-delta up">↑ +582 (+149,6%)</div>
+      <div class="card-vs">vs 389 uke 14-25</div>
+    </div>
+
+    <!-- Inngang omsetning -->
+    <div class="card">
+      <div class="card-label">Inngang omsetning</div>
+      <div class="card-value"><span class="nok">NOK</span>174 150</div>
+      <div class="card-delta up">↑ +NOK 113 366 (+186,4%)</div>
+      <div class="card-vs">vs NOK 60 784 uke 14-25</div>
+    </div>
+
+    <!-- Leie av utstyr -->
+    <div class="card">
+      <div class="card-label">Leie av utstyr</div>
+      <div class="card-value"><span class="nok">NOK</span>49 628</div>
+      <div class="card-delta up">↑ +NOK 39 678 (+398,8%)</div>
+      <div class="card-vs">vs NOK 9 950 uke 14-25</div>
+    </div>
+
+    <!-- Snitt per drop-in -->
+    <div class="card">
+      <div class="card-label">Snitt per drop-in</div>
+      <div class="card-value"><span class="nok">NOK</span>179</div>
+      <div class="card-delta up">↑ +NOK 23 (+14,8%)</div>
+      <div class="card-vs">vs NOK 156 uke 14-25</div>
+    </div>
+
+  </div>
+
+  <!-- Secondary cards -->
+  <div class="cards-grid">
+
+    <!-- Abonnementer/Medlemskap -->
+    <div class="card">
+      <div class="card-label">Abonnement-omsetning</div>
+      <div class="card-value"><span class="nok">NOK</span>77 622</div>
+      <div class="card-delta up">↑ +NOK 14 275 (+22,5%)</div>
+      <div class="card-vs">vs NOK 63 347 uke 14-25</div>
+    </div>
+
+    <!-- Bursdager -->
+    <div class="card">
+      <div class="card-label">Bursdager</div>
+      <div class="card-value"><span class="nok">NOK</span>3 285</div>
+      <div class="card-delta down">↓ −NOK 4 537 (−58,0%)</div>
+      <div class="card-vs">vs NOK 7 822 uke 14-25</div>
+    </div>
+
+    <!-- Kaffe, drikke, snacks -->
+    <div class="card">
+      <div class="card-label">Kafé (kaffe + drikke + snacks)</div>
+      <div class="card-value"><span class="nok">NOK</span>24 680</div>
+      <div class="card-delta up">↑ +NOK 18 610 (+304,2%)</div>
+      <div class="card-vs">vs NOK 6 070 uke 14-25</div>
+    </div>
+
+    <!-- Omsetning inkl. mva -->
+    <div class="card">
+      <div class="card-label">Omsetning inkl. mva</div>
+      <div class="card-value"><span class="nok">NOK</span>406 115</div>
+      <div class="card-delta up">↑ stor vekst fra 2025</div>
+      <div class="card-vs">Eks. mva: NOK 352 248</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- OMSETNING ETTER KATEGORI -->
+<div class="section">
+  <div class="section-badge">📊 Omsetning etter kategori — uke 14, 2026</div>
+
+  <div class="charts-row">
+
+    <!-- Pie chart -->
+    <div class="chart-card">
+      <div class="chart-title">Fordeling uke 14 · 2026 (eks. mva)</div>
+      <div class="chart-wrap">
+        <canvas id="pieChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Bar chart: top products -->
+    <div class="chart-card">
+      <div class="chart-title">Topp 10 produkter (eks. mva)</div>
+      <div style="margin-top:8px;">
+        <div class="product-bar-row">
+          <div class="product-bar-rank">1</div>
+          <div class="product-bar-name">Dropin Student/Barn/Pensjonist</div>
+          <div class="product-bar-track"><div class="product-bar-fill" style="width:100%"></div></div>
+          <div class="product-bar-value">NOK 76,2k</div>
+        </div>
+        <div class="product-bar-row">
+          <div class="product-bar-rank">2</div>
+          <div class="product-bar-name">Inngang Familie</div>
+          <div class="product-bar-track"><div class="product-bar-fill" style="width:58.9%"></div></div>
+          <div class="product-bar-value">NOK 44,9k</div>
+        </div>
+        <div class="product-bar-row">
+          <div class="product-bar-rank">3</div>
+          <div class="product-bar-name">Dropin Voksen</div>
+          <div class="product-bar-track"><div class="product-bar-fill" style="width:55.6%"></div></div>
+          <div class="product-bar-value">NOK 42,4k</div>
+        </div>
+        <div class="product-bar-row">
+          <div class="product-bar-rank">4</div>
+          <div class="product-bar-name">MND Abo. Familiemedlemskap</div>
+          <div class="product-bar-track"><div class="product-bar-fill" style="width:33.5%"></div></div>
+          <div class="product-bar-value">NOK 25,5k</div>
+        </div>
+        <div class="product-bar-row">
+          <div class="product-bar-rank">5</div>
+          <div class="product-bar-name">Månedlig Abonnement</div>
+          <div class="product-bar-track"><div class="product-bar-fill" style="width:29.8%"></div></div>
+          <div class="product-bar-value">NOK 22,7k</div>
+        </div>
+        <div class="product-bar-row">
+          <div class="product-bar-rank">6</div>
+          <div class="product-bar-name">Leie av Klatresele & Klatresko</div>
+          <div class="product-bar-track"><div class="product-bar-fill" style="width:22.7%"></div></div>
+          <div class="product-bar-value">NOK 17,3k</div>
+        </div>
+        <div class="product-bar-row">
+          <div class="product-bar-rank">7</div>
+          <div class="product-bar-name">MND Abo. Student/Barn/Pensjonist</div>
+          <div class="product-bar-track"><div class="product-bar-fill" style="width:22.2%"></div></div>
+          <div class="product-bar-value">NOK 16,9k</div>
+        </div>
+        <div class="product-bar-row">
+          <div class="product-bar-rank">8</div>
+          <div class="product-bar-name">Familiepakke (leie)</div>
+          <div class="product-bar-track"><div class="product-bar-fill" style="width:18.4%"></div></div>
+          <div class="product-bar-value">NOK 14,0k</div>
+        </div>
+        <div class="product-bar-row">
+          <div class="product-bar-rank">9</div>
+          <div class="product-bar-name">Leie av Klatresko</div>
+          <div class="product-bar-track"><div class="product-bar-fill" style="width:12.8%"></div></div>
+          <div class="product-bar-value">NOK 9,7k</div>
+        </div>
+        <div class="product-bar-row">
+          <div class="product-bar-rank">10</div>
+          <div class="product-bar-name">Slush</div>
+          <div class="product-bar-track"><div class="product-bar-fill" style="width:11.9%"></div></div>
+          <div class="product-bar-value">NOK 9,1k</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- YOY SAMMENLIKNING -->
+<div class="section">
+  <div class="section-badge">📅 År-over-år-sammenlikning — uke 14</div>
+
+  <div class="yoy-table">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Kategori</th>
+          <th class="num">Uke 14 · 2026</th>
+          <th class="num">Uke 14 · 2025</th>
+          <th class="num">Endring (NOK)</th>
+          <th class="num">Endring (%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Inngang (drop-ins)</td>
+          <td class="num">NOK 174 150</td>
+          <td class="num">NOK 60 784</td>
+          <td class="num delta-up">+NOK 113 366</td>
+          <td class="num delta-up">+186,4%</td>
+        </tr>
+        <tr>
+          <td>Leie av utstyr</td>
+          <td class="num">NOK 49 628</td>
+          <td class="num">NOK 9 950</td>
+          <td class="num delta-up">+NOK 39 678</td>
+          <td class="num delta-up">+398,8%</td>
+        </tr>
+        <tr>
+          <td>Abonnement / Medlemskap</td>
+          <td class="num">NOK 77 622</td>
+          <td class="num">NOK 63 347</td>
+          <td class="num delta-up">+NOK 14 275</td>
+          <td class="num delta-up">+22,5%</td>
+        </tr>
+        <tr>
+          <td>Bursdager</td>
+          <td class="num">NOK 3 285</td>
+          <td class="num">NOK 7 822</td>
+          <td class="num delta-down">−NOK 4 537</td>
+          <td class="num delta-down">−58,0%</td>
+        </tr>
+        <tr>
+          <td>Kafé (kaffe, drikke, snacks)</td>
+          <td class="num">NOK 24 680</td>
+          <td class="num">NOK 6 070</td>
+          <td class="num delta-up">+NOK 18 610</td>
+          <td class="num delta-up">+306,6%</td>
+        </tr>
+        <tr>
+          <td>Øvrige produkter</td>
+          <td class="num">NOK 22 884</td>
+          <td class="num">NOK 25 603</td>
+          <td class="num delta-down">−NOK 2 719</td>
+          <td class="num delta-down">−10,6%</td>
+        </tr>
+        <tr class="total-row">
+          <td>Totalt omsetning (eks. mva)</td>
+          <td class="num">NOK 352 248</td>
+          <td class="num">NOK 173 576</td>
+          <td class="num delta-up">+NOK 178 672</td>
+          <td class="num delta-up">+102,9%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- INNGANGSTALL SAMMENLIKNING -->
+<div class="section">
+  <div class="section-badge">👟 Inngangstall — uke 14</div>
+
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-label">Drop-ins 2026</div>
+      <div class="card-value">971</div>
+      <div class="card-delta up">↑ +582 (+149,6%) vs 2025</div>
+      <div class="card-vs">Inkl. voksen, student/barn, familie</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Drop-ins 2025</div>
+      <div class="card-value">389</div>
+      <div class="card-vs">Inkl. Custom Inngang, Via Ferrata m.m.</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Snitt per drop-in 2026</div>
+      <div class="card-value"><span class="nok">NOK</span>179</div>
+      <div class="card-delta up">↑ +NOK 23 (+14,8%) vs 2025</div>
+      <div class="card-vs">Inngang omsetning / antall</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Snitt per drop-in 2025</div>
+      <div class="card-value"><span class="nok">NOK</span>156</div>
+      <div class="card-vs">NOK 60 784 / 389</div>
+    </div>
+  </div>
+
+  <div class="note-banner" style="margin-top:18px; margin-bottom:0;">
+    ⚠️ <strong>Merk:</strong> Sammenlikning mellom uke 14 2026 og uke 14 2025 er påvirket av at Playground har skiftet konsept — fra trampoline/Via Ferrata i 2025 til klatring/høydebane/skate i 2026. Veksten reflekterer delvis ny fasilitetstype og kapasitet.
+  </div>
+</div>
+
+<script>
+// Pie chart — kategorier uke 14 2026
+const pieCtx = document.getElementById('pieChart').getContext('2d');
+new Chart(pieCtx, {
+  type: 'doughnut',
+  data: {
+    labels: ['Inngang', 'Abonnement', 'Leie av utstyr', 'Kafé', 'Bursdager', 'Øvrige'],
+    datasets: [{
+      data: [174150, 77622, 49628, 24680, 3285, 22884],
+      backgroundColor: ['#6366f1','#8b5cf6','#06b6d4','#f59e0b','#ec4899','#64748b'],
+      borderWidth: 2,
+      borderColor: '#0d0d0d',
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'right',
+        labels: {
+          color: '#aaa',
+          font: { size: 11 },
+          boxWidth: 12,
+          padding: 12
+        }
+      },
+      tooltip: {
+        callbacks: {
+          label: (ctx) => {
+            const val = ctx.parsed;
+            const total = ctx.dataset.data.reduce((a,b)=>a+b,0);
+            const pct = ((val/total)*100).toFixed(1);
+            return ` NOK ${val.toLocaleString('nb-NO')} (${pct}%)`;
+          }
+        }
+      }
+    },
+    cutout: '60%'
+  }
+});
+</script>
+</body>
+</html>
