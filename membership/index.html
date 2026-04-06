@@ -63,46 +63,9 @@ tbody tr:hover td { background: #1a0f0f; }
 const D = /* DATA_START */{
   "dato": "5. april 2026",
   "generert": "6. april 2026",
-  "total_besok": 55,
-  "ab_sjekket": 45,
-  "ubetalt": [
-    {
-      "navn": "Cindy Sang",
-      "ab_type": "Månedlig Abonnement Student/Barn/Pensjonist/Vernepliktig",
-      "debitert_tom": "08.04.2026",
-      "status": "Ikke sendt"
-    },
-    {
-      "navn": "Ahreum Yong",
-      "ab_type": "Familie: Introtilbud 50% i 3 mnd",
-      "debitert_tom": "30.04.2026",
-      "status": "Ikke sendt"
-    },
-    {
-      "navn": "Aksel Lorieri",
-      "ab_type": "Månedlig Abonnement",
-      "debitert_tom": "27.04.2026",
-      "status": "Ikke sendt"
-    },
-    {
-      "navn": "Kjetil Rune Skoge",
-      "ab_type": "Månedlig Abonnement",
-      "debitert_tom": "17.04.2026",
-      "status": "Ikke sendt"
-    },
-    {
-      "navn": "Agalya James",
-      "ab_type": "Månedlig Abonnement",
-      "debitert_tom": "30.04.2026",
-      "status": "Ikke sendt"
-    },
-    {
-      "navn": "Mithusan Gabriel Rajeswaran",
-      "ab_type": "Månedlig Abonnement",
-      "debitert_tom": "22.04.2026",
-      "status": "Ikke sendt"
-    }
-  ]
+  "total_besok": 138,
+  "ab_sjekket": 64,
+  "ubetalt": []
 }/* DATA_END */;
 
 document.title = `Playground — Betalingsstatus ${D.dato}`;
@@ -115,7 +78,7 @@ document.getElementById('h-badge').innerHTML = harUbetalt
   : `<div class="badge-ok">✅ Alle har betalt</div>`;
 
 document.getElementById('kpi-row').innerHTML = [
-  { label: 'Besøk i går', val: D.total_besok, cls: '' },
+  { label: 'Besøk i g�^��r', val: D.total_besok, cls: '' },
   { label: 'Abonnenter sjekket', val: D.ab_sjekket, cls: '' },
   { label: 'Ikke betalt', val: D.ubetalt.length, cls: harUbetalt ? 'warn' : 'ok' }
 ].map(k => `<div class="kpi"><div class="kpi-label">${k.label}</div><div class="kpi-value ${k.cls}">${k.val}</div></div>`).join('');
