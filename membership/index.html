@@ -63,8 +63,8 @@ tbody tr:hover td { background: #1a0f0f; }
 const D = /* DATA_START */{
   "dato": "5. april 2026",
   "generert": "6. april 2026",
-  "total_besok": 138,
-  "ab_sjekket": 64,
+  "total_besok": 127,
+  "ab_sjekket": 73,
   "ubetalt": []
 }/* DATA_END */;
 
@@ -78,7 +78,7 @@ document.getElementById('h-badge').innerHTML = harUbetalt
   : `<div class="badge-ok">âœ… Alle har betalt</div>`;
 
 document.getElementById('kpi-row').innerHTML = [
-  { label: 'BesÃ¸k i gË^•år', val: D.total_besok, cls: '' },
+  { label: 'BesÃ¸k i gÃ¥r', val: D.total_besok, cls: '' },
   { label: 'Abonnenter sjekket', val: D.ab_sjekket, cls: '' },
   { label: 'Ikke betalt', val: D.ubetalt.length, cls: harUbetalt ? 'warn' : 'ok' }
 ].map(k => `<div class="kpi"><div class="kpi-label">${k.label}</div><div class="kpi-value ${k.cls}">${k.val}</div></div>`).join('');
