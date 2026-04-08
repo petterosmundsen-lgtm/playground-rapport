@@ -61,11 +61,54 @@ tbody tr:hover td { background: #1a0f0f; }
 </div>
 <script>
 const D = /* DATA_START */{
-  "dato": "6. april 2026",
-  "generert": "7. april 2026",
-  "total_besok": 171,
-  "ab_sjekket": 82,
-  "ubetalt": []
+  "dato": "7. april 2026",
+  "generert": "8. april 2026",
+  "total_besok": 97,
+  "ab_sjekket": 25,
+  "ubetalt": [
+    {
+      "navn": "Sergen Cetintas",
+      "ab_type": "Månedlig Abonnement Student/Barn/Pensjonist/Vernepliktig",
+      "debitert_tom": "26.11.2025",
+      "status": "Ikke sendt"
+    },
+    {
+      "navn": "Daniel David",
+      "ab_type": "Student/Barn: Introtilbud 50% i 3 mnd",
+      "debitert_tom": "26.04.2026",
+      "status": "Ikke sendt"
+    },
+    {
+      "navn": "Aysha De Lorenzo",
+      "ab_type": "Månedlig Abonnement",
+      "debitert_tom": "03.05.2026",
+      "status": "Ikke sendt"
+    },
+    {
+      "navn": "Thomas Dickman",
+      "ab_type": "Månedlig Abonnement Familiemedlemskap",
+      "debitert_tom": "02.03.2026",
+      "status": "Ikke sendt"
+    },
+    {
+      "navn": "Jonas Gjøvåg",
+      "ab_type": "Månedlig Abonnement",
+      "debitert_tom": "28.02.2026",
+      "status": "Ikke sendt"
+    },
+    {
+      "navn": "Lukas Hareland",
+      "ab_type": "Månedlig Abonnement",
+      "debitert_tom": "15.04.2026",
+      "status": "Ikke sendt"
+    },
+    {
+      "navn": "Geir Harald Helgeid",
+      "ab_type": "Medlemskap",
+      "debitert_tom": "21.04.2026",
+      "status": "Ikke sendt"
+    }
+  ]
 }/* DATA_END */;
 
 document.title = `Playground — Betalingsstatus ${D.dato}`;
@@ -74,8 +117,8 @@ document.getElementById('h-sub').textContent = `Gårsdagens innganger sjekket ·
 
 const harUbetalt = D.ubetalt && D.ubetalt.length > 0;
 document.getElementById('h-badge').innerHTML = harUbetalt
-  ? `<div class="badge-warn">\u26a0\ufe0f ${D.ubetalt.length} ubetalt</div>`
-  : `<div class="badge-ok">\u2705 Alle har betalt</div>`;
+  ? `<div class="badge-warn">⚠️ ${D.ubetalt.length} ubetalt</div>`
+  : `<div class="badge-ok">✅ Alle har betalt</div>`;
 
 document.getElementById('kpi-row').innerHTML = [
   { label: 'Besøk i går', val: D.total_besok, cls: '' },
@@ -86,9 +129,9 @@ document.getElementById('kpi-row').innerHTML = [
 const main = document.getElementById('main-content');
 if (!harUbetalt) {
   main.innerHTML = `
-    <div class="section-label label-ok">\u2705 Betalingsstatus</div>
+    <div class="section-label label-ok">✅ Betalingsstatus</div>
     <div class="ok-panel">
-      <div class="ok-icon">\u2705</div>
+      <div class="ok-icon">✅</div>
       <div class="ok-title">Alle har betalt</div>
       <div class="ok-sub">Alle ${D.ab_sjekket} abonnenter som besøkte ${D.dato} har gyldig betaling.</div>
     </div>`;
@@ -107,17 +150,17 @@ if (!harUbetalt) {
     const d = parseDate(m.debitert_tom);
     const forfalt = d && d < today;
     return `<tr>
-      <td><div class="member-navn">${m.navn}</div><div class="member-type">${m.ab_type||'\u2014'}</div></td>
-      <td><span class="debitert-dato ${forfalt?'debitert-forfalt':''}">${m.debitert_tom||'\u2014'}</span></td>
+      <td><div class="member-navn">${m.navn}</div><div class="member-type">${m.ab_type||'—'}</div></td>
+      <td><span class="debitert-dato ${forfalt?'debitert-forfalt':''}">${m.debitert_tom||'—'}</span></td>
       <td><span class="status-badge ${statusClass(m.status)}">${m.status||'Ukjent'}</span></td>
     </tr>`;
   }).join('');
   main.innerHTML = `
-    <div class="section-label label-warn">\u26a0\ufe0f Utestående betalinger</div>
+    <div class="section-label label-warn">⚠️ Utestående betalinger</div>
     <div class="warn-panel">
       <div class="warn-header">
         <div>
-          <div class="warn-header-title">\u26a0\ufe0f ${D.ubetalt.length} abonnent${D.ubetalt.length>1?'er':''} med utestående betaling</div>
+          <div class="warn-header-title">⚠️ ${D.ubetalt.length} abonnent${D.ubetalt.length>1?'er':''} med utestående betaling</div>
           <div class="warn-header-sub">Besøkte Playground ${D.dato} uten gyldig betaling</div>
         </div>
       </div>
