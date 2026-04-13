@@ -48,7 +48,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .bmtd-val { font-size: 15px; font-weight: 700; color: #fff; }
 .bmtd-sub { font-size: 11px; color: #a855f7; margin-top: 3px; }
 .bmtd-delta { font-size: 13px; font-weight: 700; margin-top: 4px; }
-.bmtd-divider { border-left: 1px solid #2e1840; }
 .bursdag-bookings { margin-top: 14px; padding-top: 14px; border-top: 1px solid #2e1840; }
 .booking-row { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid #1e1228; }
 .booking-row:last-child { border-bottom: none; }
@@ -173,10 +172,537 @@ tfoot td { padding: 10px; border-top: 1px solid #2e3250; font-weight: 600; color
   </div>
 </div>
 <script>
-const D = /* DATA_START */{"dag": "l√∏rdag", "dato_lang": "11. april 2026", "dato_kort": "11.04", "generert": "12. april 2026 kl. 02:00", "prev_dag": "l√∏rdag", "prev_dato_lang": "4. april 2026", "prev_dato_kort": "04.04", "dropins": 177, "dropins_prev": 101, "inngang": 26871, "inngang_prev": 17012, "leie": 6948, "leie_prev": 5744, "driftsomsetning": 50522, "driftsomsetning_prev": 27316, "merknad": null, "bursdager": [{"produkt": "Hopp i H√∏yden", "kunde": "Privatkunde", "rom": "", "tid": "11.04"}, {"produkt": "Via Ferrata", "kunde": "Privatkunde", "rom": "", "tid": "11.04"}], "bursdag_uke": 2, "bursdag_mnd_antall": 2, "bursdag_mnd_sum": 0, "bursdag_mnd_label": "April 2026", "bursdag_typer": [{"navn": "Hopp i H√∏yden", "antall": 1}, {"navn": "Via Ferrata", "antall": 1}], "bursdag_prev_periode": "Mars 2026", "bursdag_prev_antall": 0, "bursdag_prev_sum": 0, "aktive_ab": 703, "aktive_ab_mnd_start": 713, "ab_typer": [], "produkter": [{"g": "Inngang", "p": "Barn 0-3 √•r fribillet", "qty": 22, "v": 0, "qty_prev": 14, "v_prev": 0}, {"g": "Inngang", "p": "Barn 4-7 √•r", "qty": 25, "v": 4975, "qty_prev": 11, "v_prev": 2189}, {"g": "Inngang", "p": "Barn 8-12 √•r", "qty": 20, "v": 3580, "qty_prev": 6, "v_prev": 1074}, {"g": "Inngang", "p": "Drop-in barn fribillet", "qty": 2, "v": 0, "qty_prev": 0, "v_prev": 0}, {"g": "Inngang", "p": "Drop-in student", "qty": 1, "v": 169, "qty_prev": 0, "v_prev": 0}, {"g": "Inngang", "p": "Drop-in voksen", "qty": 7, "v": 1813, "qty_prev": 6, "v_prev": 1554}, {"g": "Inngang", "p": "Familie", "qty": 9, "v": 4041, "qty_prev": 4, "v_prev": 1796}, {"g": "Inngang", "p": "Gratis Adgang", "qty": 3, "v": 0, "qty_prev": 0, "v_prev": 0}, {"g": "Inngang", "p": "Introduksjonstilbud barn", "qty": 25, "v": 2975, "qty_prev": 21, "v_prev": 2499}, {"g": "Inngang", "p": "Introduksjonstilbud voksen", "qty": 8, "v": 1512, "qty_prev": 5, "v_prev": 945}, {"g": "Inngang", "p": "Klippekort barn 10-klipp", "qty": 14, "v": 2310, "qty_prev": 3, "v_prev": 495}, {"g": "Inngang", "p": "Klippekort barn 30-klipp", "qty": 3, "v": 360, "qty_prev": 2, "v_prev": 240}, {"g": "Inngang", "p": "Klippekort voksen 10-klipp", "qty": 7, "v": 1694, "qty_prev": 1, "v_prev": 242}, {"g": "Inngang", "p": "Klippekort voksen 30-klipp", "qty": 1, "v": 181, "qty_prev": 0, "v_prev": 0}, {"g": "Inngang", "p": "Parkour barn 4-7 √•r", "qty": 2, "v": 398, "qty_prev": 0, "v_prev": 0}, {"g": "Inngang", "p": "Parkour barn 8-12 √•r", "qty": 2, "v": 358, "qty_prev": 0, "v_prev": 0}, {"g": "Inngang", "p": "Student", "qty": 1, "v": 169, "qty_prev": 3, "v_prev": 507}, {"g": "Inngang", "p": "Ungdom", "qty": 15, "v": 1785, "qty_prev": 19, "v_prev": 2261}, {"g": "Inngang", "p": "Voksen", "qty": 10, "v": 2590, "qty_prev": 6, "v_prev": 1554}, {"g": "Inngang", "p": "Voksen Fribillet", "qty": 0, "v": -60, "qty_prev": 0, "v_prev": 0}, {"g": "Leie av Utstyr", "p": "Leie antibac", "qty": 1, "v": 15, "qty_prev": 0, "v_prev": 0}, {"g": "Leie av Utstyr", "p": "Leie klatresko", "qty": 29, "v": 1740, "qty_prev": 22, "v_prev": 1320}, {"g": "Leie av Utstyr", "p": "Leie klatresele", "qty": 36, "v": 2160, "qty_prev": 21, "v_prev": 1260}, {"g": "Leie av Utstyr", "p": "Leie klatresokker", "qty": 1, "v": 45, "qty_prev": 0, "v_prev": 0}, {"g": "Leie av Utstyr", "p": "Leie sokker", "qty": 35, "v": 1750, "qty_prev": 29, "v_prev": 1450}, {"g": "Leie av Utstyr", "p": "Leie via ferrata-sele", "qty": 2, "v": 120, "qty_prev": 6, "v_prev": 360}, {"g": "Leie av Utstyr", "p": "Leie via ferrata-sett", "qty": 9, "v": 540, "qty_prev": 7, "v_prev": 420}, {"g": "Leie av Utstyr", "p": "Sele klatrevegg - fribillet", "qty": 0, "v": 0, "qty_prev": 2, "v_prev": 0}, {"g": "Leie av Utstyr", "p": "Sokker fribillet", "qty": 2, "v": 0, "qty_prev": 1, "v_prev": 0}, {"g": "Leie av Utstyr", "p": "Utstyr - Bursdag", "qty": 6, "v": 270, "qty_prev": 5, "v_prev": 225}, {"g": "Leie av Utstyr", "p": "Leie hjelm", "qty": 3, "v": 180, "qty_prev": 7, "v_prev": 420}, {"g": "Leie av Utstyr", "p": "Leie kalkpose", "qty": 2, "v": 128, "qty_prev": 5, "v_prev": 269}, {"g": "Kaffe", "p": "Americano", "qty": 3, "v": 132, "qty_prev": 3, "v_prev": 132}, {"g": "Kaffe", "p": "Cappuccino", "qty": 6, "v": 318, "qty_prev": 6, "v_prev": 318}, {"g": "Kaffe", "p": "Cortado", "qty": 1, "v": 48, "qty_prev": 0, "v_prev": 0}, {"g": "Kaffe", "p": "Dobbel Espresso", "qty": 2, "v": 96, "qty_prev": 0, "v_prev": 0}, {"g": "Kaffe", "p": "Espresso", "qty": 1, "v": 38, "qty_prev": 1, "v_prev": 38}, {"g": "Kaffe", "p": "Flat White", "qty": 1, "v": 53, "qty_prev": 0, "v_prev": 0}, {"g": "Kaffe", "p": "Iced Latte", "qty": 1, "v": 63, "qty_prev": 0, "v_prev": 0}, {"g": "Kaffe", "p": "Kakao", "qty": 3, "v": 144, "qty_prev": 0, "v_prev": 0}, {"g": "Kaffe", "p": "Latte", "qty": 2, "v": 116, "qty_prev": 4, "v_prev": 232}, {"g": "Drikke", "p": "Brus", "qty": 3, "v": 135, "qty_prev": 2, "v_prev": 90}, {"g": "Drikke", "p": "Energidrikk", "qty": 1, "v": 45, "qty_prev": 0, "v_prev": 0}, {"g": "Drikke", "p": "Vann", "qty": 3, "v": 105, "qty_prev": 1, "v_prev": 35}, {"g": "Snacks", "p": "Snickers", "qty": 1, "v": 35, "qty_prev": 0, "v_prev": 0}, {"g": "Bursdag", "p": "Bursdag 2t Hopp I H√∏yden", "qty": 1, "v": 3490, "qty_prev": 0, "v_prev": 0}, {"g": "Bursdag", "p": "Bursdag Via Ferrata", "qty": 1, "v": 3490, "qty_prev": 0, "v_prev": 0}, {"g": "Bursdag", "p": "Ekstra deltaker HIH", "qty": 2, "v": 500, "qty_prev": 0, "v_prev": 0}, {"g": "Bursdag", "p": "Ekstra deltaker VF", "qty": 1, "v": 250, "qty_prev": 0, "v_prev": 0}, {"g": "Bedrift", "p": "Bedrift - Voksen klatring", "qty": 4, "v": 1036, "qty_prev": 0, "v_prev": 0}, {"g": "Mat & Drikke", "p": "Brus 0,5l", "qty": 2, "v": 90, "qty_prev": 0, "v_prev": 0}, {"g": "Mat & Drikke", "p": "Juice", "qty": 1, "v": 45, "qty_prev": 0, "v_prev": 0}, {"g": "Mat & Drikke", "p": "Smoothie", "qty": 1, "v": 69, "qty_prev": 0, "v_prev": 0}], "ab_produkter": [{"g": "Abonnement", "p": "Abonnement Barn", "qty": 3, "v": 597, "qty_prev": 6, "v_prev": 1194}, {"g": "Abonnement", "p": "Abonnement Familie", "qty": 2, "v": 1078, "qty_prev": 1, "v_prev": 539}, {"g": "Abonnement", "p": "Abonnement Student", "qty": 2, "v": 478, "qty_prev": 1, "v_prev": 239}, {"g": "Abonnement", "p": "Abonnement Voksen", "qty": 3, "v": 897, "qty_prev": 5, "v_prev": 1495}, {"g": "Abonnement", "p": "RCP Medlemskap", "qty": 2, "v": 0, "qty_prev": 0, "v_prev": 0}, {"g": "Abonnement", "p": "RCP Medlemskap Barn", "qty": 1, "v": 0, "qty_prev": 0, "v_prev": 0}]}/* DATA_END */;
+const D = /* DATA_START */{
+  "dag": "s√∏ndag",
+  "dato_lang": "12. april 2026",
+  "dato_kort": "12/4",
+  "generert": "13. april 2026",
+  "prev_dag": "s√∏ndag",
+  "prev_dato_lang": "5. april 2026",
+  "prev_dato_kort": "5/4",
+  "dropins": 106,
+  "dropins_prev": 125,
+  "inngang": 17709,
+  "inngang_prev": 21542,
+  "leie": 5084,
+  "leie_prev": 6811,
+  "driftsomsetning": 37097,
+  "driftsomsetning_prev": 35166,
+  "merknad": null,
+  "bursdager": [
+    {
+      "produkt": "Hopp i H√∏yden",
+      "kunde": "Kristine Johnson",
+      "rom": "M√∏terom 3",
+      "tid": "12:00‚Äì13:30"
+    },
+    {
+      "produkt": "Via Ferrata",
+      "kunde": "Mari Dirdal",
+      "rom": "H√∏ydebane, M√∏terom 3",
+      "tid": "15:30‚Äì17:30"
+    }
+  ],
+  "bursdag_uke": 2,
+  "bursdag_mnd_antall": 11,
+  "bursdag_mnd_sum": 28144,
+  "bursdag_mnd_label": "1‚Äì12. april",
+  "bursdag_typer": [
+    {
+      "navn": "Klatring",
+      "antall": 4
+    },
+    {
+      "navn": "Hopp i H√∏yden",
+      "antall": 3
+    },
+    {
+      "navn": "Skate & Scoot",
+      "antall": 2
+    },
+    {
+      "navn": "Via Ferrata",
+      "antall": 2
+    }
+  ],
+  "bursdag_prev_periode": "Mars 1‚Äì12",
+  "bursdag_prev_antall": 9,
+  "bursdag_prev_sum": 24500,
+  "aktive_ab": 705,
+  "aktive_ab_mnd_start": 717,
+  "ab_typer": [],
+  "produkter": [
+    {
+      "g": "Kaffe",
+      "p": "Americano dobbel",
+      "qty": 1,
+      "v": 30.4,
+      "qty_prev": 7,
+      "v_prev": 212.8
+    },
+    {
+      "g": "Be-Kind",
+      "p": "Be-Kind Caramel & Sea Salt",
+      "qty": 1,
+      "v": 23.2,
+      "qty_prev": 5,
+      "v_prev": 116.0
+    },
+    {
+      "g": "Be-Kind",
+      "p": "Be-Kind Dark Chocolate Nuts",
+      "qty": 2,
+      "v": 46.4,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Be-Kind",
+      "p": "Be-Kind Milk Choc-Latte",
+      "qty": 1,
+      "v": 23.2,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Be-Kind",
+      "p": "Be-Kind Peanut Butter Dark Chocolate",
+      "qty": 3,
+      "v": 69.6,
+      "qty_prev": 1,
+      "v_prev": 23.2
+    },
+    {
+      "g": "Snacks",
+      "p": "Boller",
+      "qty": 2,
+      "v": 64.0,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Brattkort",
+      "p": "Brattkortkurs",
+      "qty": 3,
+      "v": 4015.18,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Bedrift",
+      "p": "BRV",
+      "qty": 2,
+      "v": 267.86,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Bursdag",
+      "p": "Bursdags Kaffekanne",
+      "qty": 1,
+      "v": 119.2,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Kaffe",
+      "p": "Cappuccino Dobbel",
+      "qty": 4,
+      "v": 144.0,
+      "qty_prev": 9,
+      "v_prev": 324.0
+    },
+    {
+      "g": "Drikke",
+      "p": "Coca-Cola",
+      "qty": 1,
+      "v": 31.2,
+      "qty_prev": 2,
+      "v_prev": 62.4
+    },
+    {
+      "g": "Drikke",
+      "p": "Coca-Cola Zero",
+      "qty": 4,
+      "v": 124.8,
+      "qty_prev": 2,
+      "v_prev": 62.4
+    },
+    {
+      "g": "Hjelmer & Beskyttelse",
+      "p": "Core Knebeskytter",
+      "qty": 1,
+      "v": 719.2,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Snacks",
+      "p": "Cup Noodle",
+      "qty": 7,
+      "v": 162.4,
+      "qty_prev": 3,
+      "v_prev": 69.6
+    },
+    {
+      "g": "Butikk",
+      "p": "Custom Produkt",
+      "qty": 1,
+      "v": 279.6,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Kaffe",
+      "p": "Dagens Kaffe",
+      "qty": 8,
+      "v": 224.0,
+      "qty_prev": 18,
+      "v_prev": 476.0
+    },
+    {
+      "g": "Kaffe",
+      "p": "Dagens Kaffe Medlem",
+      "qty": 4,
+      "v": 80.0,
+      "qty_prev": 9,
+      "v_prev": 180.0
+    },
+    {
+      "g": "Inngang",
+      "p": "Dropin Student/Barn/Pensjonist/Vernepliktig",
+      "qty": 65,
+      "v": 8943.63,
+      "qty_prev": 70,
+      "v_prev": 9743.47
+    },
+    {
+      "g": "Inngang",
+      "p": "Dropin Voksen",
+      "qty": 33,
+      "v": 5201.27,
+      "qty_prev": 45,
+      "v_prev": 7166.57
+    },
+    {
+      "g": "Bursdag Trampoline & nettpark",
+      "p": "Ekstra Deltaker Hopp i H√∏yden",
+      "qty": 1,
+      "v": 168.75,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Kaffe",
+      "p": "Espresso Dobbel",
+      "qty": 1,
+      "v": 30.4,
+      "qty_prev": 1,
+      "v_prev": 30.4
+    },
+    {
+      "g": "Leie av Utstyr",
+      "p": "Familiepakke",
+      "qty": 3,
+      "v": 717.6,
+      "qty_prev": 9,
+      "v_prev": 2152.8
+    },
+    {
+      "g": "Drikke",
+      "p": "FruktSmekk *Eple + Eple",
+      "qty": 1,
+      "v": 39.2,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Drikke",
+      "p": "FruktSmekk Rabarbra + Hylleblomst",
+      "qty": 1,
+      "v": 39.2,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Leie av Utstyr",
+      "p": "Fullpakke",
+      "qty": 4,
+      "v": 465.63,
+      "qty_prev": 4,
+      "v_prev": 465.63
+    },
+    {
+      "g": "Snacks",
+      "p": "Go'morgen Yoghurt",
+      "qty": 1,
+      "v": 23.2,
+      "qty_prev": 1,
+      "v_prev": 23.2
+    },
+    {
+      "g": "Inngang",
+      "p": "Inngang Familie",
+      "qty": 8,
+      "v": 3564.32,
+      "qty_prev": 10,
+      "v_prev": 4632.0
+    },
+    {
+      "g": "Snacks",
+      "p": "Kvikklunsj",
+      "qty": 1,
+      "v": 23.2,
+      "qty_prev": 3,
+      "v_prev": 69.6
+    },
+    {
+      "g": "Leie av Utstyr",
+      "p": "Leie av Klatresele",
+      "qty": 6,
+      "v": 252.8,
+      "qty_prev": 5,
+      "v_prev": 211.0
+    },
+    {
+      "g": "Leie av Utstyr",
+      "p": "Leie av Klatresele & Klatresko",
+      "qty": 31,
+      "v": 2257.2,
+      "qty_prev": 34,
+      "v_prev": 2558.4
+    },
+    {
+      "g": "Leie av Utstyr",
+      "p": "Leie av Klatresko",
+      "qty": 18,
+      "v": 853.2,
+      "qty_prev": 22,
+      "v_prev": 1044.0
+    },
+    {
+      "g": "Leie av Utstyr",
+      "p": "Leie av Skateboard",
+      "qty": 2,
+      "v": 94.8,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Leie av Utstyr",
+      "p": "Leie av Sparkesykkel",
+      "qty": 7,
+      "v": 442.4,
+      "qty_prev": 6,
+      "v_prev": 379.2
+    },
+    {
+      "g": "Drikke",
+      "p": "MER Jordb√¶r & Eple",
+      "qty": 1,
+      "v": 23.2,
+      "qty_prev": 8,
+      "v_prev": 185.6
+    },
+    {
+      "g": "Snacks",
+      "p": "New Energy",
+      "qty": 1,
+      "v": 23.2,
+      "qty_prev": 3,
+      "v_prev": 69.6
+    },
+    {
+      "g": "Drikke",
+      "p": "Powerade",
+      "qty": 3,
+      "v": 93.6,
+      "qty_prev": 1,
+      "v_prev": 0.0
+    },
+    {
+      "g": "Drikke",
+      "p": "Redbull",
+      "qty": 1,
+      "v": 31.2,
+      "qty_prev": 2,
+      "v_prev": 62.4
+    },
+    {
+      "g": "Drikke",
+      "p": "RedBull Lilac",
+      "qty": 1,
+      "v": 31.2,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Drikke",
+      "p": "Redbull Sukkerfri",
+      "qty": 1,
+      "v": 31.2,
+      "qty_prev": 2,
+      "v_prev": 62.4
+    },
+    {
+      "g": "Scoot Hjul",
+      "p": "Root Honeycore hjul",
+      "qty": 1,
+      "v": 556.92,
+      "qty_prev": 1,
+      "v_prev": 556.92
+    },
+    {
+      "g": "Rungne",
+      "p": "Rungne Chalk bag (alle farger)",
+      "qty": 1,
+      "v": 279.2,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Rungne",
+      "p": "Rungne Magdust Superdry",
+      "qty": 2,
+      "v": 428.8,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Scarpa",
+      "p": "Scarpa Instinct VS",
+      "qty": 1,
+      "v": 1839.92,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Scarpa",
+      "p": "Scarpa Origin VS",
+      "qty": 1,
+      "v": 1439.92,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Drikke",
+      "p": "Slush",
+      "qty": 57,
+      "v": 1747.2,
+      "qty_prev": 59,
+      "v_prev": 1811.2
+    },
+    {
+      "g": "Ekstra Mat & Drikke",
+      "p": "Slush bursdag",
+      "qty": 13,
+      "v": 70.4,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Drikke",
+      "p": "Slush stor",
+      "qty": 18,
+      "v": 705.6,
+      "qty_prev": 14,
+      "v_prev": 548.8
+    },
+    {
+      "g": "Drikke",
+      "p": "Sprite Zero",
+      "qty": 1,
+      "v": 31.2,
+      "qty_prev": 1,
+      "v_prev": 31.2
+    },
+    {
+      "g": "Drikke",
+      "p": "Telemark (med kullsyre)",
+      "qty": 3,
+      "v": 93.6,
+      "qty_prev": 3,
+      "v_prev": 93.6
+    },
+    {
+      "g": "Drikke",
+      "p": "Telemark (uten kullsyre)",
+      "qty": 1,
+      "v": 31.2,
+      "qty_prev": 4,
+      "v_prev": 124.8
+    },
+    {
+      "g": "Drikke",
+      "p": "Urge",
+      "qty": 2,
+      "v": 62.4,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Wabba",
+      "p": "Wabba Sea Salt",
+      "qty": 1,
+      "v": 36.0,
+      "qty_prev": 1,
+      "v_prev": 36.0
+    }
+  ],
+  "ab_produkter": [
+    {
+      "g": "Medlemskap",
+      "p": "Ettermiddagsskole-Medlemskap",
+      "qty": 2,
+      "v": 444.64,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Medlemskap",
+      "p": "M√•nedlig Abonnement",
+      "qty": 7,
+      "v": 3333.04,
+      "qty_prev": 9,
+      "v_prev": 4313.4
+    },
+    {
+      "g": "Medlemskap",
+      "p": "M√•nedlig Abonnement Dagtid",
+      "qty": 2,
+      "v": 623.22,
+      "qty_prev": 1,
+      "v_prev": 311.61
+    },
+    {
+      "g": "Medlemskap",
+      "p": "M√•nedlig Abonnement Familiemedlemskap",
+      "qty": 7,
+      "v": 6279.46,
+      "qty_prev": 7,
+      "v_prev": 6868.75
+    },
+    {
+      "g": "Medlemskap",
+      "p": "M√•nedlig Abonnement Student/Barn/Pensjonist/Vernepliktig",
+      "qty": 2,
+      "v": 801.79,
+      "qty_prev": 7,
+      "v_prev": 3118.78
+    },
+    {
+      "g": "Medlemskap",
+      "p": "Student/Barn: Introtilbud 50% i 3 mnd",
+      "qty": 1,
+      "v": 445.54,
+      "qty_prev": 0,
+      "v_prev": 0
+    }
+  ]
+}/* DATA_END */;
 const fmtN=n=>Math.round(n).toLocaleString('no-NO');
 const fmtK=n=>{if(n>=1000)return(n/1000).toFixed(1).replace('.',',')+' k';return fmtN(n);};
-const pct=(a,b)=>b?(((a-b)/b)*100).toFixd(1):'‚Äî';
+const pct=(a,b)=>b?(((a-b)/b)*100).toFixed(1):'‚Äî';
 const dSpan=(a,b)=>{const d=a-b,p=pct(a,b),cls=d>=0?'up':'down',arr=d>=0?'‚Üë':'‚Üì',s=d>=0?'+':'‚àí';return`<span class="${cls}">${arr} ${s}${Math.abs(d)>0?Math.abs(d)+'&nbsp;':''}(${d>=0?'+':''}${p}%)</span>`;};
 const nSpan=(a,b)=>{const d=a-b,p=pct(a,b),cls=d>=0?'up':'down',arr=d>=0?'‚Üë':'‚Üì',s=d>=0?'+':'‚àí';return`<span class="${cls}">${arr} ${s}NOK ${fmtN(Math.abs(d))} (${d>=0?'+':''}${p}%)</span>`;};
 const CC={'Inngang':'#60a5fa','Leie av Utstyr':'#fbbf24','Kaffe':'#f87171','Bursdag':'#e879f9','Drikke':'#a5b4fc','Mat & Drikke':'#fb923c','Snacks':'#94a3b8','Bedrift':'#34d399','Utstyr':'#c084fc'};
@@ -190,127 +716,38 @@ const sn=D.dropins?Math.round(D.driftsomsetning/D.dropins):0,snp=D.dropins_prev?
 document.getElementById('drift-kpis').innerHTML=[{l:'Drop-ins',v:fmtN(D.dropins),d:dSpan(D.dropins,D.dropins_prev),m:`vs ${fmtN(D.dropins_prev)} forrige ${D.prev_dag}`},{l:'Inngang omsetning',v:`<sup>NOK </sup>${fmtN(D.inngang)}`,d:nSpan(D.inngang,D.inngang_prev),m:`vs ${fmtN(D.inngang_prev)} forrige ${D.prev_dag}`},{l:'Leie av utstyr',v:`<sup>NOK </sup>${fmtN(D.leie)}`,d:nSpan(D.leie,D.leie_prev),m:`vs ${fmtN(D.leie_prev)} forrige ${D.prev_dag}`},{l:'Snitt per drop-in',v:`<sup>NOK </sup>${fmtN(sn)}`,d:nSpan(sn,snp),m:`vs ${fmtN(snp)} forrige ${D.prev_dag}`}].map(k=>`<div class="kpi drift-card"><div class="kpi-label">${k.l}</div><div class="kpi-value">${k.v}</div><div class="kpi-delta">${k.d}<span class="muted">${k.m}</span></div></div>`).join('');
 if(D.merknad)document.getElementById('merknad-wrap').innerHTML=`<div class="warn-banner">‚ö†Ô∏è <strong>Merknad:</strong> ${D.merknad}</div>`;
 document.getElementById('b-uke').textContent=D.bursdag_uke;
-document.getElementById('b-uke-label').textContekùX[õôHZŸ[à
-X[∏†$…—ôYﬂJX¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã[[ôX[ù	 Kù^€€ù[ùQòù\úŸY◊€[ôÿ[ù[¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã[[ô[Xô[	 Kù^€€ù[ùQòù\úŸY◊€[ô€Xô[¬ò€€ú›úœQòù\úŸY◊€[ôÿ[ù[”X]úõ›[ô
-òù\úŸY◊€[ô‹›[K—òù\úŸY◊€[ôÿ[ù[
-Nå¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã[[ô\€ö]	 Kù^€€ù[ùX€ö]ì“»	Ÿõ]äú _H[ö€à[ò[ÿ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã[[ô\›[I Kù^€€ù[ùYõ]äòù\úŸY◊€[ô‹›[JN¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã]\\â Kö[õô\íSQòù\úŸY◊›\\ãõX\
-Oò]à€\‹œHòù\Hèè]à€\‹œHòù\K[ò[YHèâ›õò]õüOŸ]èè]à€\‹œHòù\KX€›[ùèâ›ò[ù[H‹[à›[OHôõ€ù\⁄^ôNåL‹ÿ€€‹éàÕòçÃéŸõ€ù]ŸZY⁄çèô[õôH[ôè‹‹[èèŸ]èèŸ]èò
-Köõ⁄[ä	… N¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã\ô]ã\\ö[ŸI Kù^€€ù[ùQòù\úŸY◊‹ô]ó‹\ö[ŸN¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã\ô]ãX[ù	 Kù^€€ù[ùX	—òù\úŸY◊‹ô]óÿ[ù[Hù\úŸYŸ\ò¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã\ô]ã\›[I Kù^€€ù[ùXì“»	Ÿõ]äòù\úŸY◊‹ô]ó‹›[J_H0≠»€ö]	Ÿõ]äòù\úŸY◊‹ô]óÿ[ù[”X]úõ›[ô
-òù\úŸY◊‹ô]ó‹›[K—òù\úŸY◊‹ô]óÿ[ù[
-Nå
-_X¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿãX›\úã\\ö[ŸI Kù^€€ù[ùQòù\úŸY◊€[ô€Xô[¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿãX›\úãX[ù	 Kù^€€ù[ùX	—òù\úŸY◊€[ôÿ[ù[Hù\úŸYŸ\ò¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿãX›\úã\›[I Kù^€€ù[ùXì“»	Ÿõ]äòù\úŸY◊€[ô‹›[J_H0≠»€ö]	Ÿõ]äú _X¬ò€€ú›ëOQòù\úŸY◊€[ôÿ[ù[Qòù\úŸY◊‹ô]óÿ[ù[ëœQòù\úŸY◊€[ô‹›[KQòù\úŸY◊‹ô]ó‹›[N¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿãY[KX[ù	 Kò€\‹”ò[YOXõ]Y[H	ÿëOèL…›\	ŒâŸ›€âﬂX¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿãY[KX[ù	 Kö[õô\íSX	ÿëOèL…¯°§IŒâ¯°§…ﬂH	ÿëOèL… …Œâ…ﬂIÿë_H\úò[ôŸ[Y[ù\à
-	ÿëOèL… …Œâ…ﬂI—òù\úŸY◊‹ô]óÿ[ù[ 
-ëK—òù\úŸY◊‹ô]óÿ[ù[
-JåL
-Kù—ö^Y
-JNåIJX¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿãY[K\›[I Kö[õô\íSX‹[à€\‹œHâÿëœèL…›\	ŒâŸ›€âﬂHèâÿëœèL…¯°§IŒâ¯°§…ﬂH	ÿëœèL… …Œâ¯¢$âﬂSì“»	Ÿõ]äX]òXú ë J_H
-	ÿëœèL… …Œâ…ﬂI—òù\úŸY◊‹ô]ó‹›[O 
-ëÀ—òù\úŸY◊‹ô]ó‹›[JJåL
-Kù—ö^Y
-JNåIJO‹‹[èà€\Ÿ]ö[ôÿ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿãXõ€⁄⁄[ô‹… Kö[õô\íSQòù\úŸYŸ\ââëòù\úŸYŸ\ãõ[ô›å—òù\úŸYŸ\ãõX\
-èOò]à€\‹œHòõ€⁄⁄[ôÀ\õ›»èè‹[à€\‹œHòõ€⁄⁄[ôÀ\õŸZ›èâÿãúõŸZ›O‹‹[èè‹[à€\‹œHòõ€⁄⁄[ôÀZ›[ôHèâÿãö›[ô_O‹‹[èè‹[à€\‹œHòõ€⁄⁄[ôÀ\õ€Hèâÿãúõ€_O‹‹[èè‹[à€\‹œHòõ€⁄⁄[ôÀ]YèâÿãùYO‹‹[èèŸ]èò
-Köõ⁄[ä	… Nò]à€\‹œHõõÀXù\úŸY»èí[ôŸ[àù\úŸYÀXõ€⁄⁄[ôŸ\àHYœŸ]èò¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿÿ]X⁄\ù]]I Kù^€€ù[ùX€\Ÿ]ö[ô»]\àÿ]Y€‹öH8†%	—ô]◊€[ôﬂX¬ò€€ú›€O^ﬂN—úõŸZ›\ãôõ‹ëXX⁄
-Oûÿ€V‹ô◊OJ€V‹ô◊_
-J‹ùéﬂJNÿ€€ú›‹œSÿöôX›ô[ùöY\ €JKú€‹ù
-
-KäOOòñÃWKXVÃWJN¬õô]»⁄\ù
-ÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿÿ]⁄\ù	 K›\NâŸ›Y⁄ù]	À]Nû€Xô[Œò‹ÀõX\
-œOò÷ÃJK]\Ÿ]ŒñﬁŸ]Nò‹ÀõX\
-œOò÷ÃWJKòX⁄Ÿ‹õ›[ô€€‹éò‹ÀõX\
-œOòÿ ÷ÃJJKõ‹ô\ê€€‹éâ»ÃåLLM…Àõ‹ô\ï⁄Yåã›ô\ìŸôúŸ]çüW_K‹[€úŒû‹ô\‹€ú⁄]ôNùùYKY⁄[úŒû€YŸ[ôû‹‹⁄][€éâÿõ›€IÀXô[Œûÿ€€‹éâ»ŒLN	Àõ€ùû‹⁄^ôNåL_Kõﬁ⁄YåLY[ôŒåLü_K€€\ûÿÿ[òX⁄‹Œû€Xô[òœOò	ÿÀõXô[Nàì“»	Ÿõ]äÀúò] _H
-	 
-Àúò]Àÿ‹ÀúôYXŸJ
-À
-OOú ﬁÃWK
-JJåL
-Kù—ö^Y
-J_IJX____JN¬ò€€ú›VÀããëúõŸZ›\óKú€‹ù
-
-KäOOòãùãXKùäKú€XŸJ
-K^]ÃOÀùüN¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	›‹õŸ… Kö[õô\íS]õX\
-
-JOOò]à€\‹œHúò\àèè‹[à€\‹œHúò\ã\ò[ö»èâ⁄JÃ_O‹‹[èè‹[à€\‹œHúò\ã[ò[YHà]OHâ‹úHèâ‹úO‹‹[èè]à€\‹œHúò\ã]òX⁄»èè]à€\‹œHúò\ãYö[à›[OHù⁄Yâ ùã€^
-åL
-Kù—ö^Y
-J_INÿòX⁄Ÿ‹õ›[ôâÿÿ ô _HèèŸ]èèŸ]èè‹[à€\‹œHúò\ã]ò[èìì“»	Ÿõ] ùä_O‹‹[èèŸ]èò
-Köõ⁄[ä	… N¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ŸöYù]XõK]]I Kù^€€ù[ùX[HöYù‹õŸZ›\à8†%	—ô]◊€[ôﬂHúÀà	—úô]óŸ]◊€[ôﬂX¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	›\]KZI Kù^€€ù[ùX[ùà	—ô]◊⁄€‹ùXŸÿ›[Y[ùôŸ][[Y[ùûRY
-	›\ô]ãZI Kù^€€ù[ùX€\Ÿ]ãà	—ô]◊⁄€‹ùXŸÿ›[Y[ùôŸ][[Y[ùûRY
-	›\]K\	 Kù^€€ù[ùX[ùà	—úô]óŸ]◊⁄€‹ùXŸÿ›[Y[ùôŸ][[Y[ùûRY
-	›\ô]ã\	 Kù^€€ù[ùX€\Ÿ]ãà	—úô]óŸ]◊⁄€‹ùX¬õ]OLèLTLîL¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ŸöYùõŸI Kö[õô\íSQúõŸZ›\ãõX\
-Oû›Jœ\ú]N›äœ\ùé›T
-œJú]W‹ô]ü
-N›î
-œJùó‹ô]ü
-Nÿ€€ú›\ùãJùó‹ô]ü
-K€œYå…›\	Œô…Ÿ›€âŒâ€]]Y	ÀœYèL… …Œâ¯¢$âŒ‹ô]\õòèèâÿ›
-ô _O›èâ‹úO›è€\‹œHõù[Hèâ‹ú]_O›è€\‹œHõù[Hèìì“»	Ÿõ]äùä_O›è€\‹œHõù[Hèâ‹ú]W‹ô]ü	¯†%	ﬂO›è€\‹œHõù[Hèâ‹ùó‹ô]è…”ì“»	 Ÿõ]äùó‹ô]äNâ¯†%	ﬂO›è€\‹œHõù[Hèè‹[à€\‹œHâÿ€ﬂHèâ‹ùó‹ô]è‹ …”ì“»	 Ÿõ]äX]òXú 
-JNâ¯†%	ﬂO‹‹[èè›è›èòﬂJKöõ⁄[ä	… N¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	Ÿ\]K]	 Kù^€€ù[ù]NŸÿ›[Y[ùôŸ][[Y[ùûRY
-	Ÿ\ô]ã]	 Kù^€€ù[ùXì“»	Ÿõ]ää_XŸÿ›[Y[ùôŸ][[Y[ùûRY
-	Ÿ\]K\	 Kù^€€ù[ù]T	¯†%	ŒŸÿ›[Y[ùôŸ][[Y[ùûRY
-	Ÿ\ô]ã\	 Kù^€€ù[ù]îÿì“»	Ÿõ]äî
-_Xâ¯†%	Œÿ€€ú›]ã]îŸÿ›[Y[ùôŸ][[Y[ùûRY
-	ŸY[I Kö[õô\íS]îÿ‹[à€\‹œHâ›èL…›\	ŒâŸ›€âﬂHèâ›èL… …Œâ¯¢$âﬂSì“»	Ÿõ]äX]òXú 
-J_O‹‹[èòâ¯†%	Œ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	€KXöY… Kù^€€ù[ùQòZ›]ôWÿXéÿ€€ú›QQòZ›]ôWÿXãQòZ›]ôWÿXó€[ô‹›\ùŸÿ›[Y[ùôŸ][[Y[ùûRY
-	€KY[I Kö[õô\íSX‹[à€\‹œHâÿQèL…›\	ŒâŸ›€âﬂHèâÿQèL…¯°§IŒâ¯°§…ﬂH	ÿQèL… …Œâ…ﬂIÿQH
-	 
-Q—òZ›]ôWÿXó€[ô‹›\ù
-JåL
-Kù—ö^Y
-J_IJO‹‹[èòŸÿ›[Y[ùôŸ][[Y[ùûRY
-	€K]ú… Kù^€€ù[ùXúÀà	Ÿõ]äòZ›]ôWÿXó€[ô‹›\ù
-_H\àKà[ôŸÿ›[Y[ùôŸ][[Y[ùûRY
-	€K]X›\úâ Kù^€€ù[ùQô]◊€[ôŒ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿXï\\êõŸI Kö[õô\íSQòXó›\\ãõX\
-Oûÿ€€ú›]ò[ù[]ôõ‹úöYŸN‹ô]\õòèèâ›õò]õüO›è€\‹œHõù[HY⁄Y⁄èâ›ò[ù[O›è€\‹œHõù[Hèâ›ôõ‹úöYŸ_O›è€\‹œHõù[H	ŸèL…›\	ŒâŸ›€âﬂHèâŸèL… …Œâ…ﬂIŸO›è›èòﬂJKöõ⁄[ä	… N¬ò€€ú›OQòXó›\\ãúôYXŸJ
-À
-OOú ›ò[ù[
-KTQòXó›\\ãúôYXŸJ
-À
-OOú ›ôõ‹úöYŸK
-KQ]K]TŸÿ›[Y[ùôŸ][[Y[ùûRY
-	€K]›X›\úâ Kù^€€ù[ùQòZ›]ôWÿXéŸÿ›[Y[ùôŸ][[Y[ùûRY
-	€K]›\ô]â Kù^€€ù[ùQòZ›]ôWÿXó€[ô‹›\ùŸÿ›[Y[ùôŸ][[Y[ùûRY
-	€K]›Y[I Kö[õô\íSX‹[à€\‹œHâ›QèL…›\	ŒâŸ›€âﬂHèâ›QèL… …Œâ…ﬂI›QO‹‹[èò¬öYäòXó‹õŸZ›\ââëòXó‹õŸZ›\ãõ[ô›å
-^ÿ€€ú›TœQòXó‹õŸZ›\ãúôYXŸJ
-À
-OOú ‹ùã
-KT‘QòXó‹õŸZ›\ãúôYXŸJ
-À
-OOú  ùó‹ô]ü
-K
-KTOQòXó‹õŸZ›\ãúôYXŸJ
-À
-OOú ‹ú]K
-KTTQòXó‹õŸZ›\ãúôYXŸJ
-À
-OOú  ú]W‹ô]ü
-K
-NŸÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿXãYõ‹õûY[Ÿ\ã]‹ò\	 Kö[õô\íSX]à€\‹œHòXõ€õô[Y[ùZXY\àèè]èè›õ€ôœîê‘Yõ‹õûY[Ÿ\à	—ô]◊€[ôﬂH8†%ì“»	Ÿõ]äT _O‹›õ€ôœè]à€\‹œHòXõ€õô[Y[ù[õ›HèïôYôô\à[ô[Y»0ÈH[ZŸHYŸ\àŸ»ôYõZ›\ô\àZ⁄ŸHY€Y»öYù\ôZ›OŸ]èèŸ]èè]à›[OHõX\ô⁄[ã[Yùò]]Œ›^X[Y€éúöY⁄èè]à›[OHôõ€ù\⁄^ôNåL\ÿ€€‹éàÕMÿMN»èùúÀà	—úô]óŸ]◊€[ôﬂOŸ]èè]à›[OHôõ€ù\⁄^ôNåMŸõ€ù]ŸZY⁄çåÿ€€‹éàŒôYòXŒ»èìì“»	Ÿõ]äT‘
-_OŸ]èèŸ]èèŸ]èè]à€\‹œHòXõ€õô[Y[ù]XõK]‹ò\èèXõOèXYèèèîõŸZ››è€\‹œHõù[Hèê[ùà	—ô]◊⁄€‹ùO›è€\‹œHõù[Hèì€\Ÿ]ãà	—ô]◊⁄€‹ùO›è€\‹œHõù[Hèê[ùà	—úô]óŸ]◊⁄€‹ùO›è€\‹œHõù[Hèì€\Ÿ]ãà	—úô]óŸ]◊⁄€‹ùO›è›èè›XYèõŸOâ—òXó‹õŸZ›\ãõX\
-Oòèèâ‹úO›è€\‹œHõù[Hèâ‹ú]_O›è€\‹œHõù[Hèìì“»	Ÿõ]äùä_O›è€\‹œHõù[Hèâ‹ú]W‹ô]ü	¯†%	ﬂO›è€\‹œHõù[Hèâ‹ùó‹ô]è…”ì“»	 Ÿõ]äùó‹ô]äNâ¯†%	ﬂO›è›èò
-Köõ⁄[ä	… _O›õŸOèõ€›èèèï›[Xõ€õô[Y[ù\è›è€\‹œHõù[HèâÿT_O›è€\‹œHõù[Hèìì“»	Ÿõ]äT _O›è€\‹œHõù[HèâÿTT	¯†%	ﬂO›è€\‹œHõù[HèâÿT‘…”ì“»	 Ÿõ]äT‘
-Nâ¯†%	ﬂO›è›èè›õ€›è›XõOèŸ]èòﬂBè‹ÿ‹ö\ÇèÿõŸOÇè⁄[æ
+document.getElementById('b-uke-label').textContent=`Denne uken (man‚Äì${D.dag})`;
+document.getElementById('b-mnd-ant').textContent=D.bursdag_mnd_antall;
+document.getElementById('b-mnd-label').textContent=D.bursdag_mnd_label;
+const bs=D.bursdag_mnd_antall?Math.round(D.bursdag_mnd_sum/D.bursdag_mnd_antall):0;
+document.getElementById('b-mnd-snitt').textContent=`Snitt NOK ${fmtN(bs)} inkl. tilvalg`;
+document.getElementById('b-mnd-sum').textContent=fmtN(D.bursdag_mnd_sum);
+document.getElementById('b-typer').innerHTML=D.bursdag_typer.map(t=>`<div class="btype"><div class="btype-name">${t.navn}</div><div class="btype-count">${t.antall} <span style="font-size:13px;color:#6b7280;font-weight:400">denne mnd.</span></div></div>`).join('');
+document.getElementById('b-prev-periode').textContent=D.bursdag_prev_periode;
+document.getElementById('b-prev-ant').textContent=`${D.bursdag_prev_antall} bursdager`;
+document.getElementById('b-prev-sum').textContent=`NOK ${fmtN(D.bursdag_prev_sum)} ¬∑ snitt ${fmtN(D.bursdag_prev_antall?Math.round(D.bursdag_prev_sum/D.bursdag_prev_antall):0)}`;
+document.getElementById('b-curr-periode').textContent=D.bursdag_mnd_label;
+document.getElementById('b-curr-ant').textContent=`${D.bursdag_mnd_antall} bursdager`;
+document.getElementById('b-curr-sum').textContent=`NOK ${fmtN(D.bursdag_mnd_sum)} ¬∑ snitt ${fmtN(bs)}`;
+const bDA=D.bursdag_mnd_antall-D.bursdag_prev_antall,bDS=D.bursdag_mnd_sum-D.bursdag_prev_sum;
+document.getElementById('b-delta-ant').className=`bmtd-delta ${bDA>=0?'up':'down'}`;
+document.getElementById('b-delta-ant').innerHTML=`${bDA>=0?'‚Üë':'‚Üì'} ${bDA>=0?'+':''}${bDA} arrangementer (${bDA>=0?'+':''}${D.bursdag_prev_antall?((bDA/D.bursdag_prev_antall)*100).toFixed(1):0}%)`;
+document.getElementById('b-delta-sum').innerHTML=`<span class="${bDS>=0?'up':'down'}">${bDS>=0?'‚Üë':'‚Üì'} ${bDS>=0?'+':'‚àí'}NOK ${fmtN(Math.abs(bDS))} (${bDS>=0?'+':''}${D.bursdag_prev_sum?((bDS/D.bursdag_prev_sum)*100).toFixed(1):0}%)</span> omsetning`;
+document.getElementById('b-bookings').innerHTML=D.bursdager&&D.bursdager.length>0?D.bursdager.map(b=>`<div class="booking-row"><span class="booking-produkt">${b.produkt}</span><span class="booking-kunde">${b.kunde}</span><span class="booking-rom">${b.rom}</span><span class="booking-tid">${b.tid}</span></div>`).join(''):`<div class="no-bursdag">Ingen bursdag-bookinger i dag</div>`;
+document.getElementById('cat-chart-title').textContent=`Omsetning etter kategori ‚Äî ${D.dato_lang}`;
+const cm={};D.produkter.forEach(p=>{cm[p.g]=(cm[p.g]||0)+p.v;});const cs=Object.entries(cm).sort((a,b)=>b[1]-a[1]);
+new Chart(document.getElementById('catChart'),{type:'doughnut',data:{labels:cs.map(c=>c[0]),datasets:[{data:cs.map(c=>c[1]),backgroundColor:cs.map(c=>cc(c[0])),borderColor:'#0f1117',borderWidth:2,hoverOffset:6}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{color:'#8890a8',font:{size:11},boxWidth:10,padding:12}},tooltip:{callbacks:{label:c=>`${c.label}: NOK ${fmtN(c.raw)} (${((c.raw/cs.reduce((s,x)=>s+x[1],0))*100).toFixed(1)}%)`}}}}});
+const t8=[...D.produkter].sort((a,b)=>b.v-a.v).slice(0,8),mx=t8[0]?.v||1;
+document.getElementById('topProds').innerHTML=t8.map((p,i)=>`<div class="pbar"><span class="pbar-rank">${i+1}</span><span class="pbar-name" title="${p.p}">${p.p}</span><div class="pbar-track"><div class="pbar-fill" style="width:${(p.v/mx*100).toFixed(1)}%;background:${cc(p.g)}"></div></div><span class="pbar-val">NOK ${fmtK(p.v)}</span></div>`).join('');
+document.getElementById('drift-table-title').textContent=`Alle driftsprodukter ‚Äî ${D.dato_lang} vs. ${D.prev_dato_lang}`;
+document.getElementById('th-qty-i').textContent=`Ant. ${D.dato_kort}`;document.getElementById('th-rev-i').textContent=`Omsetn. ${D.dato_kort}`;document.getElementById('th-qty-p').textContent=`Ant. ${D.prev_dato_kort}`;document.getElementById('th-rev-p').textContent=`Omsetn. ${D.prev_dato_kort}`;
+let tQ=0,tR=0,tQP=0,tRP=0;
+document.getElementById('driftBody').innerHTML=D.produkter.map(p=>{tQ+=p.qty;tR+=p.v;tQP+=(p.qty_prev||0);tRP+=(p.v_prev||0);const d=p.v-(p.v_prev||0),cls=d>0?'up':d<0?'down':'muted',s=d>=0?'+':'‚àí';return`<tr><td>${ct(p.g)}</td><td>${p.p}</td><td class="num">${p.qty}</td><td class="num">NOK ${fmtN(p.v)}</td><td class="num">${p.qty_prev||'‚Äî'}</td><td class="num">${p.v_prev?'NOK '+fmtN(p.v_prev):'‚Äî'}</td><td class="num"><span class="${cls}">${p.v_prev?s+'NOK '+fmtN(Math.abs(d)):'‚Äî'}</span></td></tr>`;}).join('');
+document.getElementById('d-qty-t').textContent=tQ;document.getElementById('d-rev-t').textContent=`NOK ${fmtN(tR)}`;document.getElementById('d-qty-p').textContent=tQP||'‚Äî';document.getElementById('d-rev-p').textContent=tRP?`NOK ${fmtN(tRP)}`:'‚Äî';const td=tR-tRP;document.getElementById('d-delta').innerHTML=tRP?`<span class="${td>=0?'up':'down'}">${td>=0?'+':'‚àí'}NOK ${fmtN(Math.abs(td))}</span>`:'‚Äî';
+document.getElementById('m-big').textContent=D.aktive_ab;const aD=D.aktive_ab-D.aktive_ab_mnd_start;document.getElementById('m-delta').innerHTML=`<span class="${aD>=0?'up':'down'}">${aD>=0?'‚Üë':'‚Üì'} ${aD>=0?'+':''}${aD} (${((aD/D.aktive_ab_mnd_start)*100).toFixed(1)}%)</span>`;document.getElementById('m-vs').textContent=`vs. ${fmtN(D.aktive_ab_mnd_start)} per 1. mnd`;document.getElementById('m-th-curr').textContent=D.dato_lang;
+document.getElementById('abTyperBody').innerHTML=D.ab_typer.map(t=>{const d=t.antall-t.forrige;return`<tr><td>${t.navn}</td><td class="num highlight">${t.antall}</td><td class="num">${t.forrige}</td><td class="num ${d>=0?'up':'down'}">${d>=0?'+':''}${d}</td></tr>`;}).join('');
+const tA=D.ab_typer.reduce((s,t)=>s+t.antall,0),tAP=D.ab_typer.reduce((s,t)=>s+t.forrige,0),tAD=tA-tAP;document.getElementById('m-tot-curr').textContent=D.aktive_ab;document.getElementById('m-tot-prev').textContent=D.aktive_ab_mnd_start;document.getElementById('m-tot-delta').innerHTML=`<span class="${tAD>=0?'up':'down'}">${tAD>=0?'+':''}${tAD}</span>`;
+if(D.ab_produkter&&D.ab_produkter.length>0){const aS=D.ab_produkter.reduce((s,p)=>s+p.v,0),aSP=D.ab_produkter.reduce((s,p)=>s+(p.v_prev||0),0),aQ=D.ab_produkter.reduce((s,p)=>s+p.qty,0),aQP=D.ab_produkter.reduce((s,p)=>s+(p.qty_prev||0),0);document.getElementById('ab-fornyelser-wrap').innerHTML=`<div class="abonnement-header"><div><strong>RCP-fornyelser ${D.dato_lang} ‚Äî NOK ${fmtN(aS)}</strong><div class="abonnement-note">Treffer tilfeldig p√• ulike dager og reflekterer ikke daglig drift direkte</div></div><div style="margin-left:auto;text-align:right"><div style="font-size:11px;color:#4a7a4a;">vs. ${D.prev_dato_lang}</div><div style="font-size:14px;font-weight:600;color:#86efac;">NOK ${fmtN(aSP)}</div></div></div><div class="abonnement-table-wrap"><table><thead><tr><th>Produkt</th><th class="num">Ant. ${D.dato_kort}</th><th class="num">Omsetn. ${D.dato_kort}</th><th class="num">Ant. ${D.prev_dato_kort}</th><th class="num">Omsetn. ${D.prev_dato_kort}</th></tr></thead><tbody>${D.ab_produkter.map(p=>`<tr><td>${p.p}</td><td class="num">${p.qty}</td><td class="num">NOK ${fmtN(p.v)}</td><td class="num">${p.qty_prev||'‚Äî'}</td><td class="num">${p.v_prev?'NOK '+fmtN(p.v_prev):'‚Äî'}</td></tr>`).join('')}</tbody><tfoot><tr><td>Totalt abonnementer</td><td class="num">${aQ}</td><td class="num">NOK ${fmtN(aS)}</td><td class="num">${aQP||'‚Äî'}</td><td class="num">${aSP?'NOK '+fmtN(aSP):'‚Äî'}</td></tr></tfoot></table></div>`;}
+</script>
+</body>
+</html>
