@@ -3,130 +3,214 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title id="page-title">Playground — Betalingsstatus</title>
+<title>Playground – Medlemssjekk 1. mai 2026</title>
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f1117; color: #e8eaf0; min-height: 100vh; }
-.header { background: #13151f; border-bottom: 1px solid #232636; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-.header h1 { font-size: 20px; font-weight: 700; color: #fff; letter-spacing: -0.3px; }
-.header .sub { font-size: 12px; color: #6b7280; margin-top: 3px; }
-.badge-ok   { display: inline-flex; align-items: center; gap: 6px; background: #0d1a0d; border: 1px solid #1e3a1e; border-radius: 20px; padding: 5px 14px; font-size: 12px; color: #86efac; }
-.badge-warn { display: inline-flex; align-items: center; gap: 6px; background: #1c0f0f; border: 1px solid #7f1d1d; border-radius: 20px; padding: 5px 14px; font-size: 12px; color: #fca5a5; }
-.content { padding: 24px 32px; max-width: 900px; margin: 0 auto; }
-.section-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 12px; }
-.label-ok   { background: #1a2010; color: #86efac; }
-.label-warn { background: #1c0d0d; color: #fca5a5; }
-.kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
-.kpi { background: #13151f; border: 1px solid #232636; border-radius: 12px; padding: 18px 20px; }
-.kpi-label { font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.7px; margin-bottom: 8px; }
-.kpi-value { font-size: 32px; font-weight: 700; color: #fff; letter-spacing: -0.5px; line-height: 1.1; }
-.kpi-value.ok   { color: #4ade80; }
-.kpi-value.warn { color: #f87171; }
-.ok-panel { background: #0d140d; border: 1px solid #1e3a1e; border-radius: 12px; padding: 32px 24px; text-align: center; margin-bottom: 20px; }
-.ok-icon  { font-size: 48px; margin-bottom: 12px; }
-.ok-title { font-size: 20px; font-weight: 700; color: #4ade80; margin-bottom: 6px; }
-.ok-sub   { font-size: 13px; color: #4a7a4a; }
-.warn-panel { background: #130d0d; border: 1px solid #7f1d1d; border-radius: 12px; overflow: hidden; margin-bottom: 20px; }
-.warn-header { background: #1c0f0f; padding: 14px 20px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #7f1d1d; }
-.warn-header-title { font-size: 14px; font-weight: 700; color: #fca5a5; }
-.warn-header-sub { font-size: 11px; color: #7f1d1d; margin-top: 2px; }
-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-thead th { padding: 10px 16px; color: #6b7280; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid #2a1010; font-weight: 500; text-align: left; }
-tbody td { padding: 12px 16px; border-bottom: 1px solid #1a0d0d; color: #e8eaf0; vertical-align: middle; }
-tbody tr:last-child td { border-bottom: none; }
-tbody tr:hover td { background: #1a0f0f; }
-.member-navn { font-weight: 600; color: #fff; }
-.member-type { font-size: 11px; color: #9ca3af; margin-top: 2px; }
-.status-badge { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; }
-.status-ikke-sendt { background: #1c1507; color: #fbbf24; border: 1px solid #854d0e; }
-.status-feilet     { background: #1c0f0f; color: #f87171; border: 1px solid #7f1d1d; }
-.status-ubetalt    { background: #1c0f0f; color: #fca5a5; border: 1px solid #7f1d1d; }
-.status-annet      { background: #1e2130; color: #8890a8; border: 1px solid #2e3250; }
-.debitert-dato { font-size: 12px; color: #9ca3af; }
-.debitert-forfalt { color: #f87171; font-weight: 600; }
-@media (max-width: 700px) { .kpi-row { grid-template-columns: 1fr 1fr; } .content { padding: 16px; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f4f6f9; color: #1a1a2e; }
+  header { background: #1a1a2e; color: #fff; padding: 24px 32px; display: flex; align-items: center; gap: 16px; }
+  header h1 { font-size: 1.4rem; font-weight: 600; }
+  header .meta { font-size: 0.82rem; color: #8899bb; margin-top: 2px; }
+  .container { max-width: 960px; margin: 0 auto; padding: 28px 20px 60px; }
+
+  /* KPI cards */
+  .kpi-row { display: flex; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+  .kpi { flex: 1; min-width: 150px; background: #fff; border-radius: 10px; padding: 20px 22px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+  .kpi .val { font-size: 2.2rem; font-weight: 700; line-height: 1; }
+  .kpi .label { font-size: 0.78rem; color: #666; margin-top: 6px; text-transform: uppercase; letter-spacing: .04em; }
+  .kpi.blue .val  { color: #2563eb; }
+  .kpi.green .val { color: #16a34a; }
+  .kpi.red .val   { color: #dc2626; }
+  .kpi.amber .val { color: #d97706; }
+
+  /* Notice banner */
+  .notice { background: #fff7ed; border: 1.5px solid #fdba74; border-radius: 10px; padding: 16px 20px; margin-bottom: 28px; display: flex; gap: 12px; align-items: flex-start; }
+  .notice .icon { font-size: 1.3rem; flex-shrink: 0; }
+  .notice p { font-size: 0.88rem; line-height: 1.6; color: #92400e; }
+  .notice strong { color: #78350f; }
+
+  /* Table section */
+  .section-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; color: #1a1a2e; }
+  .card { background: #fff; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.08); overflow: hidden; margin-bottom: 28px; }
+  table { width: 100%; border-collapse: collapse; }
+  th { background: #f8f9fb; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: #555; padding: 10px 16px; text-align: left; border-bottom: 1.5px solid #eee; }
+  td { padding: 11px 16px; font-size: 0.88rem; border-bottom: 1px solid #f0f0f0; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #fafbfc; }
+  .badge { display: inline-block; border-radius: 20px; padding: 2px 10px; font-size: 0.75rem; font-weight: 600; }
+  .badge.unknown { background: #f3f4f6; color: #6b7280; }
+  .badge.ok      { background: #dcfce7; color: #15803d; }
+  .badge.unpaid  { background: #fee2e2; color: #b91c1c; }
+
+  /* Footer */
+  footer { text-align: center; font-size: 0.75rem; color: #aaa; padding-top: 24px; }
+
+  @media (max-width: 600px) {
+    .kpi-row { gap: 10px; }
+    th, td { padding: 9px 10px; }
+  }
 </style>
 </head>
 <body>
-<div class="header">
+
+<header>
   <div>
-    <h1 id="h-tittel">Playground — Betalingsstatus</h1>
-    <div class="sub" id="h-sub"></div>
+    <h1>🏋️ Playground – Medlemssjekk</h1>
+    <div class="meta">Dato: 1. mai 2026 &nbsp;·&nbsp; Generert: 3. mai 2026 &nbsp;·&nbsp; Automatisk rapport</div>
   </div>
-  <div id="h-badge"></div>
+</header>
+
+<div class="container">
+
+  <!-- KPI cards -->
+  <div class="kpi-row">
+    <div class="kpi blue">
+      <div class="val">47</div>
+      <div class="label">Totale besøk</div>
+    </div>
+    <div class="kpi green">
+      <div class="val">32</div>
+      <div class="label">Drop-in / klippekort</div>
+    </div>
+    <div class="kpi amber">
+      <div class="val">15</div>
+      <div class="label">Abonnenter besøkte</div>
+    </div>
+    <div class="kpi red">
+      <div class="val">⚠</div>
+      <div class="label">Betalingsstatus ukjent</div>
+    </div>
+  </div>
+
+  <!-- Notice about failed BRP check -->
+  <div class="notice">
+    <div class="icon">⚠️</div>
+    <p>
+      <strong>Automatisk betalingssjekk kunne ikke gjennomføres.</strong><br>
+      BRP Back Office benytter Vaadin Flow (server-side Java UI), som gjentatte ganger avbrøt Chrome-tilkoblingen under datainnhenting. Alle 15 abonnenter som besøkte senteret 1. mai 2026 er identifisert fra inngangsloggen, men debiteringsintervallstatus («Ikke sendt» / «Ferdig») ble ikke tilgjengelig for automatisert avlesning.<br><br>
+      <strong>Anbefaling:</strong> Sjekk manuelt i BRP Back Office → Abonnement for hver person i listen nedenfor, og se etter intervaller med status «Ikke sendt».
+    </p>
+  </div>
+
+  <!-- Subscriber list -->
+  <div class="section-title">Abonnenter i inngangsloggen – 1. mai 2026</div>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Navn</th>
+          <th>Betalingsstatus</th>
+          <th>Merknad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Jannicke Larsen</td>
+          <td><span class="badge unknown">Ikke sjekket</span></td>
+          <td>Sjekk BRP manuelt</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Hanne Elisabeth Kjelland Skarås</td>
+          <td><span class="badge unknown">Ikke sjekket</span></td>
+          <td>Sjekk BRP manuelt</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Laszlo Særvold</td>
+          <td><span class="badge unknown">Ikke sjekket</span></td>
+          <td>Sjekk BRP manuelt</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Viktor Ruud</td>
+          <td><span class="badge unknown">Ikke sjekket</span></td>
+          <td>Sjekk BRP manuelt</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Pawel Koniecki</td>
+          <td><span class="badge unknown">Ikke sjekket</span></td>
+          <td>Sjekk BRP manuelt</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Magda Lipka</td>
+          <td><span class="badge unknown">Ikke sjekket</span></td>
+          <td>Sjekk BRP manuelt</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Sigbjørn Vaa</td>
+          <td><span class="badge unknown">Ikke sjekket</span></td>
+          <td>Sjekk BRP manuelt</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Emilian Frøyland Lea</td>
+          <td><span class="badge unknown">Ikke sjekket</span></td>
+          <td>Sjekk BRP manuelt</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Jon Hægeland</td>
+          <td><span class="badge unknown">Ikke sjekket</span></td>
+          <td>Sjekk BRP manuelt</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Ludvig Kalberg</td>
+          <td><span class="badge unknown">Ikke sjekket</span></td>
+          <td>Sjekk BRP manuelt</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Markus Vestbøstad</td>
+          <td><span class="badge unknown">Ikke sjekket</span></td>
+          <td>Sjekk BRP manuelt</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Jonas Sømme</td>
+          <td><span class="badge unknown">Ikke sjekket</span></td>
+          <td>Sjekk BRP manuelt</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Maria Hauso Froestad</td>
+          <td><span class="badge unknown">Ikke sjekket</span></td>
+          <td>Sjekk BRP manuelt</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Emma Kristine Dumitrof</td>
+          <td><span class="badge unknown">Ikke sjekket</span></td>
+          <td>Sjekk BRP manuelt</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>Cristian Sebastian Dumitrof</td>
+          <td><span class="badge unknown">Ikke sjekket</span></td>
+          <td>Sjekk BRP manuelt</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Drop-in note -->
+  <div class="notice" style="background:#f0fdf4; border-color:#86efac;">
+    <div class="icon">✅</div>
+    <p style="color:#14532d;">
+      <strong>32 drop-in / klippekort-besøkende</strong> registrert 1. mai 2026. Disse betaler per besøk eller klipp og krever ikke abonnementssjekk.
+    </p>
+  </div>
+
 </div>
-<div class="content">
-  <div class="kpi-row" id="kpi-row"></div>
-  <div id="main-content"></div>
-</div>
-<script>
-const D = /* DATA_START */{
-  "dato": "26. april 2026",
-  "generert": "27. april 2026",
-  "total_besok": 95,
-  "ab_sjekket": 20,
-  "ubetalt": []
-}/* DATA_END */;
 
-document.title = `Playground — Betalingsstatus ${D.dato}`;
-document.getElementById('h-tittel').textContent = `Playground — Betalingsstatus ${D.dato}`;
-document.getElementById('h-sub').textContent = `Gårsdagens innganger sjekket · Generert ${D.generert}`;
+<footer>
+  Playground Membership Report · Automatisk generert av Claude · 3. mai 2026
+</footer>
 
-const harUbetalt = D.ubetalt && D.ubetalt.length > 0;
-document.getElementById('h-badge').innerHTML = harUbetalt
-  ? `<div class="badge-warn">⚠️ ${D.ubetalt.length} ubetalt</div>`
-  : `<div class="badge-ok">✅ Alle har betalt</div>`;
-
-document.getElementById('kpi-row').innerHTML = [
-  { label: 'Besøk i går', val: D.total_besok, cls: '' },
-  { label: 'Abonnenter sjekket', val: D.ab_sjekket, cls: '' },
-  { label: 'Ikke betalt', val: D.ubetalt.length, cls: harUbetalt ? 'warn' : 'ok' }
-].map(k => `<div class="kpi"><div class="kpi-label">${k.label}</div><div class="kpi-value ${k.cls}">${k.val}</div></div>`).join('');
-
-const main = document.getElementById('main-content');
-if (!harUbetalt) {
-  main.innerHTML = `
-    <div class="section-label label-ok">✅ Betalingsstatus</div>
-    <div class="ok-panel">
-      <div class="ok-icon">✅</div>
-      <div class="ok-title">Alle har betalt</div>
-      <div class="ok-sub">Alle ${D.ab_sjekket} abonnenter som besøkte ${D.dato} har gyldig betaling.</div>
-    </div>`;
-} else {
-  const statusClass = s => {
-    if (!s) return 'status-annet';
-    const sl = s.toLowerCase();
-    if (sl.includes('ikke sendt')) return 'status-ikke-sendt';
-    if (sl.includes('feil')) return 'status-feilet';
-    if (sl.includes('ubetalt')) return 'status-ubetalt';
-    return 'status-annet';
-  };
-  const today = new Date(); today.setHours(0,0,0,0);
-  const parseDate = s => { if(!s)return null; const p=s.split('.'); return p.length===3?new Date(p[2],p[1]-1,p[0]):null; };
-  const rows = D.ubetalt.map(m => {
-    const d = parseDate(m.debitert_tom);
-    const forfalt = d && d < today;
-    return `<tr>
-      <td><div class="member-navn">${m.navn}</div><div class="member-type">${m.ab_type||'—'}</div></td>
-      <td><span class="debitert-dato ${forfalt?'debitert-forfalt':''}">${m.debitert_tom||'—'}</span></td>
-      <td><span class="status-badge ${statusClass(m.status)}">${m.status||'Ukjent'}</span></td>
-    </tr>`;
-  }).join('');
-  main.innerHTML = `
-    <div class="section-label label-warn">⚠️ Utestående betalinger</div>
-    <div class="warn-panel">
-      <div class="warn-header">
-        <div>
-          <div class="warn-header-title">⚠️ ${D.ubetalt.length} abonnent${D.ubetalt.length>1?'er':''} med utestående betaling</div>
-          <div class="warn-header-sub">Besøkte Playground ${D.dato} uten gyldig betaling</div>
-        </div>
-      </div>
-      <table>
-        <thead><tr><th>Navn</th><th>Debitert t.o.m.</th><th>Status</th></tr></thead>
-        <tbody>${rows}</tbody>
-      </table>
-    </div>`;
-}
-</script>
 </body>
 </html>
