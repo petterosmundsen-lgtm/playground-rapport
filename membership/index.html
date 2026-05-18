@@ -12,27 +12,20 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .header .sub { font-size: 12px; color: #6b7280; margin-top: 3px; }
 .badge-ok   { display: inline-flex; align-items: center; gap: 6px; background: #0d1a0d; border: 1px solid #1e3a1e; border-radius: 20px; padding: 5px 14px; font-size: 12px; color: #86efac; }
 .badge-warn { display: inline-flex; align-items: center; gap: 6px; background: #1c0f0f; border: 1px solid #7f1d1d; border-radius: 20px; padding: 5px 14px; font-size: 12px; color: #fca5a5; }
-.badge-err  { display: inline-flex; align-items: center; gap: 6px; background: #1c130d; border: 1px solid #7f4d1d; border-radius: 20px; padding: 5px 14px; font-size: 12px; color: #fdba74; }
 .content { padding: 24px 32px; max-width: 900px; margin: 0 auto; }
 .section-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 12px; }
 .label-ok   { background: #1a2010; color: #86efac; }
 .label-warn { background: #1c0d0d; color: #fca5a5; }
-.label-err  { background: #1c1207; color: #fdba74; }
 .kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
 .kpi { background: #13151f; border: 1px solid #232636; border-radius: 12px; padding: 18px 20px; }
 .kpi-label { font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.7px; margin-bottom: 8px; }
 .kpi-value { font-size: 32px; font-weight: 700; color: #fff; letter-spacing: -0.5px; line-height: 1.1; }
 .kpi-value.ok   { color: #4ade80; }
 .kpi-value.warn { color: #f87171; }
-.kpi-value.err  { color: #fdba74; }
 .ok-panel { background: #0d140d; border: 1px solid #1e3a1e; border-radius: 12px; padding: 32px 24px; text-align: center; margin-bottom: 20px; }
 .ok-icon  { font-size: 48px; margin-bottom: 12px; }
 .ok-title { font-size: 20px; font-weight: 700; color: #4ade80; margin-bottom: 6px; }
 .ok-sub   { font-size: 13px; color: #4a7a4a; }
-.err-panel { background: #130f07; border: 1px solid #854d0e; border-radius: 12px; padding: 32px 24px; text-align: center; margin-bottom: 20px; }
-.err-icon  { font-size: 48px; margin-bottom: 12px; }
-.err-title { font-size: 20px; font-weight: 700; color: #fdba74; margin-bottom: 6px; }
-.err-sub   { font-size: 13px; color: #92400e; }
 .warn-panel { background: #130d0d; border: 1px solid #7f1d1d; border-radius: 12px; overflow: hidden; margin-bottom: 20px; }
 .warn-header { background: #1c0f0f; padding: 14px 20px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #7f1d1d; }
 .warn-header-title { font-size: 14px; font-weight: 700; color: #fca5a5; }
@@ -68,55 +61,71 @@ tbody tr:hover td { background: #1a0f0f; }
 </div>
 <script>
 const D = /* DATA_START */{
-  "dato": "14. mai 2026",
-  "generert": "15. mai 2026",
+  "dato": "17. mai 2026",
+  "generert": "18. mai 2026",
   "total_besok": 0,
   "ab_sjekket": 0,
-  "ubetalt": [],
-  "feil": "Chrome-nettleseren koblet fra under kjøring. Kunne ikke hente gårsdagens besøkende fra BRP Entrance View. Kjør sjekken på nytt når Chrome-utvidelsen er tilkoblet."
+  "ubetalt": []
 }/* DATA_END */;
 
-document.title = "Playground — Betalingsstatus " + D.dato;
-document.getElementById('h-tittel').textContent = "Playground — Betalingsstatus " + D.dato;
-document.getElementById('h-sub').textContent = "Gårsdagens innganger sjekket · Generert " + D.generert;
+document.title = `Playground — Betalingsstatus ${D.dato}`;
+document.getElementById('h-tittel').textContent = `Playground — Betalingsstatus ${D.dato}`;
+document.getElementById('h-sub').textContent = `Gårsdagens innganger sjekket · Generert ${D.generert}`;
 
-const harFeil = D.feil && D.feil.length > 0;
 const harUbetalt = D.ubetalt && D.ubetalt.length > 0;
-
-document.getElementById('h-badge').innerHTML = harFeil
-  ? '<div class="badge-err">⚠️ Kunne ikke fullføre</div>'
-  : harUbetalt
-    ? '<div class="badge-warn">⚠️ ' + D.ubetalt.length + ' ubetalt</div>'
-    : '<div class="badge-ok">✅ Alle har betalt</div>';
+document.getElementById('h-badge').innerHTML = harUbetalt
+  ? `<div class="badge-warn">⚠️ ${D.ubetalt.length} ubetalt</div>`
+  : `<div class="badge-ok">✅ Alle har betalt</div>`;
 
 document.getElementById('kpi-row').innerHTML = [
-  { label: 'Besøk i går', val: D.total_besok !== 0 ? D.total_besok : '–', cls: '' },
-  { label: 'Abonnenter sjekket', val: D.ab_sjekket !== 0 ? D.ab_sjekket : '–', cls: '' },
-  { label: 'Ikke betalt', val: harFeil ? '–' : D.ubetalt.length, cls: harFeil ? 'err' : harUbetalt ? 'warn' : 'ok' }
-].map(function(k) { return '<div class="kpi"><div class="kpi-label">' + k.label + '</div><div class="kpi-value ' + k.cls + '">' + k.val + '</div></div>'; }).join('');
+  { label: 'Besøk i går', val: D.total_besok, cls: '' },
+  { label: 'Abonnenter sjekket', val: D.ab_sjekket, cls: '' },
+  { label: 'Ikke betalt', val: D.ubetalt.length, cls: harUbetalt ? 'warn' : 'ok' }
+].map(k => `<div class="kpi"><div class="kpi-label">${k.label}</div><div class="kpi-value ${k.cls}">${k.val}</div></div>`).join('');
 
 const main = document.getElementById('main-content');
-if (harFeil) {
-  main.innerHTML = '<div class="section-label label-err">⚠️ Kjørefeil</div><div class="err-panel"><div class="err-icon">🔌</div><div class="err-title">Automatisk sjekk mislyktes</div><div class="err-sub">' + D.feil + '</div></div>';
-} else if (!harUbetalt) {
-  main.innerHTML = '<div class="section-label label-ok">✅ Betalingsstatus</div><div class="ok-panel"><div class="ok-icon">✅</div><div class="ok-title">Alle har betalt</div><div class="ok-sub">Alle ' + D.ab_sjekket + ' abonnenter som besøkte ' + D.dato + ' har gyldig betaling.</div></div>';
+if (!harUbetalt) {
+  main.innerHTML = `
+    <div class="section-label label-ok">✅ Betalingsstatus</div>
+    <div class="ok-panel">
+      <div class="ok-icon">✅</div>
+      <div class="ok-title">Alle har betalt</div>
+      <div class="ok-sub">Alle ${D.ab_sjekket} abonnenter som besøkte ${D.dato} har gyldig betaling.</div>
+    </div>`;
 } else {
-  const statusClass = function(s) {
+  const statusClass = s => {
     if (!s) return 'status-annet';
     const sl = s.toLowerCase();
-    if (sl.indexOf('ikke sendt') >= 0) return 'status-ikke-sendt';
-    if (sl.indexOf('feil') >= 0) return 'status-feilet';
-    if (sl.indexOf('ubetalt') >= 0) return 'status-ubetalt';
+    if (sl.includes('ikke sendt')) return 'status-ikke-sendt';
+    if (sl.includes('feil')) return 'status-feilet';
+    if (sl.includes('ubetalt')) return 'status-ubetalt';
     return 'status-annet';
   };
   const today = new Date(); today.setHours(0,0,0,0);
-  const parseDate = function(s) { if(!s)return null; const p=s.split('.'); return p.length===3?new Date(p[2],p[1]-1,p[0]):null; };
-  const rows = D.ubetalt.map(function(m) {
+  const parseDate = s => { if(!s)return null; const p=s.split('.'); return p.length===3?new Date(p[2],p[1]-1,p[0]):null; };
+  const rows = D.ubetalt.map(m => {
     const d = parseDate(m.debitert_tom);
     const forfalt = d && d < today;
-    return '<tr><td><div class="member-navn">' + m.navn + '</div><div class="member-type">' + (m.ab_type||'—') + '</div></td><td><span class="debitert-dato ' + (forfalt?'debitert-forfalt':'') + '">' + (m.debitert_tom||'—') + '</span></td><td><span class="status-badge ' + statusClass(m.status) + '">' + (m.status||'Ukjent') + '</span></td></tr>';
+    return `<tr>
+      <td><div class="member-navn">${m.navn}</div><div class="member-type">${m.ab_type||'—'}</div></td>
+      <td><span class="debitert-dato ${forfalt?'debitert-forfalt':''}">${m.debitert_tom||'—'}</span></td>
+      <td><span class="status-badge ${statusClass(m.status)}">${m.status||'Ukjent'}</span></td>
+    </tr>`;
   }).join('');
-  main.innerHTML = '<div class="section-label label-warn">⚠️ Utestående betalinger</div><div class="warn-panel"><div class="warn-header"><div><div class="warn-header-title">⚠️ ' + D.ubetalt.length + ' abonnent' + (D.ubetalt.length>1?'er':'') + ' med utestående betaling</div><div class="warn-header-sub">Besøkte Playground ' + D.dato + ' uten gyldig betaling</div></div></div><table><thead><tr><th>Navn</th><th>Debitert t.o.m.</th><th>Status</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
+  main.innerHTML = `
+    <div class="section-label label-warn">⚠️ Utestående betalinger</div>
+    <div class="warn-panel">
+      <div class="warn-header">
+        <div>
+          <div class="warn-header-title">⚠️ ${D.ubetalt.length} abonnent${D.ubetalt.length>1?'er':''} med utestående betaling</div>
+          <div class="warn-header-sub">Besøkte Playground ${D.dato} uten gyldig betaling</div>
+        </div>
+      </div>
+      <table>
+        <thead><tr><th>Navn</th><th>Debitert t.o.m.</th><th>Status</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
 }
 </script>
 </body>
