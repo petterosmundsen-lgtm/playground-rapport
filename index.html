@@ -14,21 +14,19 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .badge { display: inline-flex; align-items: center; gap: 6px; background: #1e2130; border: 1px solid #2e3250; border-radius: 20px; padding: 5px 14px; font-size: 12px; color: #8890a8; }
 .content { padding: 24px 32px; max-width: 1300px; margin: 0 auto; }
 .section-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 12px; }
-.label-drift      { background: #162035; color: #60a5fa; }
-.label-bursdag    { background: #1f1228; color: #e879f9; }
+.label-drift { background: #162035; color: #60a5fa; }
+.label-bursdag { background: #1f1228; color: #e879f9; }
 .label-abonnement { background: #1a2010; color: #86efac; }
 .kpi-row { display: grid; gap: 12px; margin-bottom: 20px; }
 .kpi-row-4 { grid-template-columns: repeat(4, 1fr); }
-.kpi-row-3 { grid-template-columns: repeat(3, 1fr); }
 .kpi { background: #13151f; border: 1px solid #232636; border-radius: 12px; padding: 18px 20px; }
-.kpi.drift-card   { border-color: #1e3050; }
-.kpi.ab-card      { border-color: #1e3a1e; background: #0d140d; }
+.kpi.drift-card { border-color: #1e3050; }
 .kpi-label { font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.7px; margin-bottom: 8px; }
 .kpi-value { font-size: 26px; font-weight: 700; color: #fff; letter-spacing: -0.5px; line-height: 1.1; }
 .kpi-value sup { font-size: 13px; font-weight: 400; color: #6b7280; vertical-align: top; margin-top: 3px; }
 .kpi-delta { margin-top: 8px; font-size: 12px; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
-.up    { color: #4ade80; font-weight: 600; }
-.down  { color: #f87171; font-weight: 600; }
+.up { color: #4ade80; font-weight: 600; }
+.down { color: #f87171; font-weight: 600; }
 .muted { color: #6b7280; }
 .warn-banner { background: #1c1507; border: 1px solid #854d0e; border-radius: 10px; padding: 12px 18px; margin-bottom: 20px; font-size: 12px; color: #fbbf24; line-height: 1.6; }
 .bursdag-panel { background: #13151f; border: 1px solid #2e1840; border-radius: 12px; padding: 20px 24px; margin-bottom: 20px; }
@@ -74,15 +72,15 @@ tbody tr:last-child td { border-bottom: none; }
 tbody tr:hover td { background: #191c28; }
 tfoot td { padding: 10px; border-top: 1px solid #2e3250; font-weight: 600; color: #fff; font-size: 13px; }
 .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10.5px; font-weight: 500; white-space: nowrap; }
-.t-inngang   { background: #162035; color: #60a5fa; }
-.t-leie      { background: #251d0d; color: #fbbf24; }
-.t-kaffe     { background: #1e1010; color: #f87171; }
-.t-drikke    { background: #131828; color: #a5b4fc; }
-.t-bursdag   { background: #1f1228; color: #e879f9; }
-.t-utstyr    { background: #1a1a28; color: #94a3b8; }
-.t-mat       { background: #1a1a28; color: #fb923c; }
-.t-bedrift   { background: #0d1a14; color: #34d399; }
-.t-snacks    { background: #1a1a1a; color: #94a3b8; }
+.t-inngang { background: #162035; color: #60a5fa; }
+.t-leie { background: #251d0d; color: #fbbf24; }
+.t-kaffe { background: #1e1010; color: #f87171; }
+.t-drikke { background: #131828; color: #a5b4fc; }
+.t-bursdag { background: #1f1228; color: #e879f9; }
+.t-utstyr { background: #1a1a28; color: #94a3b8; }
+.t-mat { background: #1a1a28; color: #fb923c; }
+.t-bedrift { background: #0d1a14; color: #34d399; }
+.t-snacks { background: #1a1a1a; color: #94a3b8; }
 .abonnement-section { margin-top: 20px; }
 .abonnement-header { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: #111a11; border: 1px solid #1e3a1e; border-radius: 10px 10px 0 0; font-size: 12px; color: #86efac; }
 .abonnement-header strong { font-size: 13px; }
@@ -104,39 +102,24 @@ tfoot td { padding: 10px; border-top: 1px solid #2e3250; font-weight: 600; color
 .members-table tfoot td { padding: 7px 8px; border-top: 1px solid #1e3a1e; color: #86efac; font-weight: 600; font-size: 12.5px; }
 .members-table .num { text-align: right; font-variant-numeric: tabular-nums; }
 .members-table .highlight { color: #fff; font-weight: 600; }
-@media (max-width: 900px) { .members-panel { grid-template-columns: 1fr; } .kpi-row-4, .kpi-row-3 { grid-template-columns: 1fr 1fr; } .two-col { grid-template-columns: 1fr; } .bursdag-grid, .bursdag-mtd { grid-template-columns: 1fr 1fr; } .content { padding: 16px; } }
+@media (max-width: 900px) { .members-panel { grid-template-columns: 1fr; } .kpi-row-4 { grid-template-columns: 1fr 1fr; } .two-col { grid-template-columns: 1fr; } .bursdag-grid, .bursdag-mtd { grid-template-columns: 1fr 1fr; } .content { padding: 16px; } }
 </style>
 </head>
 <body>
 <div class="header">
-  <div>
-    <h1 id="h-tittel">Playground â€” Salg</h1>
-    <div class="sub" id="h-sub"></div>
-  </div>
+  <div><h1 id="h-tittel">Playground â€” Salg</h1><div class="sub" id="h-sub"></div></div>
   <div class="badge" id="h-badge"></div>
 </div>
 <div class="content">
-  <div class="section-label label-drift">âš¡ Daglig drift</div>
+  <div class="section-label label-drift">&#9889; Daglig drift</div>
   <div class="kpi-row kpi-row-4" id="drift-kpis"></div>
   <div id="merknad-wrap"></div>
-  <div class="section-label label-bursdag">ğŸ‚ Bursdager</div>
+  <div class="section-label label-bursdag">&#127874; Bursdager</div>
   <div class="bursdag-panel">
     <div class="bursdag-grid">
-      <div class="bursdag-stat">
-        <div class="bursdag-big" id="b-uke"></div>
-        <div class="bursdag-small-label" id="b-uke-label"></div>
-        <div class="bursdag-sub">Arrangementsprodukt</div>
-      </div>
-      <div class="bursdag-stat bursdag-divider">
-        <div class="bursdag-big" id="b-mnd-ant"></div>
-        <div class="bursdag-small-label" id="b-mnd-label"></div>
-        <div class="bursdag-sub" id="b-mnd-snitt"></div>
-      </div>
-      <div class="bursdag-stat bursdag-divider">
-        <div class="bursdag-big"><sup style="font-size:18px;color:#a855f7">NOK </sup><span id="b-mnd-sum"></span></div>
-        <div class="bursdag-small-label">Bursdagsomsetning MTD</div>
-        <div class="bursdag-sub">Inkl. tilvalg og ekstra deltakere</div>
-      </div>
+      <div class="bursdag-stat"><div class="bursdag-big" id="b-uke"></div><div class="bursdag-small-label" id="b-uke-label"></div><div class="bursdag-sub">Arrangementsprodukt</div></div>
+      <div class="bursdag-stat bursdag-divider"><div class="bursdag-big" id="b-mnd-ant"></div><div class="bursdag-small-label" id="b-mnd-label"></div><div class="bursdag-sub" id="b-mnd-snitt"></div></div>
+      <div class="bursdag-stat bursdag-divider"><div class="bursdag-big"><sup style="font-size:18px;color:#a855f7">NOK </sup><span id="b-mnd-sum"></span></div><div class="bursdag-small-label">Bursdagsomsetning MTD</div><div class="bursdag-sub">Inkl. tilvalg og ekstra deltakere</div></div>
     </div>
     <div class="bursdag-types" id="b-typer"></div>
     <div class="bursdag-mtd">
@@ -146,7 +129,7 @@ tfoot td { padding: 10px; border-top: 1px solid #2e3250; font-weight: 600; color
     </div>
     <div class="bursdag-bookings" id="b-bookings"></div>
   </div>
-  <div class="section-label label-drift">ğŸ“Š Driftsomsetning i dag (ekskl. abonnementer)</div>
+  <div class="section-label label-drift">&#128202; Driftsomsetning i dag (ekskl. abonnementer)</div>
   <div class="two-col">
     <div class="card"><div class="card-title" id="cat-chart-title">Omsetning etter kategori</div><canvas id="catChart"></canvas></div>
     <div class="card"><div class="card-title">Topp 8 produkter (ekskl. abonnementer)</div><div id="topProds"></div></div>
@@ -154,17 +137,17 @@ tfoot td { padding: 10px; border-top: 1px solid #2e3250; font-weight: 600; color
   <div class="card" style="margin-bottom:20px;">
     <div class="card-title" id="drift-table-title">Alle driftsprodukter</div>
     <div style="overflow-x:auto"><table>
-      <thead><tr><th>Kategori</th><th>Produkt</th><th class="num" id="th-qty-i"></th><th class="num" id="th-rev-i"></th><th class="num" id="th-qty-p"></th><th class="num" id="th-rev-p"></th><th class="num">Î”</th></tr></thead>
+      <thead><tr><th>Kategori</th><th>Produkt</th><th class="num" id="th-qty-i"></th><th class="num" id="th-rev-i"></th><th class="num" id="th-qty-p"></th><th class="num" id="th-rev-p"></th><th class="num">&#916;</th></tr></thead>
       <tbody id="driftBody"></tbody>
       <tfoot><tr><td colspan="2">Totalt drift</td><td class="num" id="d-qty-t"></td><td class="num" id="d-rev-t"></td><td class="num" id="d-qty-p"></td><td class="num" id="d-rev-p"></td><td class="num" id="d-delta"></td></tr></tfoot>
     </table></div>
   </div>
   <div class="abonnement-section">
-    <div class="section-label label-abonnement">ğŸ”„ Abonnementer</div>
+    <div class="section-label label-abonnement">&#128260; Abonnementer</div>
     <div class="members-panel">
       <div class="members-hero"><div class="members-big" id="m-big"></div><div class="members-sub">Aktive abonnementer</div><div class="members-delta" id="m-delta"></div><div class="members-vs" id="m-vs"></div></div>
       <div><table class="members-table">
-        <thead><tr><th>Abonnementstype</th><th class="num" id="m-th-curr"></th><th class="num">1. mnd</th><th class="num">Î”</th></tr></thead>
+        <thead><tr><th>Abonnementstype</th><th class="num" id="m-th-curr"></th><th class="num">1. mnd</th><th class="num">&#916;</th></tr></thead>
         <tbody id="abTyperBody"></tbody>
         <tfoot><tr><td>Totalt aktive</td><td class="num" id="m-tot-curr"></td><td class="num" id="m-tot-prev"></td><td class="num" id="m-tot-delta"></td></tr></tfoot>
       </table></div>
@@ -174,31 +157,31 @@ tfoot td { padding: 10px; border-top: 1px solid #2e3250; font-weight: 600; color
 </div>
 <script>
 const D = /* DATA_START */{
-  "dag": "sÃ¸ndag",
-  "dato_lang": "17. mai 2026",
-  "dato_kort": "17/5",
-  "generert": "18. mai 2026",
-  "prev_dag": "sÃ¸ndag",
-  "prev_dato_lang": "10. mai 2026",
-  "prev_dato_kort": "10/5",
-  "dropins": 0,
-  "dropins_prev": 138,
-  "inngang": 0,
-  "inngang_prev": 22188,
-  "leie": 0,
-  "leie_prev": 5970,
-  "driftsomsetning": 14150,
-  "driftsomsetning_prev": 44400,
-  "merknad": "17. mai (Grunnlovsdagen) â€” Playground var stengt. Kun forhÃ¥ndsbestilte kurs og abonnementsfornyelser er registrert.",
+  "dag": "mandag",
+  "dato_lang": "18. mai 2026",
+  "dato_kort": "18/5",
+  "generert": "19. mai 2026",
+  "prev_dag": "mandag",
+  "prev_dato_lang": "11. mai 2026",
+  "prev_dato_kort": "11/5",
+  "dropins": 51,
+  "dropins_prev": 48,
+  "inngang": 8568,
+  "inngang_prev": 10707,
+  "leie": 965,
+  "leie_prev": 1600,
+  "driftsomsetning": 42794,
+  "driftsomsetning_prev": 31329,
+  "merknad": null,
   "bursdager": [],
-  "bursdag_uke": 10,
-  "bursdag_mnd_antall": 20,
-  "bursdag_mnd_sum": 50432,
-  "bursdag_mnd_label": "1â€“17. mai",
+  "bursdag_uke": 4,
+  "bursdag_mnd_antall": 24,
+  "bursdag_mnd_sum": 57155,
+  "bursdag_mnd_label": "1â€“18. mai",
   "bursdag_typer": [
     {
       "navn": "Hopp i HÃ¸yden",
-      "antall": 11
+      "antall": 15
     },
     {
       "navn": "Skate & Scoot",
@@ -213,128 +196,258 @@ const D = /* DATA_START */{
       "antall": 1
     }
   ],
-  "bursdag_prev_periode": "April 1â€“17",
-  "bursdag_prev_antall": 19,
+  "bursdag_prev_periode": "April 1-18",
+  "bursdag_prev_antall": 20,
   "bursdag_prev_sum": 43603,
   "aktive_ab": 692,
-  "aktive_ab_mnd_start": 692,
+  "aktive_ab_mnd_start": 659,
   "ab_typer": [],
   "produkter": [
     {
-      "g": "Ettermiddagsskole",
-      "p": "HÃ¸st 2026 Klatreskole 10 - 13 Ã¥r",
+      "g": "Kaffe",
+      "p": "Americano dobbel",
       "qty": 1,
-      "v": 3338.53,
+      "v": 30,
       "qty_prev": 0,
       "v_prev": 0
     },
     {
-      "g": "Ettermiddagsskole",
-      "p": "HÃ¸st 2026 Klatreskole 13 - 15 Ã¥r",
-      "qty": 1,
-      "v": 3338.53,
-      "qty_prev": 0,
-      "v_prev": 0
-    },
-    {
-      "g": "Medlemskap",
-      "p": "Ettermiddagsskole-Medlemskap",
-      "qty": 1,
-      "v": 222.32,
+      "g": "Bursdag Trampoline & nettpark",
+      "p": "Bursdag Hopp i HÃ¸yden",
+      "qty": 4,
+      "v": 5711,
       "qty_prev": 1,
-      "v_prev": 222.32
+      "v_prev": 1428
     },
     {
-      "g": "Medlemskap",
-      "p": "Medlemskap",
+      "g": "Inngang",
+      "p": "Custom Inngang",
       "qty": 1,
-      "v": 490.18,
+      "v": 1471,
       "qty_prev": 2,
-      "v_prev": 882.14
+      "v_prev": 3964
     },
     {
-      "g": "Medlemskap",
-      "p": "MÃ¥nedlig Abonnement",
-      "qty": 6,
-      "v": 2744.64,
-      "qty_prev": 7,
-      "v_prev": 3565.19
+      "g": "Butikk",
+      "p": "Custom Produkt",
+      "qty": 1,
+      "v": 23,
+      "qty_prev": 0,
+      "v_prev": 0
     },
     {
-      "g": "Medlemskap",
-      "p": "MÃ¥nedlig Abonnement Dagtid",
-      "qty": 2,
-      "v": 623.22,
-      "qty_prev": 3,
-      "v_prev": 934.83
+      "g": "Kaffe",
+      "p": "Dagens Kaffe Medlem",
+      "qty": 4,
+      "v": 80,
+      "qty_prev": 0,
+      "v_prev": 0
     },
     {
-      "g": "Medlemskap",
-      "p": "MÃ¥nedlig Abonnement Familiemedlemskap",
-      "qty": 3,
-      "v": 2501.79,
-      "qty_prev": 4,
-      "v_prev": 3532.14
-    },
-    {
-      "g": "Medlemskap",
-      "p": "MÃ¥nedlig Abonnement Student/Barn/Pensjonist/Vernepliktig",
-      "qty": 2,
-      "v": 891.08,
+      "g": "Inngang",
+      "p": "Dropin Dagtid (10-16 ukedager)",
+      "qty": 5,
+      "v": 710,
       "qty_prev": 5,
-      "v_prev": 2227.7
-    }
-  ],
-  "ab_produkter": []
-}/* DATA_END */;
-const fmtN=n=>Math.round(n).toLocaleString('no-NO');
-const fmtK=n=>{if(n>=1000)return(n/1000).toFixed(1).replace('.',',')+' k';return fmtN(n);};
-const pct=(a,b)=>b?(((a-b)/b)*100).toFixed(1):'â€”';
-const dSpan=(a,b)=>{const d=a-b,p=pct(a,b),cls=d>=0?'up':'down',arr=d>=0?'â†‘':'â†“',s=d>=0?'+':'âˆ’';return`<span class="${cls}">${arr} ${s}${Math.abs(d)>0?Math.abs(d)+'&nbsp;':''}(${d>=0?'+':''}${p}%)</span>`;};
-const nSpan=(a,b)=>{const d=a-b,p=pct(a,b),cls=d>=0?'up':'down',arr=d>=0?'â†‘':'â†“',s=d>=0?'+':'âˆ’';return`<span class="${cls}">${arr} ${s}NOK ${fmtN(Math.abs(d))} (${d>=0?'+':''}${p}%)</span>`;};
-const CC={'Inngang':'#60a5fa','Leie av Utstyr':'#fbbf24','Kaffe':'#f87171','Bursdag':'#e879f9','Drikke':'#a5b4fc','Mat & Drikke':'#fb923c','Snacks':'#94a3b8','Bedrift':'#34d399','Utstyr':'#c084fc'};
-const cc=g=>CC[g]||'#6b7280';
-const ct=g=>{const m={'Inngang':'t-inngang','Leie av Utstyr':'t-leie','Kaffe':'t-kaffe','Bursdag':'t-bursdag','Drikke':'t-drikke','Mat & Drikke':'t-mat','Snacks':'t-snacks','Bedrift':'t-bedrift','Utstyr':'t-utstyr'};return`<span class="tag ${m[g]||''}">${g}</span>`;};
-document.title=`Playground â€” Salg ${D.dag} ${D.dato_lang}`;
-document.getElementById('h-tittel').textContent=`Playground â€” Salg ${D.dag} ${D.dato_lang}`;
-document.getElementById('h-sub').textContent=`Fullstendig dagsomsetning Â· Generert ${D.generert}`;
-document.getElementById('h-badge').textContent=`â” vs. ${D.prev_dag} ${D.prev_dato_lang}`;
-const sn=D.dropins?Math.round(D.driftsomsetning/D.dropins):0,snp=D.dropins_prev?Math.round(D.driftsomsetning_prev/D.dropins_prev):0;
-document.getElementById('drift-kpis').innerHTML=[{l:'Drop-ins',v:fmtN(D.dropins),d:dSpan(D.dropins,D.dropins_prev),m:`vs ${fmtN(D.dropins_prev)} forrige ${D.prev_dag}`},{l:'Inngang omsetning',v:`<sup>NOK </sup>${fmtN(D.inngang)}`,d:nSpan(D.inngang,D.inngang_prev),m:`vs ${fmtN(D.inngang_prev)} forrige ${D.prev_dag}`},{l:'Leie av utstyr',v:`<sup>NOK </sup>${fmtN(D.leie)}`,d:nSpan(D.leie,D.leie_prev),m:`vs ${fmtN(D.leie_prev)} forrige ${D.prev_dag}`},{l:'Snitt per drop-in',v:`<sup>NOK </sup>${fmtN(sn)}`,d:nSpan(sn,snp),m:`vs ${fmtN(snp)} forrige ${D.prev_dag}`}].map(k=>`<div class="kpi drift-card"><div class="kpi-label">${k.l}</div><div class="kpi-value">${k.v}</div><div class="kpi-delta">${k.d}<span class="muted">${k.m}</span></div></div>`).join('');
-if(D.merknad)document.getElementById('merknad-wrap').innerHTML=`<div class="warn-banner">âš ï¸ <strong>Merknad:</strong> ${D.merknad}</div>`;
-document.getElementById('b-uke').textContent=D.bursdag_uke;
-document.getElementById('b-uke-label').textContent=`Denne uken (manâ€“${D.dag})`;
-document.getElementById('b-mnd-ant').textContent=D.bursdag_mnd_antall;
-document.getElementById('b-mnd-label').textContent=D.bursdag_mnd_label;
-const bs=D.bursdag_mnd_antall?Math.round(D.bursdag_mnd_sum/D.bursdag_mnd_antall):0;
-document.getElementById('b-mnd-snitt').textContent=`Snitt NOK ${fmtN(bs)} inkl. tilvalg`;
-document.getElementById('b-mnd-sum').textContent=fmtN(D.bursdag_mnd_sum);
-document.getElementById('b-typer').innerHTML=D.bursdag_typer.map(t=>`<div class="btype"><div class="btype-name">${t.navn}</div><div class="btype-count">${t.antall} <span style="font-size:13px;color:#6b7280;font-weight:400">denne mnd.</span></div></div>`).join('');
-document.getElementById('b-prev-periode').textContent=D.bursdag_prev_periode;
-document.getElementById('b-prev-ant').textContent=`${D.bursdag_prev_antall} bursdager`;
-document.getElementById('b-prev-sum').textContent=`NOK ${fmtN(D.bursdag_prev_sum)} Â· snitt ${fmtN(D.bursdag_prev_antall?Math.round(D.bursdag_prev_sum/D.bursdag_prev_antall):0)}`;
-document.getElementById('b-curr-periode').textContent=D.bursdag_mnd_label;
-document.getElementById('b-curr-ant').textContent=`${D.bursdag_mnd_antall} bursdager`;
-document.getElementById('b-curr-sum').textContent=`NOK ${fmtN(D.bursdag_mnd_sum)} Â· snitt ${fmtN(bs)}`;
-const bDA=D.bursdag_mnd_antall-D.bursdag_prev_antall,bDS=D.bursdag_mnd_sum-D.bursdag_prev_sum;
-document.getElementById('b-delta-ant').className=`bmtd-delta ${bDA>=0?'up':'down'}`;
-document.getElementById('b-delta-ant').innerHTML=`${bDA>=0?'â†‘':'â†“'} ${bDA>=0?'+':''}${bDA} arrangementer (${bDA>=0?'+':''}${D.bursdag_prev_antall?((bDA/D.bursdag_prev_antall)*100).toFixed(1):0}%)`;
-document.getElementById('b-delta-sum').innerHTML<`<span class="${bDS>=0?'up':'down'}">${bDS>=0?'â†‘':'â†“'} ${bDS>=0?'+':'âˆ’'}NOK ${fmtN(Math.abs(bDS))} (${bDS>=0?'+':''}${D.bursdag_prev_sum?((bDS/D.bursdag_prev_sum)*100).toFixed(1):0}%)</span> omsetning`;
-document.getElementById('b-bookings').innerHTML=D.bursdager&&D.bursdager.length>0?D.bursdager.map(b=>`<div class="booking-row"><span class="booking-produkt">${b.produkt}</span><span class="booking-kunde">${b.kunde}</span><span class="booking-rom">${b.rom}</span><span class="booking-tid">${b.tid}</span></div>`).join(''):`<div class="no-bursdag">Ingen bursdag-bookinger i dag</div>`;
-document.getElementById('cat-chart-title').textContent=`Omsetning etter kategori â€” ${D.dato_lang}`;
-const cm={};D.produkter.forEach(p=>{cm[p.g]=(cm[p.g]||0)+p.v;});const cs=Object.entries(cm).sort((a,b)=>b[1]-a[1]);
-new Chart(document.getElementById('catChart'),{type:'doughnut',data:{labels:cs.map(c=>c[0]),datasets:[{data:cs.map(c=>c[1]),backgroundColor:cs.map(c=>cc(c[0])),borderColor:'#0f1117',borderWidth:2,hoverOffset:6}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{color:'#8890a8',font:{size:11},boxWidth:10,padding:12}},tooltip:{callbacks:{label:c=>`${c.label}: NOK ${fmtN(c.raw)} (${((c.raw/cs.reduce((s,x)=>s+x[1],0))*100).toFixed(1)}%)`}}}}});
-const t8=[...D.produkter].sort((a,b)=>b.v-a.v).slice(0,8),mx=t8[0]?.v||1;
-document.getElementById('topProds').innerHTML=t8.map((p,i)=>`<div class="pbar"><span class="pbar-rank">${i+1}</span><span class="pbar-name" title="${p.p}">${p.p}</span><div class="pbar-track"><div class="pbar-fill" style="width:${(p.v/mx*100).toFixed(1)}%;background:${cc(p.g)}"></div></div><span class="pbar-val">NOK ${fmtK(p.v)}</span></div>`).join('');
-document.getElementById('drift-table-title').textContent=`Alle driftsprodukter â€” ${D.dato_lang} vs. ${D.prev_dato_lang}`;
-document.getElementById('th-qty-i').textContent=`Ant. ${D.dato_kort}`;document.getElementById('th-rev-i').textContent=`Omsetn. ${D.dato_kort}`;document.getElementById('th-qty-p').textContent=`Ant. ${D.prev_dato_kort}`;document.getElementById('th-rev-p').textContent=`Omsetn. ${D.prev_dato_kort}`;
-let tQ=0,tR=0,tQP=0,tRP=0;
-document.getElementById('driftBody').innerHTML=D.produkter.map(p=>{tQ+=p.qty;tR+=p.v;tQP+=(p.qty_prev||0);tRP+=(p.v_prev||0);const d=p.v-(p.v_prev||0),cls=d>0?'up':d<0?'down':'muted',s=d>=0?'+':'âˆ’';return`<tr><td>${ct(p.g)}</td><td>${p.p}</td><td class="num">${p.qty}</td><td class="num">NOK ${fmtN(p.v)}</td><td class="num">${p.qty_prev||'â€”'}</td><td class="num">${p.v_prev?'NOK '+fmtN(p.v_prev):'â€”'}</td><td class="num"><span class="${cls}">${p.v_prev?s+'NOK '+fmtN(Math.abs(d)):'â€”'}</span></td></tr>`;}).join('');
-document.getElementById('d-qty-t').textContent=tQ;document.getElementById('d-rev-t').textContent=`NOK ${fmtN(tR)}`;document.getElementById('d-qty-p').textContent=tQP||'â€”';document.getElementById('d-rev-p').textContent=tRP?`NOK ${fmtN(tRP)}`:'â€”';const td=tR-tRP;document.getElementById('d-delta').innerHTML=tRP?`<span class="${td>=0?'up':'down'}">${td>=0?'+':'âˆ’'}NOK ${fmtN(Math.abs(td))}</span>`:'â€”';
-document.getElementById('m-big').textContent=D.aktive_ab;const aD=D.aktive_ab-D.aktive_ab_mnd_start;document.getElementById('m-delta').innerHTML=`<span class="${aD>=0?'up':'down'}">${aD>=0?'â†‘':'â†“'} ${aD>=0?'+':''}${aD} (${((aD/D.aktive_ab_mnd_start)*100).toFixed(1)}%)</span>`;document.getElementById('m-vs').textContent=`vs. ${fmtN(D.aktive_ab_mnd_start)} per 1. mnd`;document.getElementById('m-th-curr').textContent=D.dato_lang;
-document.getElementById('abTyperBody').innerHTML=D.ab_typer.map(t=>{const d=t.antall-t.forrige;return`<tr><td>${t.navn}</td><td class="num highlight">${t.antall}</td><td class="num">${t.forrige}</td><td class="num ${d>=0?'up':'down'}">${d>=0?'+':''}${d}</td></tr>`;}).join('');
-const tA=D.ab_typer.reduce((s,t)=>s+t.antall,0),tAP=D.ab_typer.reduce((s,t)=>s+t.forrige,0),tAD=tA-tAP;document.getElementById('m-tot-curr').textContent=D.aktive_ab;document.getElementById('m-tot-prev').textContent=D.aktive_ab_mnd_start;document.getElementById('m-tot-delta').innerHTML<`<span class="${tAD>=0?'up':'down'}">${tAD>=0?'+':''}${tAD}</span>`;
-if(D.ab_produkter&&D.ab_produkter.length>0){const aS=D.ab_produkter.reduce((s,p)=>s+p.v,0),aSP=D.ab_produkter.reduce((s,p)=>s+(p.v_prev||0),0),aQ=D.ab_produkter.reduce((s,p)=>s+p.qty,0),aQP=D.ab_produkter.reduce((s,p)=>s+(p.qty_prev||0),0);document.getElementById('ab-fornyelser-wrap').innerHTML=`<div class="abonnement-header"><div><strong>RCP-fornyelser ${D.dato_lang} â€” NOK ${fmtN(aS)}</strong><div class="abonnement-note">Treffer tilfeldig pÃ¥ ulike dager og reflekterer ikke daglig drift direkte</div></div><div style="margin-left:auto;text-align:right"><div style="font-size:11px;color:#4a7a4a;">vs. ${D.prev_dato_lang}</div><div style="font-size:14px;font-weight:600;color:#86efac;">NOK ${fmtN(aSP)}</div></div></div><div class="abonnement-table-wrap"><table><thead><tr><th>Produkt</th><th class="num">Ant. ${D.dato_kort}</th><th class="num">Omsetn. ${D.dato_kort}</th><th class="num">Ant. ${D.prev_dato_kort}</th><th class="num">Omsetn. ${D.prev_dato_kort}</th></tr></thead><tbody>${D.ab_produkter.map(p=>`<tr><td>${p.p}</td><td class="num">${p.qty}</td><td class="num">NOK ${fmtN(p.v)}</td><td class="num">${p.qty_prev||'â€”'}</td><td class="num">${p.v_prev?'NOK '+fmtN(p.v_prev):'â€”'}</td></tr>`).join('')}</tbody><tfoot><tr><td>Totalt abonnementer</td><td class="num">${aQ}</td><td class="num">NOK ${fmtN(aS)}</td><td class="num">${aQP||'â€”'}</td><td class="num">${aSP?'NOL '+fmtN(aSP):'â€”'}</td></tr></tfoot></table></div>`;}
-</script>
-</body>
-</html>
+      "v_prev": 710
+    },
+    {
+      "g": "Inngang",
+      "p": "Dropin Student/Barn/Pensjonist/Vernepliktig",
+      "qty": 19,
+      "v": 2555,
+      "qty_prev": 15,
+      "v_prev": 2103
+    },
+    {
+      "g": "Inngang",
+      "p": "Dropin Voksen",
+      "qty": 25,
+      "v": 3386,
+      "qty_prev": 25,
+      "v_prev": 3484
+    },
+    {
+      "g": "Bursdag Trampoline & nettpark",
+     œˆ‘ZÜİ˜H[ZÙ\ˆÜH0îY[ˆ‹ˆœ]Hˆ‹ˆˆˆLLËˆœ]WÜ™]ˆˆ‹ˆ—Ü™]ˆˆLLÂˆKˆÂˆ™Èˆ™YšY‹ˆœˆ‘\]Z[›Üˆ‹ˆœ]Hˆ‹ˆˆˆMMKˆœ]WÜ™]ˆˆËˆ—Ü™]ˆˆÎˆKˆÂˆ™Èˆ“YY[\ÚØ\‹ˆœˆ‘]\›ZYYÜÜÚÛÛKSYY[\ÚØ\‹ˆœ]HˆKˆˆˆŒŒ‹ˆœ]WÜ™]ˆˆ‹ˆ—Ü™]ˆˆBˆKˆÂˆ™Èˆ“YY[\ÚØ\‹ˆœˆ‘˜[Z[YNˆ[›İ[YL	HHÈ[™‹ˆœ]HˆKˆˆˆNKˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆ™Èˆ‘šZÚÙH‹ˆœˆ‘˜[H‹ˆœ]HˆKˆˆˆˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆ™Èˆ‘šZÚÙH‹ˆœˆ‘œZİÛYZÚÈ[X›Û\İ
+ÈÚ]›Ûˆ‹ˆœ]HˆKˆˆˆM‹ˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆ™Èˆ‘]\›ZYYÜÜÚÛÛH‹ˆœˆ’0îİŒˆÛ]™\ÚÛÛHLHLÈ0é\ˆ‹ˆœ]HˆKˆˆˆÎLˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆ™Èˆ‘]\›ZYYÜÜÚÛÛH‹ˆœˆ’0îİŒˆÛ]™\ÚÛÛHLÈHMH0é\ˆ‹ˆœ]HˆËˆˆˆLŒKˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆ™Èˆ‘]\›ZYYÜÜÚÛÛH‹ˆœˆ’0îİŒˆØÛÛİÚÛÛHLLMH0é\ˆ‹ˆœ]HˆKˆˆˆÌÌÎKˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆ™Èˆ”Ü\šÙ\ŞZÚÙ[‹ˆœˆ’[™ÈÚXÚÜİ\˜[\Û[™HØÛÛİ‹ˆœ]HˆKˆˆˆÎNKˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆ™Èˆ’[›™Ø[™È‹ˆœˆ’[›™Ø[™È˜[Z[YH‹ˆœ]HˆKˆˆˆ‹ˆœ]WÜ™]ˆˆKˆ—Ü™]ˆˆ‚ˆKˆÂˆ™Èˆ‘ZÜİ˜HX]	ˆšZÚÙH‹ˆœˆ’Ú°îZYÜ^˜HHÛH
+ËM\œÊH‹ˆœ]Hˆ‹ˆˆˆÎNˆœ]WÜ™]ˆˆ‹ˆ—Ü™]ˆˆÎNˆKˆÂˆ™Èˆ”Û˜XÚÜÈ‹ˆœˆ’İšZÚÛ[œÚˆ‹ˆœ]HˆKˆˆˆŒËˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆ™Èˆ“ZYH]ˆ]İ\ˆ‹ˆœˆ“ZYH]ˆÛ]™\Ù[H‹ˆœ]HˆKˆˆˆŒËˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆ™Èˆ“ZYH]ˆ]İ\ˆ‹ˆœˆ“ZYH]ˆÛ]™\Ù[H	ˆÛ]™\ÚÛÈ‹ˆœ]Hˆ‹ˆˆˆÎM‹ˆœ]WÜ™]ˆˆL‹ˆ—Ü™]ˆˆMLˆKˆÂˆ™Èˆ“ZYH]ˆ]İ\ˆ‹ˆœˆ“ZYH]ˆÛ]™\ÚÛÈ‹ˆœ]HˆKˆˆˆL‹ˆœ]WÜ™]ˆˆKˆ—Ü™]ˆˆLBˆKˆÂˆ™Èˆ“YY[\ÚØ\‹ˆœˆ“YY[\ÚØ\‹ˆœ]HˆKˆˆˆLˆœ]WÜ™]ˆˆKˆ—Ü™]ˆˆLˆKˆÂˆ™Èˆ‘ZÜİ˜HX]	ˆšZÚÙH‹ˆœˆ“Üİ\^˜HHÛH
+ËM\œÊH‹ˆœ]HˆˆˆˆÍKˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆ™Èˆ‘ZÜİ˜HX]	ˆšZÚÙH‹ˆœˆ”\\›Ûš\^˜HHÛH
+ËM\œÊH‹ˆœ]HˆKˆˆˆNM‹ˆœ]WÜ™]ˆˆKˆ—Ü™]ˆˆNNBˆKˆÂˆ™Èˆ‘šZÚÙH‹ˆœˆ”İÙ\˜YH‹ˆœ]Hˆ‹ˆˆˆŒ‹ˆœ]WÜ™]ˆˆËˆ—Ü™]ˆˆMˆKˆÂˆ™Èˆ’[›™Ø[™È‹ˆœˆ”š]˜][YH‹ˆœ]HˆKˆˆˆLÍKˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆ™Èˆ’\È‹ˆœˆ”›ŞX[‹ˆœ]HˆKˆˆˆÌˆœ]WÜ™]ˆˆKˆ—Ü™]ˆˆˆKˆÂˆ™Èˆ”[™Û™H‹ˆœˆ”[™Û™HXYÙ\İİ\\™H‹ˆœ]HˆKˆˆˆMLˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆ™Èˆ”[™Û™H‹ˆœˆ”[™Û™HXYÛ\È›ÚÈ‹ˆœ]HˆKˆˆˆÍLKˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆ™Èˆ”ØØ\œH‹ˆœˆ”ØØ\œH™[ØÙH‹ˆœ]HˆKˆˆˆMÍNKˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆ™Èˆ‘ZÜİ˜HX]	ˆšZÚÙH‹ˆœˆ”ÚÚ[šÙ\^˜HHÛH
+ËM\œÊH‹ˆœ]Hˆ‹ˆˆˆÎNˆœ]WÜ™]ˆˆKˆ—Ü™]ˆˆNNBˆKˆÂˆ™Èˆ‘šZÚÙH‹ˆœˆ”Û\Ú‹ˆœ]HˆËˆˆˆMˆœ]WÜ™]ˆˆËˆ—Ü™]ˆˆNÂˆKˆÂˆ™Èˆ‘ZÜİ˜HX]	ˆšZÚÙH‹ˆœˆ”Û\Ú\œÙYÈ‹ˆœ]HˆˆˆˆN‹ˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆ™Èˆ‘šZÚÙH‹ˆœˆ•[[X\šÈ
+YYİ[Ş\™JH‹ˆœ]Hˆ‹ˆˆˆŒ‹ˆœ]WÜ™]ˆˆ‹ˆ—Ü™]ˆˆŒ‚ˆKˆÂˆ™Èˆ‘šZÚÙH‹ˆœˆ•[[X\šÈ
+][ˆİ[Ş\™JH‹ˆœ]HˆKˆˆˆÌKˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆBˆKˆ˜X—Ü›ÙZİ\ˆˆÂˆÂˆœˆ“pé[™YYÈX›Û›™[Y[‹ˆœ]HˆˆˆˆÎLŒKˆœ]WÜ™]ˆˆËˆ—Ü™]ˆˆÌLÍÂˆKˆÂˆœˆ“pé[™YYÈX›Û›™[Y[YİY‹ˆœ]HˆKˆˆˆÌL‹ˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆœˆ“pé[™YYÈX›Û›™[Y[˜[Z[Y[YY[\ÚØ\‹ˆœ]HˆËˆˆˆMLKˆœ]WÜ™]ˆˆˆ—Ü™]ˆˆˆKˆÂˆœˆ“pé[™YYÈX›Û›™[Y[İY[Ğ˜\›‹Ô[œÚ›Ûš\İÕ™\›™\ZİYÈ‹ˆœ]HˆKˆˆˆŒLÎˆœ]WÜ™]ˆˆËˆ—Ü™]ˆˆLLMˆBˆBŸKÊˆUWÑS‘
+‹ÎÂ˜ÛÛœİ›][O“X]œ›İ[™
+ŠKÓØØ[Tİš[™Ê	Û›ËS“ÉÊNÂ˜ÛÛœİ›]Ï[OÚYŠLL
+\™]\›Š‹ÌL
+KÑš^Y
+JKœ™\XÙJ	Ë‰Ë	Ë	ÊJÉÈÉÎÜ™]\›ˆ›]ŠŠNßNÂ˜ÛÛœİİJKŠOO˜Ê
+
+KXŠKØŠJŒL
+KÑš^Y
+JN‰ÌŒ	ÎÂ˜ÛÛœİÜ[JKŠOOØÛÛœİXKX‹\İ
+KŠKÛÏYLÉİ\	Î‰ÙİÛ‰Ë\œYLÉÉˆÎNLÎÉÎ‰ÉˆÎNMNÉËÏYLÉÊÉÎ‰ÉˆÎÌŒÉÎÜ™]\›˜Ü[ˆÛ\ÜÏH‰ØÛßH‰Ø\œŸH	ÜßIÓX]˜XœÊ
+_H
+	ÙLÉÊÉÎ‰ÉßIÜIJOÜÜ[˜ßNÂ˜ÛÛœİ”Ü[JKŠOOØÛÛœİXKX‹\İ
+KŠKÛÏYLÉİ\	Î‰ÙİÛ‰Ë\œYLÉÉˆÎNLÎÉÎ‰ÉˆÎNMNÉËÏYLÉÊÉÎ‰ÉˆÎÌŒÉÎÜ™]\›˜Ü[ˆÛ\ÜÏH‰ØÛßH‰Ø\œŸH	ÜßS“ÒÈ	Ù›]ŠX]˜XœÊ
+J_H
+	ÙLÉÊÉÎ‰ÉßIÜIJOÜÜ[˜ßNÂ˜ÛÛœİĞÏ^ÉÒ[›™Ø[™ÉÎ‰ÈÍŒMY˜IË	ÓZYH]ˆ]İ\‰Î‰ÈÙ˜˜™Œ	Ë	ÒØY™™IÎ‰ÈÙÌMÌIË	Ğ\œÙYÈ˜[\Û[™H	ˆ™]\šÉÎ‰ÈÙNÎYIË	ÑšZÚÙIÎ‰ÈØMX˜ÉË	ÑZÜİ˜HX]	ˆšZÚÙIÎ‰ÈÙ˜LŒØÉË	ÔÛ˜XÚÜÉÎ‰ÈÎMLØ	Ë	Ğ™YšY	Î‰ÈÌÍÎNIË	Ñ]\›ZYYÜÜÚÛÛIÎ‰ÈØÌ˜ÉË	ÔÜ\šÙ\ŞZÚÙ[	Î‰ÈÌÎ™	Ë	Ô[™Û™IÎ‰ÈØLÙMŒÍIË	ÔØØ\œIÎ‰ÈÙMÌÌM‰Ë	Ò\ÉÎ‰ÈÍÙNIË	Ğ]ZÚÉÎ‰ÈØNLYIË	ÓYY[\ÚØ\	Î‰ÈÎNÙ	ßNÂ˜ÛÛœİØÏYÏOÙ›ÜŠÛÛœİÈÙˆØš™XİšÙ^\ÊĞÊJ^ÚYŠÉ‰™ËÓİÙ\Ø\ÙJ
+Kš[˜ÛY\ÊËÓİÙ\Ø\ÙJ
+JJ\™]\›ˆĞÖÚ×Nß\™]\›ˆĞÖÙ×_	ÈÍ˜Ì	ÎßNÂ˜ÛÛœİİYÏOØÛÛœİO^ÉÒ[›™Ø[™ÉÎ‰İZ[›™Ø[™ÉË	ÓZYH]ˆ]İ\‰Î‰İ[ZYIË	ÒØY™™IÎ‰İZØY™™IË	Ğ\œÙYÉÎ‰İX\œÙYÉË	ÑšZÚÙIÎ‰İYšZÚÙIË	ÑZÜİ˜HX]	ˆšZÚÙIÎ‰İ[X]	Ë	ÔÛ˜XÚÜÉÎ‰İ\Û˜XÚÜÉË	Ğ™YšY	Î‰İX™YšY	ßNÛ]ÛÏIÉÎÙ›ÜŠÛÛœİÚË—HÙˆØš™Xİ™[šY\ÊJJ^ÚYŠÉ‰™Ëš[˜ÛY\ÊÊJ^ØÛÏ]Øœ™XZÎß_\™]\›˜Ü[ˆÛ\ÜÏHYÈ	ØÛßH‰ÙßOÜÜ[˜ßNÂ™Øİ[Y[]OIÔ^YÜ›İ[™8 %Ø[È	ÊÑ™YÊÉÈ	ÊÑ™]×Û[™ÎÂ™Øİ[Y[™Ù][[Y[RY
+	Ú]][	ÊK^ÛÛ[IÔ^YÜ›İ[™8 %Ø[È	ÊÑ™YÊÉÈ	ÊÑ™]×Û[™ÎÂ™Øİ[Y[™Ù][[Y[RY
+	Ú\İX‰ÊK^ÛÛ[IÑ[İ[™YÈYÜÛÛ\Ù]š[™È0­ÈÙ[™\™\	ÊÑ™Ù[™\™\Â™Øİ[Y[™Ù][[Y[RY
+	ÚX˜YÙIÊK^ÛÛ[Iø§§œËˆ	ÊÑœ™]—ÙYÊÉÈ	ÊÑœ™]—Ù]×Û[™ÎÂ˜ÛÛœİÛQ™›Ü[œÏÓX]œ›İ[™
+™šYÛÛ\Ù]š[™ËÑ™›Ü[œÊNŒÛœQ™›Ü[œ×Ü™]ÓX]œ›İ[™
+™šYÛÛ\Ù]š[™×Ü™]‹Ñ™›Ü[œ×Ü™]ŠNŒÂ™Øİ[Y[™Ù][[Y[RY
+	ÙšYZÜ\ÉÊKš[›™\’SVŞÛ‰Ñ›ÜZ[œÉË™›]Š™›Ü[œÊK™Ü[Š™›Ü[œË™›Ü[œ×Ü™]ŠKN‰İœÈ	ÊÙ›]Š™›Ü[œ×Ü™]ŠJÉÈ›ÜœšYÙH	ÊÑœ™]—ÙYßKÛ‰Ò[›™Ø[™ÈÛ\Ù]š[™ÉË‰Ïİ\““ÒÈÜİ\‰ÊÙ›]Šš[›™Ø[™ÊK›”Ü[Šš[›™Ø[™Ëš[›™Ø[™×Ü™]ŠKN‰İœÈ	ÊÙ›]Šš[›™Ø[™×Ü™]ŠJÉÈ›ÜœšYÙH	ÊÑœ™]—ÙYßKÛ‰ÓZYH]ˆ]İ\‰Ë‰Ïİ\““ÒÈÜİ\‰ÊÙ›]Š›ZYJK›”Ü[Š›ZYK›ZYWÜ™]ŠKN‰İœÈ	ÊÙ›]Š›ZYWÜ™]ŠJÉÈ›ÜœšYÙH	ÊÑœ™]—ÙYßKÛ‰ÔÛš]\ˆ›ÜZ[‰Ë‰Ïİ\““ÒÈÜİ\‰ÊÙ›]ŠÛŠK›”Ü[ŠÛ‹Ûœ
+KN‰İœÈ	ÊÙ›]ŠÛœ
+JÉÈ›ÜœšYÙH	ÊÑœ™]—ÙYßWK›X\
+ÏO‰Ï]ˆÛ\ÜÏHšÜHšYXØ\™]ˆÛ\ÜÏHšÜK[X™[‰ÊÚË›
+ÉÏÙ]]ˆÛ\ÜÏHšÜK]˜[YH‰ÊÚËŠÉÏÙ]]ˆÛ\ÜÏHšÜKY[H‰ÊÚË™
+ÉÏÜ[ˆÛ\ÜÏH›]]Y‰ÊÚË›JÉÏÜÜ[Ù]Ù]‰ÊKš›Ú[Š	ÉÊNÂšYŠ›Y\šÛ˜Y
+YØİ[Y[™Ù][[Y[RY
+	ÛY\šÛ˜Y]Ü˜\	ÊKš[›™\’SIÏ]ˆÛ\ÜÏHØ\›‹X˜[›™\ˆ‰ˆÎNÉˆÍLÎNÈİ›Û™Ï“Y\šÛ˜YÜİ›Û™Ïˆ	ÊÑ›Y\šÛ˜Y
+ÉÏÙ]‰ÎÂ™Øİ[Y[™Ù][[Y[RY
+	Ø‹]ZÙIÊK^ÛÛ[Q˜\œÙY×İZÙNÂ™Øİ[Y[™Ù][[Y[RY
+	Ø‹]ZÙK[X™[	ÊK^ÛÛ[IÑ[›™HZÙ[ˆ
+X[¸ $ÉÊÑ™YÊÉÊIÎÂ™Øİ[Y[™Ù][[Y[RY
+	Ø‹[[™X[	ÊK^ÛÛ[Q˜\œÙY×Û[™Ø[[Â™Øİ[Y[™Ù][[Y[RY
+	Ø‹[[™[X™[	ÊK^ÛÛ[Q˜\œÙY×Û[™ÛX™[Â˜ÛÛœİœÏQ˜\œÙY×Û[™Ø[[ÓX]œ›İ[™
+˜\œÙY×Û[™Üİ[KÑ˜\œÙY×Û[™Ø[[
+NŒÂ™Øİ[Y[™Ù][[Y[RY
+	Ø‹[[™\Ûš]	ÊK^ÛÛ[IÔÛš]“ÒÈ	ÊÙ›]ŠœÊJÉÈ[šÛˆ[˜[ÉÎÂ™Øİ[Y[™Ù][[Y[RY
+	Ø‹[[™\İ[IÊK^ÛÛ[Y›]Š˜\œÙY×Û[™Üİ[JNÂ™Øİ[Y[™Ù][[Y[RY
+	Ø‹]\\‰ÊKš[›™\’SQ˜\œÙY×İ\\‹›X\
+O‰Ï]ˆÛ\ÜÏH˜\H]ˆÛ\ÜÏH˜\K[˜[YH‰Êİ›˜]›ŠÉÏÙ]]ˆÛ\ÜÏH˜\KXÛİ[‰Êİ˜[[
+ÉÈÜ[ˆİ[OH™›Û\Ú^™NŒLÜØÛÛÜˆÍ˜ÌÙ›Û]ÙZYÚ™[›™H[™ÜÜ[Ù]Ù]‰ÊKš›Ú[Š	ÉÊNÂ™Øİ[Y[™Ù][[Y[RY
+	Ø‹\™]‹\\š[ÙIÊK^ÛÛ[Q˜\œÙY×Ü™]—Ü\š[ÙNÂ™Øİ[Y[™Ù][[Y[RY
+	Ø‹\™]‹X[	ÊK^ÛÛ[Q˜\œÙY×Ü™]—Ø[[
+ÉÈ\œÙYÙ\‰ÎÂ™Øİ[Y[™Ù][[Y[RY
+	Ø‹\™]‹\İ[IÊK^ÛÛ[IÓ“ÒÈ	ÊÙ›]Š˜\œÙY×Ü™]—Üİ[JJÉÈ0­ÈÛš]	ÊÙ›]Š˜\œÙY×Ü™]—Ø[[ÓX]œ›İ[™
+˜\œÙY×Ü™]—Üİ[KÑ˜\œÙY×Ü™]—Ø[[
+NŒ
+NÂ™Øİ[Y[™Ù][[Y[RY
+	Ø‹Xİ\œ‹\\š[ÙIÊK^ÛÛ[Q˜\œÙY×Û[™ÛX™[Â™Øİ[Y[™Ù][[Y[RY
+	Ø‹Xİ\œ‹X[	ÊK^ÛÛ[Q˜\œÙY×Û[™Ø[[
+ÉÈ\œÙYÙ\‰ÎÂ™Øİ[Y[™Ù][[Y[RY
+	Ø‹Xİ\œ‹\İ[IÊK^ÛÛ[IÓ“ÒÈ	ÊÙ›]Š˜\œÙY×Û[™Üİ[JJÉÈ0­ÈÛš]	ÊÙ›]ŠœÊNÂ˜ÛÛœİ‘OQ˜\œÙY×Û[™Ø[[Q˜\œÙY×Ü™]—Ø[[‘ÏQ˜\œÙY×Û[™Üİ[KQ˜\œÙY×Ü™]—Üİ[NÂ™Øİ[Y[™Ù][[Y[RY
+	Ø‹Y[KX[	ÊK˜Û\ÜÓ˜[YOIØ›]Y[H	ÊÊ‘OLÉİ\	Î‰ÙİÛ‰ÊNÂ™Øİ[Y[™Ù][[Y[RY
+	Ø‹Y[KX[	ÊKš[›™\’SJ‘OLÉÉˆÎNLÎÉÎ‰ÉˆÎNMNÉÊJÉÈ	ÊÊ‘OLÉÊÉÎ‰ÉÊJØ‘JÉÈ\œ˜[™Ù[Y[\ˆ
+	ÊÊ‘OLÉÊÉÎ‰ÉÊJÊ˜\œÙY×Ü™]—Ø[[Ê
+‘KÑ˜\œÙY×Ü™]—Ø[[
+JŒL
+KÑš^Y
+JNŒ
+JÉÉJIÎÂ™Øİ[Y[™Ù][[Y[RY
+	Ø‹Y[K\İ[IÊKš[›™\’SIÏÜ[ˆÛ\ÜÏH‰ÊÊ‘ÏLÉİ\	Î‰ÙİÛ‰ÊJÉÈ‰ÊÊ‘ÏLÉÉˆÎNLÎÉÎ‰ÉˆÎNMNÉÊJÉÈ	ÊÊ‘ÏLÉÊÉÎ‰ÉˆÎÌŒÉÊJÉÓ“ÒÈ	ÊÙ›]ŠX]˜XœÊ‘ÊJJÉÈ
+	ÊÊ‘ÏLÉÊÉÎ‰ÉÊJÊ˜\œÙY×Ü™]—Üİ[OÊ
+‘ËÑ˜\œÙY×Ü™]—Üİ[JJŒL
+KÑš^Y
+JNŒ
+JÉÉJOÜÜ[ˆÛ\Ù]š[™ÉÎÂ™Øİ[Y[™Ù][[Y[RY
+	Ø‹X›ÛÚÚ[™ÜÉÊKš[›™\’SQ˜\œÙYÙ\‰‰‘˜\œÙYÙ\‹›[™İŒÑ˜\œÙYÙ\‹›X\
+O‰Ï]ˆÛ\ÜÏH˜›ÛÚÚ[™Ë\›İÈÜ[ˆÛ\ÜÏH˜›ÛÚÚ[™Ë\›ÙZİ‰ÊØ‹œ›ÙZİ
+ÉÏÜÜ[Ü[ˆÛ\ÜÏH˜›ÛÚÚ[™ËZİ[™H‰ÊØ‹šİ[™JÉÏÜÜ[Ü[ˆÛ\ÜÏH˜›ÛÚÚ[™Ë\›ÛH‰ÊØ‹œ›ÛJÉÏÜÜ[Ü[ˆÛ\ÜÏH˜›ÛÚÚ[™Ë]Y‰ÊØ‹Y
+ÉÏÜÜ[Ù]‰ÊKš›Ú[Š	ÉÊN‰Ï]ˆÛ\ÜÏH››ËX\œÙYÈ\œÙYÈÜH0îY[‹\\Y\ˆ™YÚ\İ™\HØ[ÜÙ]H
+ÙH””›Üˆ][™\ŠOÙ]‰ÎÂ™Øİ[Y[™Ù][[Y[RY
+	ØØ]XÚ\]]IÊK^ÛÛ[IÓÛ\Ù]š[™È]\ˆØ]YÛÜšH8 %	ÊÑ™]×Û[™ÎÂ˜ÛÛœİÛO^ßNÑœ›ÙZİ\‹™›Ü‘XXÚ
+OØÛVÜ™×OJÛVÜ™×_
+JÜßJNØÛÛœİÜÏSØš™Xİ™[šY\ÊÛJKœÛÜ
+
+KŠOO˜–ÌWKXVÌWJNÂ›™]ÈÚ\
+Øİ[Y[™Ù][[Y[RY
+	ØØ]Ú\	ÊKİ\N‰ÙİYÚ]	Ë]NÛX™[Î˜ÜË›X\
+ÏO˜ÖÌJK]\Ù]Î–ŞÙ]N˜ÜË›X\
+ÏO˜ÖÌWJK˜XÚÙÜ›İ[™ÛÛÜ˜ÜË›X\
+ÏO˜ØÊÖÌJJK›Ü™\ÛÛÜ‰ÈÌŒLLMÉË›Ü™\•ÚYŒ‹İ™\“Ù™œÙ]ŸW_KÜ[ÛœÎÜ™\ÜÛœÚ]™NYKYÚ[œÎÛYÙ[™ÜÜÚ][Û‰Ø›İÛIËX™[ÎØÛÛÜ‰ÈÎLN	Ë›ÛÜÚ^™NŒL_K›ŞÚYŒLY[™ÎŒLŸ_KÛÛ\ØØ[˜XÚÜÎÛX™[˜ÏO˜Ë›X™[
+ÉÎˆ“ÒÈ	ÊÙ›]ŠËœ˜]ÊJÉÈ
+	ÊÊ
+Ëœ˜]ËØÜËœ™YXÙJ
+Ë
+OOœÊŞÌWK
+JJŒL
+KÑš^Y
+JJÉÉJIß____JNÂ˜ÛÛœİVË‹‹‘œ›ÙZİ\—KœÛÜ
+
+KŠOO˜‹‹XKŠKœÛXÙJ
+K^]ÌOËŸNÂ™Øİ[Y[™Ù][[Y[RY
+	İÜ›ÙÉÊKš[›™\’S]›X\
+
+JOO‰Ï]ˆÛ\ÜÏHœ˜\ˆÜ[ˆÛ\ÜÏHœ˜\‹\˜[šÈ‰ÊÊJÌJJÉÏÜÜ[Ü[ˆÛ\ÜÏHœ˜\‹[˜[YHˆ]OH‰ÊÜœ
+ÉÈ‰ÊÜœ
+ÉÏÜÜ[]ˆÛ\ÜÏHœ˜\‹]˜XÚÈ]ˆÛ\ÜÏHœ˜\‹Yš[ˆİ[OHÚY‰ÊÊ‹Û^
+ŒL
+KÑš^Y
+JJÉÉNØ˜XÚÙÜ›İ[™‰ÊØØÊ™ÊJÉÈÙ]Ù]Ü[ˆÛ\ÜÏHœ˜\‹]˜[““ÒÈ	ÊÙ›]ÊŠJÉÏÜÜ[Ù]‰ÊKš›Ú[Š	ÉÊNÂ™Øİ[Y[™Ù][[Y[RY
+	ÙšY]X›K]]IÊK^ÛÛ[IĞ[HšYÜ›ÙZİ\ˆ8 %	ÊÑ™]×Û[™ÊÉÈœËˆ	ÊÑœ™]—Ù]×Û[™ÎÂ™Øİ[Y[™Ù][[Y[RY
+	İ\]KZIÊK^ÛÛ[IĞ[ˆ	ÊÑ™]×ÚÛÜÙØİ[Y[™Ù][[Y[RY
+	İ\™]‹ZIÊK^ÛÛ[IÓÛ\Ù]‹ˆ	ÊÑ™]×ÚÛÜÙØİ[Y[™Ù][[Y[RY
+	İ\]K\	ÊK^ÛÛ[IĞ[ˆ	ÊÑœ™]—Ù]×ÚÛÜÙØİ[Y[™Ù][[Y[RY
+	İ\™]‹\	ÊK^ÛÛ[IÓÛ\Ù]‹ˆ	ÊÑœ™]—Ù]×ÚÛÜÂ›]OLLTL”LÂ™Øİ[Y[™Ù][[Y[RY
+	ÙšY›ÙIÊKš[›™\’SQœ›ÙZİ\‹›X\
+OİJÏ\œ]NİŠÏ\İT
+ÏJœ]WÜ™]Ÿ
+Nİ”
+ÏJ—Ü™]Ÿ
+NØÛÛœİ\‹J—Ü™]Ÿ
+KÛÏYŒÉİ\	Î™ÉÙİÛ‰Î‰Û]]Y	ËÏYLÉÊÉÎ‰ÉˆÎÌŒÉÎÜ™]\›‰Ï‰ÊØİ
+™ÊJÉÏİ‰ÊÜœ
+ÉÏİÛ\ÜÏH›[H‰ÊÜœ]JÉÏİÛ\ÜÏH›[H““ÒÈ	ÊÙ›]ŠŠJÉÏİÛ\ÜÏH›[H‰ÊÊœ]WÜ™]Ÿ	ø %	ÊJÉÏİÛ\ÜÏH›[H‰ÊÊ—Ü™]ÉÓ“ÒÈ	ÊÙ›]Š—Ü™]ŠN‰ø %	ÊJÉÏİÛ\ÜÏH›[HÜ[ˆÛ\ÜÏH‰ÊØÛÊÉÈ‰ÊÊ—Ü™]ÜÊÉÓ“ÒÈ	ÊÙ›]ŠX]˜XœÊ
+JN‰ø %	ÊJÉÏÜÜ[İİ‰ÎßJKš›Ú[Š	ÉÊNÂ™Øİ[Y[™Ù][[Y[RY
+	Ù\]K]	ÊK^ÛÛ[]NÙØİ[Y[™Ù][[Y[RY
+	Ù\™]‹]	ÊK^ÛÛ[IÓ“ÒÈ	ÊÙ›]ŠŠNÙØİ[Y[™Ù][[Y[RY
+	Ù\]K\	ÊK^ÛÛ[]T	ø %	ÎÙØİ[Y[™Ù][[Y[RY
+	Ù\™]‹\	ÊK^ÛÛ[]”ÉÓ“ÒÈ	ÊÙ›]Š”
+N‰ø %	ÎØÛÛœİ]‹]”ÙØİ[Y[™Ù][[Y[RY
+	ÙY[IÊKš[›™\’S]”ÉÏÜ[ˆÛ\ÜÏH‰ÊÊLÉİ\	Î‰ÙİÛ‰ÊJÉÈ‰ÊÊLÉÊÉÎ‰ÉˆÎÌŒÉÊJÉÓ“ÒÈ	ÊÙ›]ŠX]˜XœÊ
+JJÉÏÜÜ[‰Î‰ø %	ÎÂ™Øİ[Y[™Ù][[Y[RY
+	ÛKXšYÉÊK^ÛÛ[Q˜Zİ]™WØXØÛÛœİQQ˜Zİ]™WØX‹Q˜Zİ]™WØX—Û[™Üİ\ÙØİ[Y[™Ù][[Y[RY
+	ÛKY[IÊKš[›™\’SIÏÜ[ˆÛ\ÜÏH‰ÊÊQLÉİ\	Î‰ÙİÛ‰ÊJÉÈ‰ÊÊQLÉÉˆÎNLÎÉÎ‰ÉˆÎNMNÉÊJÉÈ	ÊÊQLÉÊÉÎ‰ÉÊJØQ
+ÉÈ
+	ÊÊ
+
+QÑ˜Zİ]™WØX—Û[™Üİ\
+JŒL
+KÑš^Y
+JJJÉÉJOÜÜ[‰ÎÙØİ[Y[™Ù][[Y[RY
+	ÛK]œÉÊK^ÛÛ[IİœËˆ	ÊÙ›]Š˜Zİ]™WØX—Û[™Üİ\
+JÉÈ\ˆKˆ[™	ÎÙØİ[Y[™Ù][[Y[RY
+	ÛK]Xİ\œ‰ÊK^ÛÛ[Q™]×Û[™ÎÂ™Øİ[Y[™Ù][[Y[RY
+	ØX•\\›ÙIÊKš[›™\’SQ˜X—İ\\‹›X\
+OØÛÛœİ]˜[[]™›ÜœšYÙNÜ™]\›‰Ï‰Êİ›˜]›ŠÉÏİÛ\ÜÏH›[HYÚYÚ‰Êİ˜[[
+ÉÏİÛ\ÜÏH›[H‰Êİ™›ÜœšYÙJÉÏİÛ\ÜÏH›[H	ÊÊLÉİ\	Î‰ÙİÛ‰ÊJÉÈ‰ÊÊLÉÊÉÎ‰ÉÊJÙ
+ÉÏİİ‰ÎßJKš›Ú[Š	ÉÊNÂ˜ÛÛœİOQ˜X—İ\\‹œ™YXÙJ
+Ë
+OOœÊİ˜[[
+KTQ˜X—İ\\‹œ™YXÙJ
+Ë
+OOœÊİ™›ÜœšYÙK
+KQ]K]TÙØİ[Y[™Ù][[Y[RY
+	ÛK]İXİ\œ‰ÊK^ÛÛ[Q˜Zİ]™WØXÙØİ[Y[™Ù][[Y[RY
+	ÛK]İ\™]‰ÊK^ÛÛ[Q˜Zİ]™WØX—Û[™Üİ\ÙØİ[Y[™Ù][[Y[RY
+	ÛK]İY[IÊKš[›™\’SIÏÜ[ˆÛ\ÜÏH‰ÊÊQLÉİ\	Î‰ÙİÛ‰ÊJÉÈ‰ÊÊQLÉÊÉÎ‰ÉÊJİQ
+ÉÏÜÜ[‰ÎÂšYŠ˜X—Ü›ÙZİ\‰‰‘˜X—Ü›ÙZİ\‹›[™İŒ
+^ØÛÛœİTÏQ˜X—Ü›ÙZİ\‹œ™YXÙJ
+Ë
+OOœÊÜ‹
+KTÔQ˜X—Ü›ÙZİ\‹œ™YXÙJ
+Ë
+OOœÊÊ—Ü™]Ÿ
+K
+KTOQ˜X—Ü›ÙZİ\‹œ™YXÙJ
+Ë
+OOœÊÜœ]K
+KTTQ˜X—Ü›ÙZİ\‹œ™YXÙJ
+Ë
+OOœÊÊœ]WÜ™]Ÿ
+K
+NÙØİ[Y[™Ù][[Y[RY
+	ØX‹Y›Ü›Y[Ù\‹]Ü˜\	ÊKš[›™\’SIÏ]ˆÛ\ÜÏH˜X›Û›™[Y[ZXY\ˆ]İ›Û™Ï”ÔY›Ü›Y[Ù\ˆ	ÊÑ™]×Û[™ÊÉÈ8 %“ÒÈ	ÊÙ›]ŠTÊJÉÏÜİ›Û™Ï]ˆÛ\ÜÏH˜X›Û›™[Y[[›İH•™Y™™\ˆ[™[YÈ0éH[ZÙHYÙ\ˆÙÈ™Y›Zİ\™\ˆZÚÙHYÛYÈšY\™ZİOÙ]Ù]]ˆİ[OH›X\™Ú[‹[Y˜]]Îİ^X[YÛœšYÚ]ˆİ[OH™›Û\Ú^™NŒL\ØÛÛÜˆÍMØMNÈœËˆ	ÊÑœ™]—Ù]×Û[™ÊÉÏÙ]]ˆİ[OH™›Û\Ú^™NŒMÙ›Û]ÙZYÚŒØÛÛÜˆÎ™Y˜XÎÈ““ÒÈ	ÊÙ›]ŠTÔ
+JÉÏÙ]Ù]Ù]]ˆÛ\ÜÏH˜X›Û›™[Y[]X›K]Ü˜\X›OXY”›ÙZİİÛ\ÜÏH›[H[ˆ	ÊÑ™]×ÚÛÜ
+ÉÏİÛ\ÜÏH›[H“Û\Ù]‹ˆ	ÊÑ™]×ÚÛÜ
+ÉÏİÛ\ÜÏH›[H[ˆ	ÊÑœ™]—Ù]×ÚÛÜ
+ÉÏİÛ\ÜÏH›[H“Û\Ù]‹ˆ	ÊÑœ™]—Ù]×ÚÛÜ
+ÉÏİİİXY›ÙO‰ÊÑ˜X—Ü›ÙZİ\‹›X\
+O‰Ï‰ÊÜœ
+ÉÏİÛ\ÜÏH›[H‰ÊÜœ]JÉÏİÛ\ÜÏH›[H““ÒÈ	ÊÙ›]ŠŠJÉÏİÛ\ÜÏH›[H‰ÊÊœ]WÜ™]Ÿ	ø %	ÊJÉÏİÛ\ÜÏH›[H‰ÊÊ—Ü™]ÉÓ“ÒÈ	ÊÙ›]Š—Ü™]ŠN‰ø %	ÊJÉÏİİ‰ÊKš›Ú[Š	ÉÊJÉÏİ›ÙO›Ûİ•İ[X›Û›™[Y[\İÛ\ÜÏH›[H‰ÊØTJÉÏİÛ\ÜÏH›[H““ÒÈ	ÊÙ›]ŠTÊJÉÏİÛ\ÜÏH›[H‰ÊÊTT	ø %	ÊJÉÏİÛ\ÜÏH›[H‰ÊÊTÔÉÓ“ÒÈ	ÊÙ›]ŠTÔ
+N‰ø %	ÊJÉÏİİİ›ÛİİX›OÙ]‰ÎßBÜØÜš\‚Ø›ÙO‚Ú[¾
