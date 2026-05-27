@@ -14,19 +14,21 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .badge { display: inline-flex; align-items: center; gap: 6px; background: #1e2130; border: 1px solid #2e3250; border-radius: 20px; padding: 5px 14px; font-size: 12px; color: #8890a8; }
 .content { padding: 24px 32px; max-width: 1300px; margin: 0 auto; }
 .section-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 12px; }
-.label-drift { background: #162035; color: #60a5fa; }
-.label-bursdag { background: #1f1228; color: #e879f9; }
+.label-drift      { background: #162035; color: #60a5fa; }
+.label-bursdag    { background: #1f1228; color: #e879f9; }
 .label-abonnement { background: #1a2010; color: #86efac; }
 .kpi-row { display: grid; gap: 12px; margin-bottom: 20px; }
 .kpi-row-4 { grid-template-columns: repeat(4, 1fr); }
+.kpi-row-3 { grid-template-columns: repeat(3, 1fr); }
 .kpi { background: #13151f; border: 1px solid #232636; border-radius: 12px; padding: 18px 20px; }
-.kpi.drift-card { border-color: #1e3050; }
+.kpi.drift-card   { border-color: #1e3050; }
+.kpi.ab-card      { border-color: #1e3a1e; background: #0d140d; }
 .kpi-label { font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.7px; margin-bottom: 8px; }
 .kpi-value { font-size: 26px; font-weight: 700; color: #fff; letter-spacing: -0.5px; line-height: 1.1; }
 .kpi-value sup { font-size: 13px; font-weight: 400; color: #6b7280; vertical-align: top; margin-top: 3px; }
 .kpi-delta { margin-top: 8px; font-size: 12px; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
-.up { color: #4ade80; font-weight: 600; }
-.down { color: #f87171; font-weight: 600; }
+.up    { color: #4ade80; font-weight: 600; }
+.down  { color: #f87171; font-weight: 600; }
 .muted { color: #6b7280; }
 .warn-banner { background: #1c1507; border: 1px solid #854d0e; border-radius: 10px; padding: 12px 18px; margin-bottom: 20px; font-size: 12px; color: #fbbf24; line-height: 1.6; }
 .bursdag-panel { background: #13151f; border: 1px solid #2e1840; border-radius: 12px; padding: 20px 24px; margin-bottom: 20px; }
@@ -72,15 +74,15 @@ tbody tr:last-child td { border-bottom: none; }
 tbody tr:hover td { background: #191c28; }
 tfoot td { padding: 10px; border-top: 1px solid #2e3250; font-weight: 600; color: #fff; font-size: 13px; }
 .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10.5px; font-weight: 500; white-space: nowrap; }
-.t-inngang { background: #162035; color: #60a5fa; }
-.t-leie { background: #251d0d; color: #fbbf24; }
-.t-kaffe { background: #1e1010; color: #f87171; }
-.t-drikke { background: #131828; color: #a5b4fc; }
-.t-bursdag { background: #1f1228; color: #e879f9; }
-.t-utstyr { background: #1a1a28; color: #94a3b8; }
-.t-mat { background: #1a1a28; color: #fb923c; }
-.t-bedrift { background: #0d1a14; color: #34d399; }
-.t-snacks { background: #1a1a1a; color: #94a3b8; }
+.t-inngang   { background: #162035; color: #60a5fa; }
+.t-leie      { background: #251d0d; color: #fbbf24; }
+.t-kaffe     { background: #1e1010; color: #f87171; }
+.t-drikke    { background: #131828; color: #a5b4fc; }
+.t-bursdag   { background: #1f1228; color: #e879f9; }
+.t-utstyr    { background: #1a1a28; color: #94a3b8; }
+.t-mat       { background: #1a1a28; color: #fb923c; }
+.t-bedrift   { background: #0d1a14; color: #34d399; }
+.t-snacks    { background: #1a1a1a; color: #94a3b8; }
 .abonnement-section { margin-top: 20px; }
 .abonnement-header { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: #111a11; border: 1px solid #1e3a1e; border-radius: 10px 10px 0 0; font-size: 12px; color: #86efac; }
 .abonnement-header strong { font-size: 13px; }
@@ -102,24 +104,39 @@ tfoot td { padding: 10px; border-top: 1px solid #2e3250; font-weight: 600; color
 .members-table tfoot td { padding: 7px 8px; border-top: 1px solid #1e3a1e; color: #86efac; font-weight: 600; font-size: 12.5px; }
 .members-table .num { text-align: right; font-variant-numeric: tabular-nums; }
 .members-table .highlight { color: #fff; font-weight: 600; }
-@media (max-width: 900px) { .members-panel { grid-template-columns: 1fr; } .kpi-row-4 { grid-template-columns: 1fr 1fr; } .two-col { grid-template-columns: 1fr; } .bursdag-grid, .bursdag-mtd { grid-template-columns: 1fr 1fr; } .content { padding: 16px; } }
+@media (max-width: 900px) { .members-panel { grid-template-columns: 1fr; } .kpi-row-4, .kpi-row-3 { grid-template-columns: 1fr 1fr; } .two-col { grid-template-columns: 1fr; } .bursdag-grid, .bursdag-mtd { grid-template-columns: 1fr 1fr; } .content { padding: 16px; } }
 </style>
 </head>
 <body>
 <div class="header">
-  <div><h1 id="h-tittel">Playground ‚Äî Salg</h1><div class="sub" id="h-sub"></div></div>
+  <div>
+    <h1 id="h-tittel">Playground ‚Äî Salg</h1>
+    <div class="sub" id="h-sub"></div>
+  </div>
   <div class="badge" id="h-badge"></div>
 </div>
 <div class="content">
-  <div class="section-label label-drift">&#9889; Daglig drift</div>
+  <div class="section-label label-drift">‚ö° Daglig drift</div>
   <div class="kpi-row kpi-row-4" id="drift-kpis"></div>
   <div id="merknad-wrap"></div>
-  <div class="section-label label-bursdag">&#127874; Bursdager</div>
+  <div class="section-label label-bursdag">üéÇ Bursdager</div>
   <div class="bursdag-panel">
     <div class="bursdag-grid">
-      <div class="bursdag-stat"><div class="bursdag-big" id="b-uke"></div><div class="bursdag-small-label" id="b-uke-label"></div><div class="bursdag-sub">Arrangementsprodukt</div></div>
-      <div class="bursdag-stat bursdag-divider"><div class="bursdag-big" id="b-mnd-ant"></div><div class="bursdag-small-label" id="b-mnd-label"></div><div class="bursdag-sub" id="b-mnd-snitt"></div></div>
-      <div class="bursdag-stat bursdag-divider"><div class="bursdag-big"><sup style="font-size:18px;color:#a855f7">NOK </sup><span id="b-mnd-sum"></span></div><div class="bursdag-small-label">Bursdagsomsetning MTD</div><div class="bursdag-sub">Inkl. tilvalg og ekstra deltakere</div></div>
+      <div class="bursdag-stat">
+        <div class="bursdag-big" id="b-uke"></div>
+        <div class="bursdag-small-label" id="b-uke-label"></div>
+        <div class="bursdag-sub">Arrangementsprodukt</div>
+      </div>
+      <div class="bursdag-stat bursdag-divider">
+        <div class="bursdag-big" id="b-mnd-ant"></div>
+        <div class="bursdag-small-label" id="b-mnd-label"></div>
+        <div class="bursdag-sub" id="b-mnd-snitt"></div>
+      </div>
+      <div class="bursdag-stat bursdag-divider">
+        <div class="bursdag-big"><sup style="font-size:18px;color:#a855f7">NOK </sup><span id="b-mnd-sum"></span></div>
+        <div class="bursdag-small-label">Bursdagsomsetning MTD</div>
+        <div class="bursdag-sub">Inkl. tilvalg og ekstra deltakere</div>
+      </div>
     </div>
     <div class="bursdag-types" id="b-typer"></div>
     <div class="bursdag-mtd">
@@ -129,7 +146,7 @@ tfoot td { padding: 10px; border-top: 1px solid #2e3250; font-weight: 600; color
     </div>
     <div class="bursdag-bookings" id="b-bookings"></div>
   </div>
-  <div class="section-label label-drift">&#128202; Driftsomsetning i dag (ekskl. abonnementer)</div>
+  <div class="section-label label-drift">üìä Driftsomsetning i dag (ekskl. abonnementer)</div>
   <div class="two-col">
     <div class="card"><div class="card-title" id="cat-chart-title">Omsetning etter kategori</div><canvas id="catChart"></canvas></div>
     <div class="card"><div class="card-title">Topp 8 produkter (ekskl. abonnementer)</div><div id="topProds"></div></div>
@@ -137,17 +154,17 @@ tfoot td { padding: 10px; border-top: 1px solid #2e3250; font-weight: 600; color
   <div class="card" style="margin-bottom:20px;">
     <div class="card-title" id="drift-table-title">Alle driftsprodukter</div>
     <div style="overflow-x:auto"><table>
-      <thead><tr><th>Kategori</th><th>Produkt</th><th class="num" id="th-qty-i"></th><th class="num" id="th-rev-i"></th><th class="num" id="th-qty-p"></th><th class="num" id="th-rev-p"></th><th class="num">&#916;</th></tr></thead>
+      <thead><tr><th>Kategori</th><th>Produkt</th><th class="num" id="th-qty-i"></th><th class="num" id="th-rev-i"></th><th class="num" id="th-qty-p"></th><th class="num" id="th-rev-p"></th><th class="num">Œî</th></tr></thead>
       <tbody id="driftBody"></tbody>
       <tfoot><tr><td colspan="2">Totalt drift</td><td class="num" id="d-qty-t"></td><td class="num" id="d-rev-t"></td><td class="num" id="d-qty-p"></td><td class="num" id="d-rev-p"></td><td class="num" id="d-delta"></td></tr></tfoot>
     </table></div>
   </div>
   <div class="abonnement-section">
-    <div class="section-label label-abonnement">&#128260; Abonnementer</div>
+    <div class="section-label label-abonnement">üîÑ Abonnementer</div>
     <div class="members-panel">
       <div class="members-hero"><div class="members-big" id="m-big"></div><div class="members-sub">Aktive abonnementer</div><div class="members-delta" id="m-delta"></div><div class="members-vs" id="m-vs"></div></div>
       <div><table class="members-table">
-        <thead><tr><th>Abonnementstype</th><th class="num" id="m-th-curr"></th><th class="num">1. mnd</th><th class="num">&#916;</th></tr></thead>
+        <thead><tr><th>Abonnementstype</th><th class="num" id="m-th-curr"></th><th class="num">1. mnd</th><th class="num">Œî</th></tr></thead>
         <tbody id="abTyperBody"></tbody>
         <tfoot><tr><td>Totalt aktive</td><td class="num" id="m-tot-curr"></td><td class="num" id="m-tot-prev"></td><td class="num" id="m-tot-delta"></td></tr></tfoot>
       </table></div>
@@ -157,297 +174,525 @@ tfoot td { padding: 10px; border-top: 1px solid #2e3250; font-weight: 600; color
 </div>
 <script>
 const D = /* DATA_START */{
-  "dag": "mandag",
-  "dato_lang": "18. mai 2026",
-  "dato_kort": "18/5",
-  "generert": "19. mai 2026",
-  "prev_dag": "mandag",
-  "prev_dato_lang": "11. mai 2026",
-  "prev_dato_kort": "11/5",
-  "dropins": 51,
-  "dropins_prev": 48,
-  "inngang": 8568,
-  "inngang_prev": 10707,
-  "leie": 965,
-  "leie_prev": 1600,
-  "driftsomsetning": 42794,
-  "driftsomsetning_prev": 31329,
+  "dag": "tirsdag",
+  "dato_lang": "26. mai 2026",
+  "dato_kort": "26/5",
+  "generert": "27. mai 2026",
+  "prev_dag": "tirsdag",
+  "prev_dato_lang": "19. mai 2026",
+  "prev_dato_kort": "19/5",
+  "dropins": 45,
+  "dropins_prev": 47,
+  "inngang": 17361,
+  "inngang_prev": 7268,
+  "leie": 1180,
+  "leie_prev": 1661,
+  "driftsomsetning": 42011,
+  "driftsomsetning_prev": 39870,
   "merknad": null,
-  "bursdager": [],
+  "bursdager": [
+    {
+      "produkt": "Bursdag Via Ferrata",
+      "kunde": "Kjell Sunde",
+      "rom": "Klatring Barn, M√∏terom 2",
+      "tid": "17:00-19:00"
+    },
+    {
+      "produkt": "Bursdag Hopp i H√∏yden",
+      "kunde": "Anita Nyg√•rd Helg√∏y",
+      "rom": "M√∏terom 3, Trampoliner og nettpark",
+      "tid": "17:00-18:30"
+    }
+  ],
   "bursdag_uke": 4,
-  "bursdag_mnd_antall": 24,
-  "bursdag_mnd_sum": 57155,
-  "bursdag_mnd_label": "1‚Äì18. mai",
+  "bursdag_mnd_antall": 36,
+  "bursdag_mnd_sum": 103106,
+  "bursdag_mnd_label": "1-26. mai",
   "bursdag_typer": [
     {
       "navn": "Hopp i H√∏yden",
-      "antall": 15
+      "antall": 23
     },
     {
       "navn": "Skate & Scoot",
-      "antall": 5
+      "antall": 6
     },
     {
       "navn": "Via Ferrata",
-      "antall": 3
+      "antall": 4
     },
     {
       "navn": "Klatring",
-      "antall": 1
+      "antall": 3
     }
   ],
-  "bursdag_prev_periode": "April 1-18",
-  "bursdag_prev_antall": 20,
-  "bursdag_prev_sum": 43603,
-  "aktive_ab": 692,
-  "aktive_ab_mnd_start": 659,
+  "bursdag_prev_periode": "April 1-26",
+  "bursdag_prev_antall": 33,
+  "bursdag_prev_sum": 83016,
+  "aktive_ab": 689,
+  "aktive_ab_mnd_start": 699,
   "ab_typer": [],
   "produkter": [
     {
-      "g": "Kaffe",
-      "p": "Americano dobbel",
+      "g": "Bedrift",
+      "p": "Apply",
       "qty": 1,
-      "v": 30,
+      "v": 71,
       "qty_prev": 0,
       "v_prev": 0
     },
     {
-      "g": "Bursdag Trampoline & nettpark",
-      "p": "Bursdag Hopp i H√∏yden",
-      "qty": 4,
-      "v": 5711,
-      "qty_prev": 1,
-      "v_prev": 1428
-    },
-    {
-      "g": "Inngang",
-      "p": "Custom Inngang",
-      "qty": 1,
-      "v": 1471,
-      "qty_prev": 2,
-      "v_prev": 3964
-    },
-    {
-      "g": "Butikk",
-      "p": "Custom Produkt",
+      "g": "Snacks",
+      "p": "Be-Kind Caramel & Sea Salt",
       "qty": 1,
       "v": 23,
       "qty_prev": 0,
       "v_prev": 0
     },
     {
+      "g": "Bedrift",
+      "p": "BRV",
+      "qty": 1,
+      "v": 134,
+      "qty_prev": 1,
+      "v_prev": 134
+    },
+    {
+      "g": "Bursdag",
+      "p": "Bursdag Hopp i H√∏yden",
+      "qty": 1,
+      "v": 1428,
+      "qty_prev": 2,
+      "v_prev": 2855
+    },
+    {
+      "g": "Bursdag",
+      "p": "Bursdag Klatring",
+      "qty": 1,
+      "v": 1785,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Bursdag",
+      "p": "Bursdag Via Ferrata",
+      "qty": 0,
+      "v": 0,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Kaffe",
+      "p": "Cappuccino Dobbel",
+      "qty": 1,
+      "v": 39,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Drikke",
+      "p": "Coca-Cola",
+      "qty": 1,
+      "v": 28,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Drikke",
+      "p": "Coca-Cola Zero",
+      "qty": 1,
+      "v": 28,
+      "qty_prev": 2,
+      "v_prev": 56
+    },
+    {
+      "g": "Inngang",
+      "p": "Custom Inngang",
+      "qty": 4,
+      "v": 10979,
+      "qty_prev": 1,
+      "v_prev": 490
+    },
+    {
+      "g": "Kaffe",
+      "p": "Dagens Kaffe",
+      "qty": 1,
+      "v": 28,
+      "qty_prev": 4,
+      "v_prev": 112
+    },
+    {
       "g": "Kaffe",
       "p": "Dagens Kaffe Medlem",
-      "qty": 4,
-      "v": 80,
+      "qty": 1,
+      "v": 20,
       "qty_prev": 0,
       "v_prev": 0
     },
     {
       "g": "Inngang",
       "p": "Dropin Dagtid (10-16 ukedager)",
-      "qty": 5,
-      "v": 710,
-      "qty_prev": 5,
-      "v_prev": 710
+      "qty": 14,
+      "v": 1959,
+      "qty_prev": 16,
+      "v_prev": 2243
     },
     {
       "g": "Inngang",
       "p": "Dropin Student/Barn/Pensjonist/Vernepliktig",
-      "qty": 19,
-      "v": 2555,
-      "qty_prev": 15,
-      "v_prev": 2103
+      "qty": 4,
+      "v": 539,
+      "qty_prev": 13,
+      "v_prev": 1846
     },
     {
       "g": "Inngang",
       "p": "Dropin Voksen",
-      "qty": 25,
-      "v": 3386,
-      "qty_prev": 25,
-      "v_prev": 3484
+      "qty": 21,
+      "v": 3198,
+      "qty_prev": 17,
+      "v_prev": 2689
     },
     {
-      "g": "Bursdag Trampoline & nettpark",
-     úéàëZ‹›òH[ZŸ\à‹H0ÓY[àãàú]HéàãàùàéàLLÀàú]W‹ô]àéàãàùó‹ô]àéàLL¬àKà¬àô»éàêôYöYùãàúéàë\]Z[õ‹àãàú]HéàãàùàéàMMKàú]W‹ô]àéàÀàùó‹ô]àéàŒàKà¬àô»éàìYY[\⁄ÿ\ãàúéàë]\õZYY‹‹⁄€€KSYY[\⁄ÿ\ãàú]HéàKàùàéàååãàú]W‹ô]àéàãàùó‹ô]àéàBàKà¬àô»éàìYY[\⁄ÿ\ãàúéàëò[Z[YNà[ùõ›[ùYL	HH»[ôãàú]HéàKàùàéàNKàú]W‹ô]àéààùó‹ô]àéààKà¬àô»éàëöZ⁄ŸHãàúéàëò[ùHãàú]HéàKàùàéàéàú]W‹ô]àéààùó‹ô]àéààKà¬àô»éàëöZ⁄ŸHãàúéàëúùZ›€YZ⁄»[Xõ€\›
-»⁄]õ€àãàú]HéàKàùàéàMãàú]W‹ô]àéààùó‹ô]àéààKà¬àô»éàë]\õZYY‹‹⁄€€Hãàúéàí0Ó›åçà€]ô\⁄€€HLHL»0È\àãàú]HéàKàùàéàŒLéàú]W‹ô]àéààùó‹ô]àéààKà¬àô»éàë]\õZYY‹‹⁄€€Hãàúéàí0Ó›åçà€]ô\⁄€€HL»HMH0È\àãàú]HéàÀàùàéàLåKàú]W‹ô]àéààùó‹ô]àéààKà¬àô»éàë]\õZYY‹‹⁄€€Hãàúéàí0Ó›åçàÿ€€›⁄€€HLLMH0È\àãàú]HéàKàùàéàÃÃŒKàú]W‹ô]àéààùó‹ô]àéààKà¬àô»éàî‹\öŸ\ﬁZ⁄Ÿ[ãàúéàí[ô»⁄X⁄‹›\ùò[\€[ôHÿ€€›ãàú]HéàKàùàéàŒNKàú]W‹ô]àéààùó‹ô]àéààKà¬àô»éàí[õôÿ[ô»ãàúéàí[õôÿ[ô»ò[Z[YHãàú]HéàKàùàéàãàú]W‹ô]àéàKàùó‹ô]àéàÇàKà¬àô»éàëZ‹›òHX]	àöZ⁄ŸHãàúéàí⁄∞ÓZY‹^ûòHûH€H
-ÀM\ú Hãàú]HéàãàùàéàŒNàú]W‹ô]àéàãàùó‹ô]àéàŒNàKà¬àô»éàî€òX⁄‹»ãàúéàí›öZ⁄€[ú⁄àãàú]HéàKàùàéàåÀàú]W‹ô]àéààùó‹ô]àéààKà¬àô»éàìZYH]à]›\àãàúéàìZYH]à€]ô\Ÿ[Hãàú]HéàKàùàéàåÀàú]W‹ô]àéààùó‹ô]àéààKà¬àô»éàìZYH]à]›\àãàúéàìZYH]à€]ô\Ÿ[H	à€]ô\⁄€»ãàú]HéàãàùàéàŒMãàú]W‹ô]àéàLãàùó‹ô]àéàMLàKà¬àô»éàìZYH]à]›\àãàúéàìZYH]à€]ô\⁄€»ãàú]HéàKàùàéàLãàú]W‹ô]àéàKàùó‹ô]àéàLBàKà¬àô»éàìYY[\⁄ÿ\ãàúéàìYY[\⁄ÿ\ãàú]HéàKàùàéàLàú]W‹ô]àéàKàùó‹ô]àéàLàKà¬àô»éàëZ‹›òHX]	àöZ⁄ŸHãàúéàì‹›\^ûòHûH€H
-ÀM\ú Hãàú]HéààùàéàÕçKàú]W‹ô]àéààùó‹ô]àéààKà¬àô»éàëZ‹›òHX]	àöZ⁄ŸHãàúéàî\\õ€ö\^ûòHûH€H
-ÀM\ú Hãàú]HéàKàùàéàNMãàú]W‹ô]àéàKàùó‹ô]àéàNNBàKà¬àô»éàëöZ⁄ŸHãàúéàî›Ÿ\òYHãàú]Héàãàùàéàåãàú]W‹ô]àéàÀàùó‹ô]àéàMàKà¬àô»éàí[õôÿ[ô»ãàúéàîö]ò][YHãàú]HéàKàùàéàLÕKàú]W‹ô]àéààùó‹ô]àéààKà¬àô»éàí\»ãàúéàîõﬁX[ãàú]HéàKàùàéàÃàú]W‹ô]àéàKàùó‹ô]àéàçàKà¬àô»éàîù[ô€ôHãàúéàîù[ô€ôHXYŸ\››\\ôûHãàú]HéàKàùàéàMLàú]W‹ô]àéààùó‹ô]àéààKà¬àô»éàîù[ô€ôHãàúéàîù[ô€ôHXY€ù\»õ⁄»ãàú]HéàKàùàéàÕLKàú]W‹ô]àéààùó‹ô]àéààKà¬àô»éàîÿÿ\úHãàúéàîÿÿ\úHô[ÿŸHãàú]HéàKàùàéàMÕNKàú]W‹ô]àéààùó‹ô]àéààKà¬àô»éàëZ‹›òHX]	àöZ⁄ŸHãàúéàî⁄⁄[öŸ\^ûòHûH€H
-ÀM\ú Hãàú]HéàãàùàéàŒNàú]W‹ô]àéàKàùó‹ô]àéàNNBàKà¬àô»éàëöZ⁄ŸHãàúéàî€\⁄ãàú]HéàÀàùàéàMàú]W‹ô]àéàÀàùó‹ô]àéàN¬àKà¬àô»éàëZ‹›òHX]	àöZ⁄ŸHãàúéàî€\⁄ù\úŸY»ãàú]HéààùàéàNãàú]W‹ô]àéààùó‹ô]àéààKà¬àô»éàëöZ⁄ŸHãàúéàï[[X\ö»
-YY›[ﬁ\ôJHãàú]Héàãàùàéàåãàú]W‹ô]àéàãàùó‹ô]àéàåÇàKà¬àô»éàëöZ⁄ŸHãàúéàï[[X\ö»
-][à›[ﬁ\ôJHãàú]HéàKàùàéàÃKàú]W‹ô]àéààùó‹ô]àéààBàKàòXó‹õŸZ›\àéà¬à¬àúéàìpÈ[ôYY»Xõ€õô[Y[ùãàú]HéààùàéàŒLåKàú]W‹ô]àéàÀàùó‹ô]àéàÃLÕ¬àKà¬àúéàìpÈ[ôYY»Xõ€õô[Y[ùY›Yãàú]HéàKàùàéàÃLãàú]W‹ô]àéààùó‹ô]àéààKà¬àúéàìpÈ[ôYY»Xõ€õô[Y[ùò[Z[Y[YY[\⁄ÿ\ãàú]HéàÀàùàéàçMLKàú]W‹ô]àéààùó‹ô]àéààKà¬àúéàìpÈ[ôYY»Xõ€õô[Y[ù›Y[ù–ò\õã‘[ú⁄õ€ö\›’ô\õô\Z›Y»ãàú]HéàKàùàéàåLŒàú]W‹ô]àéàÀàùó‹ô]àéàLLMàBàBüK àUW—Së
-ãŒ¬ò€€ú›õ]è[èOìX]úõ›[ô
-äKù”ÿÿ[T›ö[ô 	€õÀSì… N¬ò€€ú›õ]œ[èOû⁄YäèèLL
-\ô]\õäãÃL
-Kù—ö^Y
-JKúô\XŸJ	ÀâÀ	À	 J…»…Œ‹ô]\õàõ]ääNﬂN¬ò€€ú››JKäOOòè 
-
-KXäKÿäJåL
-Kù—ö^Y
-JNâÃå	Œ¬ò€€ú›‹[èJKäOOûÿ€€ú›XKXã\›
-KäK€œYèL…›\	ŒâŸ›€âÀ\úèYèL……àŒNLŒ…Œâ…àŒNMN…ÀœYèL… …Œâ…àŒÃåé…Œ‹ô]\õò‹[à€\‹œHâÿ€ﬂHèâÿ\úüH	‹ﬂI”X]òXú 
-_H
-	ŸèL… …Œâ…ﬂI‹IJO‹‹[èòﬂN¬ò€€ú›î‹[èJKäOOûÿ€€ú›XKXã\›
-KäK€œYèL…›\	ŒâŸ›€âÀ\úèYèL……àŒNLŒ…Œâ…àŒNMN…ÀœYèL… …Œâ…àŒÃåé…Œ‹ô]\õò‹[à€\‹œHâÿ€ﬂHèâÿ\úüH	‹ﬂSì“»	Ÿõ]äX]òXú 
-J_H
-	ŸèL… …Œâ…ﬂI‹IJO‹‹[èòﬂN¬ò€€ú›–œ^…“[õôÿ[ô…Œâ»ÕåMYòIÀ	”ZYH]à]›\âŒâ»Ÿòòôåç	À	“ÿYôôIŒâ»ŸéÃMÃIÀ	–ù\úŸY»ò[\€[ôH	àô]\ö…Œâ»ŸNŒYéIÀ	—öZ⁄ŸIŒâ»ÿMXçò…À	—Z‹›òHX]	àöZ⁄ŸIŒâ»ŸòéLåÿ…À	‘€òX⁄‹…Œâ»ŒMLÿé	À	–ôYöYù	Œâ»ÃÕŒNIÀ	—]\õZYY‹‹⁄€€IŒâ»ÿÃò…À	‘‹\öŸ\ﬁZ⁄Ÿ[	Œâ»ÃŒôé	À	‘ù[ô€ôIŒâ»ÿLŸMåÕIÀ	‘ÿÿ\úIŒâ»ŸéMÃÃMâÀ	“\…Œâ»ÕçŸNéIÀ	–ù]Z⁄…Œâ»ÿNLéYIÀ	”YY[\⁄ÿ\	Œâ»ŒNŸé	ﬂN¬ò€€ú›ÿœYœOûŸõ‹ä€€ú›»ŸàÿöôX›öŸ^\ – J^⁄Yä…âôÀù”›Ÿ\êÿ\ŸJ
-Kö[ò€Y\ Àù”›Ÿ\êÿ\ŸJ
-JJ\ô]\õà–÷⁄◊Nﬂ\ô]\õà–÷Ÿ◊_	»ÕòçÃé	ŒﬂN¬ò€€ú››YœOûÿ€€ú›O^…“[õôÿ[ô…Œâ›Z[õôÿ[ô…À	”ZYH]à]›\âŒâ›[ZYIÀ	“ÿYôôIŒâ›ZÿYôôIÀ	–ù\úŸY…Œâ›Xù\úŸY…À	—öZ⁄ŸIŒâ›YöZ⁄ŸIÀ	—Z‹›òHX]	àöZ⁄ŸIŒâ›[X]	À	‘€òX⁄‹…Œâ›\€òX⁄‹…À	–ôYöYù	Œâ›XôYöYù	ﬂN€]€œI…ŒŸõ‹ä€€ú›⁄ÀóHŸàÿöôX›ô[ùöY\ JJ^⁄Yä…âôÀö[ò€Y\  J^ÿ€œ]éÿúôXZŒﬂ_\ô]\õò‹[à€\‹œHùY»	ÿ€ﬂHèâŸﬂO‹‹[èòﬂN¬ôÿ›[Y[ùù]OI‘^Y‹õ›[ô8†%ÿ[»	 —ôY …»	 —ô]◊€[ôŒ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	⁄]][	 Kù^€€ù[ùI‘^Y‹õ›[ô8†%ÿ[»	 —ôY …»	 —ô]◊€[ôŒ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	⁄\›Xâ Kù^€€ù[ùI—ù[›[ôY»Y‹€€\Ÿ]ö[ô»0≠»Ÿ[ô\ô\ù	 —ôŸ[ô\ô\ù¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	⁄XòYŸI Kù^€€ù[ùI¯ßßúÀà	 —úô]óŸY …»	 —úô]óŸ]◊€[ôŒ¬ò€€ú›€èQôõ‹[úœ”X]úõ›[ô
-ôöYù€€\Ÿ]ö[ôÀ—ôõ‹[ú Nå€úQôõ‹[ú◊‹ô]è”X]úõ›[ô
-ôöYù€€\Ÿ]ö[ô◊‹ô]ã—ôõ‹[ú◊‹ô]äNå¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ŸöYùZ‹\… Kö[õô\íSVﬁ€â—õ‹Z[ú…Àéôõ]äôõ‹[ú Kô‹[äôõ‹[úÀôõ‹[ú◊‹ô]äKNâ›ú»	 Ÿõ]äôõ‹[ú◊‹ô]äJ…»õ‹úöYŸH	 —úô]óŸYﬂK€â“[õôÿ[ô»€\Ÿ]ö[ô…Àéâœ›\ìì“»‹›\â Ÿõ]äö[õôÿ[ô Kõî‹[äö[õôÿ[ôÀö[õôÿ[ô◊‹ô]äKNâ›ú»	 Ÿõ]äö[õôÿ[ô◊‹ô]äJ…»õ‹úöYŸH	 —úô]óŸYﬂK€â”ZYH]à]›\âÀéâœ›\ìì“»‹›\â Ÿõ]äõZYJKõî‹[äõZYKõZYW‹ô]äKNâ›ú»	 Ÿõ]äõZYW‹ô]äJ…»õ‹úöYŸH	 —úô]óŸYﬂK€â‘€ö]\àõ‹Z[âÀéâœ›\ìì“»‹›\â Ÿõ]ä€äKõî‹[ä€ã€ú
-KNâ›ú»	 Ÿõ]ä€ú
-J…»õ‹úöYŸH	 —úô]óŸYﬂWKõX\
-œOâœ]à€\‹œHö‹HöYùXÿ\ôèè]à€\‹œHö‹K[Xô[èâ ⁄Àõ
-…œŸ]èè]à€\‹œHö‹K]ò[YHèâ ⁄Àùä…œŸ]èè]à€\‹œHö‹KY[Hèâ ⁄Àô
-…œ‹[à€\‹œHõ]]Yèâ ⁄ÀõJ…œ‹‹[èèŸ]èèŸ]èâ Köõ⁄[ä	… N¬öYäõY\ö€òY
-Yÿ›[Y[ùôŸ][[Y[ùûRY
-	€Y\ö€òY]‹ò\	 Kö[õô\íSIœ]à€\‹œHùÿ\õãXò[õô\àèâàŒN…àÕçLŒN»›õ€ôœìY\ö€òYè‹›õ€ôœà	 —õY\ö€òY
-…œŸ]èâŒ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã]ZŸI Kù^€€ù[ùQòù\úŸY◊›ZŸN¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã]ZŸK[Xô[	 Kù^€€ù[ùI—[õôHZŸ[à
-X[∏†$… —ôY … IŒ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã[[ôX[ù	 Kù^€€ù[ùQòù\úŸY◊€[ôÿ[ù[¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã[[ô[Xô[	 Kù^€€ù[ùQòù\úŸY◊€[ô€Xô[¬ò€€ú›úœQòù\úŸY◊€[ôÿ[ù[”X]úõ›[ô
-òù\úŸY◊€[ô‹›[K—òù\úŸY◊€[ôÿ[ù[
-Nå¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã[[ô\€ö]	 Kù^€€ù[ùI‘€ö]ì“»	 Ÿõ]äú J…»[ö€à[ò[…Œ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã[[ô\›[I Kù^€€ù[ùYõ]äòù\úŸY◊€[ô‹›[JN¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã]\\â Kö[õô\íSQòù\úŸY◊›\\ãõX\
-Oâœ]à€\‹œHòù\Hèè]à€\‹œHòù\K[ò[YHèâ ›õò]õä…œŸ]èè]à€\‹œHòù\KX€›[ùèâ ›ò[ù[
-…»‹[à›[OHôõ€ù\⁄^ôNåL‹ÿ€€‹éàÕòçÃéŸõ€ù]ŸZY⁄çèô[õôH[ôè‹‹[èèŸ]èèŸ]èâ Köõ⁄[ä	… N¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã\ô]ã\\ö[ŸI Kù^€€ù[ùQòù\úŸY◊‹ô]ó‹\ö[ŸN¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã\ô]ãX[ù	 Kù^€€ù[ùQòù\úŸY◊‹ô]óÿ[ù[
-…»ù\úŸYŸ\âŒ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿã\ô]ã\›[I Kù^€€ù[ùI”ì“»	 Ÿõ]äòù\úŸY◊‹ô]ó‹›[JJ…»0≠»€ö]	 Ÿõ]äòù\úŸY◊‹ô]óÿ[ù[”X]úõ›[ô
-òù\úŸY◊‹ô]ó‹›[K—òù\úŸY◊‹ô]óÿ[ù[
-Nå
-N¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿãX›\úã\\ö[ŸI Kù^€€ù[ùQòù\úŸY◊€[ô€Xô[¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿãX›\úãX[ù	 Kù^€€ù[ùQòù\úŸY◊€[ôÿ[ù[
-…»ù\úŸYŸ\âŒ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿãX›\úã\›[I Kù^€€ù[ùI”ì“»	 Ÿõ]äòù\úŸY◊€[ô‹›[JJ…»0≠»€ö]	 Ÿõ]äú N¬ò€€ú›ëOQòù\úŸY◊€[ôÿ[ù[Qòù\úŸY◊‹ô]óÿ[ù[ëœQòù\úŸY◊€[ô‹›[KQòù\úŸY◊‹ô]ó‹›[N¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿãY[KX[ù	 Kò€\‹”ò[YOIÿõ]Y[H	  ëOèL…›\	ŒâŸ›€â N¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿãY[KX[ù	 Kö[õô\íSJëOèL……àŒNLŒ…Œâ…àŒNMN… J…»	  ëOèL… …Œâ… JÿëJ…»\úò[ôŸ[Y[ù\à
-	  ëOèL… …Œâ… J òù\úŸY◊‹ô]óÿ[ù[ 
-ëK—òù\úŸY◊‹ô]óÿ[ù[
-JåL
-Kù—ö^Y
-JNå
-J……JIŒ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿãY[K\›[I Kö[õô\íSIœ‹[à€\‹œHâ  ëœèL…›\	ŒâŸ›€â J…»èâ  ëœèL……àŒNLŒ…Œâ…àŒNMN… J…»	  ëœèL… …Œâ…àŒÃåé… J…”ì“»	 Ÿõ]äX]òXú ë JJ…»
-	  ëœèL… …Œâ… J òù\úŸY◊‹ô]ó‹›[O 
-ëÀ—òù\úŸY◊‹ô]ó‹›[JJåL
-Kù—ö^Y
-JNå
-J……JO‹‹[èà€\Ÿ]ö[ô…Œ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿãXõ€⁄⁄[ô‹… Kö[õô\íSQòù\úŸYŸ\ââëòù\úŸYŸ\ãõ[ô›å—òù\úŸYŸ\ãõX\
-èOâœ]à€\‹œHòõ€⁄⁄[ôÀ\õ›»èè‹[à€\‹œHòõ€⁄⁄[ôÀ\õŸZ›èâ ÿãúõŸZ›
-…œ‹‹[èè‹[à€\‹œHòõ€⁄⁄[ôÀZ›[ôHèâ ÿãö›[ôJ…œ‹‹[èè‹[à€\‹œHòõ€⁄⁄[ôÀ\õ€Hèâ ÿãúõ€J…œ‹‹[èè‹[à€\‹œHòõ€⁄⁄[ôÀ]Yèâ ÿãùY
-…œ‹‹[èèŸ]èâ Köõ⁄[ä	… Nâœ]à€\‹œHõõÀXù\úŸY»èçù\úŸY»‹H0ÓY[ã\\ùY\àôY⁄\›ô\ùHÿ[‹Ÿ]H
-ŸHîîõ‹à][ô\äOŸ]èâŒ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿÿ]X⁄\ù]]I Kù^€€ù[ùI”€\Ÿ]ö[ô»]\àÿ]Y€‹öH8†%	 —ô]◊€[ôŒ¬ò€€ú›€O^ﬂN—úõŸZ›\ãôõ‹ëXX⁄
-Oûÿ€V‹ô◊OJ€V‹ô◊_
-J‹ùéﬂJNÿ€€ú›‹œSÿöôX›ô[ùöY\ €JKú€‹ù
-
-KäOOòñÃWKXVÃWJN¬õô]»⁄\ù
-ÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿÿ]⁄\ù	 K›\NâŸ›Y⁄ù]	À]Nû€Xô[Œò‹ÀõX\
-œOò÷ÃJK]\Ÿ]ŒñﬁŸ]Nò‹ÀõX\
-œOò÷ÃWJKòX⁄Ÿ‹õ›[ô€€‹éò‹ÀõX\
-œOòÿ ÷ÃJJKõ‹ô\ê€€‹éâ»ÃåLLM…Àõ‹ô\ï⁄Yåã›ô\ìŸôúŸ]çüW_K‹[€úŒû‹ô\‹€ú⁄]ôNùùYKY⁄[úŒû€YŸ[ôû‹‹⁄][€éâÿõ›€IÀXô[Œûÿ€€‹éâ»ŒLN	Àõ€ùû‹⁄^ôNåL_Kõﬁ⁄YåLY[ôŒåLü_K€€\ûÿÿ[òX⁄‹Œû€Xô[òœOòÀõXô[
-…Œàì“»	 Ÿõ]äÀúò] J…»
-	  
-Àúò]Àÿ‹ÀúôYXŸJ
-À
-OOú ﬁÃWK
-JJåL
-Kù—ö^Y
-JJ……JIﬂ____JN¬ò€€ú›VÀããëúõŸZ›\óKú€‹ù
-
-KäOOòãùãXKùäKú€XŸJ
-K^]ÃOÀùüN¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	›‹õŸ… Kö[õô\íS]õX\
-
-JOOâœ]à€\‹œHúò\àèè‹[à€\‹œHúò\ã\ò[ö»èâ  JÃJJ…œ‹‹[èè‹[à€\‹œHúò\ã[ò[YHà]OHâ ‹ú
-…»èâ ‹ú
-…œ‹‹[èè]à€\‹œHúò\ã]òX⁄»èè]à€\‹œHúò\ãYö[à›[OHù⁄Yâ  ùã€^
-åL
-Kù—ö^Y
-JJ……NÿòX⁄Ÿ‹õ›[ôâ ÿÿ ô J…»èèŸ]èèŸ]èè‹[à€\‹œHúò\ã]ò[èìì“»	 Ÿõ] ùäJ…œ‹‹[èèŸ]èâ Köõ⁄[ä	… N¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ŸöYù]XõK]]I Kù^€€ù[ùI–[HöYù‹õŸZ›\à8†%	 —ô]◊€[ô …»úÀà	 —úô]óŸ]◊€[ôŒ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	›\]KZI Kù^€€ù[ùI–[ùà	 —ô]◊⁄€‹ùŸÿ›[Y[ùôŸ][[Y[ùûRY
-	›\ô]ãZI Kù^€€ù[ùI”€\Ÿ]ãà	 —ô]◊⁄€‹ùŸÿ›[Y[ùôŸ][[Y[ùûRY
-	›\]K\	 Kù^€€ù[ùI–[ùà	 —úô]óŸ]◊⁄€‹ùŸÿ›[Y[ùôŸ][[Y[ùûRY
-	›\ô]ã\	 Kù^€€ù[ùI”€\Ÿ]ãà	 —úô]óŸ]◊⁄€‹ù¬õ]OLèLTLîL¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ŸöYùõŸI Kö[õô\íSQúõŸZ›\ãõX\
-Oû›Jœ\ú]N›äœ\ùé›T
-œJú]W‹ô]ü
-N›î
-œJùó‹ô]ü
-Nÿ€€ú›\ùãJùó‹ô]ü
-K€œYå…›\	Œô…Ÿ›€âŒâ€]]Y	ÀœYèL… …Œâ…àŒÃåé…Œ‹ô]\õâœèèâ ÿ›
-ô J…œ›èâ ‹ú
-…œ›è€\‹œHõù[Hèâ ‹ú]J…œ›è€\‹œHõù[Hèìì“»	 Ÿõ]äùäJ…œ›è€\‹œHõù[Hèâ  ú]W‹ô]ü	¯†%	 J…œ›è€\‹œHõù[Hèâ  ùó‹ô]è…”ì“»	 Ÿõ]äùó‹ô]äNâ¯†%	 J…œ›è€\‹œHõù[Hèè‹[à€\‹œHâ ÿ€ …»èâ  ùó‹ô]è‹ …”ì“»	 Ÿõ]äX]òXú 
-JNâ¯†%	 J…œ‹‹[èè›è›èâŒﬂJKöõ⁄[ä	… N¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	Ÿ\]K]	 Kù^€€ù[ù]NŸÿ›[Y[ùôŸ][[Y[ùûRY
-	Ÿ\ô]ã]	 Kù^€€ù[ùI”ì“»	 Ÿõ]ääNŸÿ›[Y[ùôŸ][[Y[ùûRY
-	Ÿ\]K\	 Kù^€€ù[ù]T	¯†%	ŒŸÿ›[Y[ùôŸ][[Y[ùûRY
-	Ÿ\ô]ã\	 Kù^€€ù[ù]î…”ì“»	 Ÿõ]äî
-Nâ¯†%	Œÿ€€ú›]ã]îŸÿ›[Y[ùôŸ][[Y[ùûRY
-	ŸY[I Kö[õô\íS]î…œ‹[à€\‹œHâ  èL…›\	ŒâŸ›€â J…»èâ  èL… …Œâ…àŒÃåé… J…”ì“»	 Ÿõ]äX]òXú 
-JJ…œ‹‹[èâŒâ¯†%	Œ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	€KXöY… Kù^€€ù[ùQòZ›]ôWÿXéÿ€€ú›QQòZ›]ôWÿXãQòZ›]ôWÿXó€[ô‹›\ùŸÿ›[Y[ùôŸ][[Y[ùûRY
-	€KY[I Kö[õô\íSIœ‹[à€\‹œHâ  QèL…›\	ŒâŸ›€â J…»èâ  QèL……àŒNLŒ…Œâ…àŒNMN… J…»	  QèL… …Œâ… JÿQ
-…»
-	  
-
-Q—òZ›]ôWÿXó€[ô‹›\ù
-JåL
-Kù—ö^Y
-JJJ……JO‹‹[èâŒŸÿ›[Y[ùôŸ][[Y[ùûRY
-	€K]ú… Kù^€€ù[ùI›úÀà	 Ÿõ]äòZ›]ôWÿXó€[ô‹›\ù
-J…»\àKà[ô	ŒŸÿ›[Y[ùôŸ][[Y[ùûRY
-	€K]X›\úâ Kù^€€ù[ùQô]◊€[ôŒ¬ôÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿXï\\êõŸI Kö[õô\íSQòXó›\\ãõX\
-Oûÿ€€ú›]ò[ù[]ôõ‹úöYŸN‹ô]\õâœèèâ ›õò]õä…œ›è€\‹œHõù[HY⁄Y⁄èâ ›ò[ù[
-…œ›è€\‹œHõù[Hèâ ›ôõ‹úöYŸJ…œ›è€\‹œHõù[H	  èL…›\	ŒâŸ›€â J…»èâ  èL… …Œâ… JŸ
-…œ›è›èâŒﬂJKöõ⁄[ä	… N¬ò€€ú›OQòXó›\\ãúôYXŸJ
-À
-OOú ›ò[ù[
-KTQòXó›\\ãúôYXŸJ
-À
-OOú ›ôõ‹úöYŸK
-KQ]K]TŸÿ›[Y[ùôŸ][[Y[ùûRY
-	€K]›X›\úâ Kù^€€ù[ùQòZ›]ôWÿXéŸÿ›[Y[ùôŸ][[Y[ùûRY
-	€K]›\ô]â Kù^€€ù[ùQòZ›]ôWÿXó€[ô‹›\ùŸÿ›[Y[ùôŸ][[Y[ùûRY
-	€K]›Y[I Kö[õô\íSIœ‹[à€\‹œHâ  QèL…›\	ŒâŸ›€â J…»èâ  QèL… …Œâ… J›Q
-…œ‹‹[èâŒ¬öYäòXó‹õŸZ›\ââëòXó‹õŸZ›\ãõ[ô›å
-^ÿ€€ú›TœQòXó‹õŸZ›\ãúôYXŸJ
-À
-OOú ‹ùã
-KT‘QòXó‹õŸZ›\ãúôYXŸJ
-À
-OOú  ùó‹ô]ü
-K
-KTOQòXó‹õŸZ›\ãúôYXŸJ
-À
-OOú ‹ú]K
-KTTQòXó‹õŸZ›\ãúôYXŸJ
-À
-OOú  ú]W‹ô]ü
-K
-NŸÿ›[Y[ùôŸ][[Y[ùûRY
-	ÿXãYõ‹õûY[Ÿ\ã]‹ò\	 Kö[õô\íSIœ]à€\‹œHòXõ€õô[Y[ùZXY\àèè]èè›õ€ôœîê‘Yõ‹õûY[Ÿ\à	 —ô]◊€[ô …»8†%ì“»	 Ÿõ]äT J…œ‹›õ€ôœè]à€\‹œHòXõ€õô[Y[ù[õ›HèïôYôô\à[ô[Y»0ÈH[ZŸHYŸ\àŸ»ôYõZ›\ô\àZ⁄ŸHY€Y»öYù\ôZ›OŸ]èèŸ]èè]à›[OHõX\ô⁄[ã[Yùò]]Œ›^X[Y€éúöY⁄èè]à›[OHôõ€ù\⁄^ôNåL\ÿ€€‹éàÕMÿMN»èùúÀà	 —úô]óŸ]◊€[ô …œŸ]èè]à›[OHôõ€ù\⁄^ôNåMŸõ€ù]ŸZY⁄çåÿ€€‹éàŒôYòXŒ»èìì“»	 Ÿõ]äT‘
-J…œŸ]èèŸ]èèŸ]èè]à€\‹œHòXõ€õô[Y[ù]XõK]‹ò\èèXõOèXYèèèîõŸZ››è€\‹œHõù[Hèê[ùà	 —ô]◊⁄€‹ù
-…œ›è€\‹œHõù[Hèì€\Ÿ]ãà	 —ô]◊⁄€‹ù
-…œ›è€\‹œHõù[Hèê[ùà	 —úô]óŸ]◊⁄€‹ù
-…œ›è€\‹œHõù[Hèì€\Ÿ]ãà	 —úô]óŸ]◊⁄€‹ù
-…œ›è›èè›XYèõŸOâ —òXó‹õŸZ›\ãõX\
-Oâœèèâ ‹ú
-…œ›è€\‹œHõù[Hèâ ‹ú]J…œ›è€\‹œHõù[Hèìì“»	 Ÿõ]äùäJ…œ›è€\‹œHõù[Hèâ  ú]W‹ô]ü	¯†%	 J…œ›è€\‹œHõù[Hèâ  ùó‹ô]è…”ì“»	 Ÿõ]äùó‹ô]äNâ¯†%	 J…œ›è›èâ Köõ⁄[ä	… J…œ›õŸOèõ€›èèèï›[Xõ€õô[Y[ù\è›è€\‹œHõù[Hèâ ÿTJ…œ›è€\‹œHõù[Hèìì“»	 Ÿõ]äT J…œ›è€\‹œHõù[Hèâ  TT	¯†%	 J…œ›è€\‹œHõù[Hèâ  T‘…”ì“»	 Ÿõ]äT‘
-Nâ¯†%	 J…œ›è›èè›õ€›è›XõOèŸ]èâŒﬂBè‹ÿ‹ö\ÇèÿõŸOÇè⁄[æ
+      "g": "Bursdag",
+      "p": "Ekstra Deltaker ",
+      "qty": 4,
+      "v": 854,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Bursdag",
+      "p": "Ekstra Deltaker Hopp i H√∏yden",
+      "qty": 8,
+      "v": 1350,
+      "qty_prev": 2,
+      "v_prev": 338
+    },
+    {
+      "g": "Bursdag",
+      "p": "Ekstra Deltaker Via Ferrata Gul",
+      "qty": 1,
+      "v": 258,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Bursdag",
+      "p": "Er det flere enn ett bursdagsbarn?",
+      "qty": 1,
+      "v": 111,
+      "qty_prev": 2,
+      "v_prev": 222
+    },
+    {
+      "g": "Leie av Utstyr",
+      "p": "Familiepakke",
+      "qty": 1,
+      "v": 239,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Mat & Drikke",
+      "p": "Fruitero",
+      "qty": 1,
+      "v": 29,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Mat & Drikke",
+      "p": "Glutenfri by Dolly",
+      "qty": 1,
+      "v": 151,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Mat & Drikke",
+      "p": "Gulrotkake",
+      "qty": 0,
+      "v": 0,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Ettermiddagsskole",
+      "p": "H√∏st 2026 Klatreskole 13 - 15 √•r",
+      "qty": 2,
+      "v": 7855,
+      "qty_prev": 1,
+      "v_prev": 3339
+    },
+    {
+      "g": "Ettermiddagsskole",
+      "p": "H√∏st 2026 Klatreskole 6 - 10 √•r",
+      "qty": 1,
+      "v": 3339,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Inngang",
+      "p": "Inngang Familie",
+      "qty": 1,
+      "v": 446,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Mat & Drikke",
+      "p": "Iskake",
+      "qty": 0,
+      "v": 0,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Mat & Drikke",
+      "p": "Kj√∏ttdeigpizza by Dolly (3-4pers)",
+      "qty": 1,
+      "v": 199,
+      "qty_prev": 1,
+      "v_prev": 199
+    },
+    {
+      "g": "Mat & Drikke",
+      "p": "Krone-Is Jordb√¶r",
+      "qty": 1,
+      "v": 23,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Leie av Utstyr",
+      "p": "Leie av Klatresele & Klatresko",
+      "qty": 7,
+      "v": 436,
+      "qty_prev": 11,
+      "v_prev": 871
+    },
+    {
+      "g": "Leie av Utstyr",
+      "p": "Leie av Klatresko",
+      "qty": 3,
+      "v": 126,
+      "qty_prev": 10,
+      "v_prev": 537
+    },
+    {
+      "g": "Leie av Utstyr",
+      "p": "Leie av Sparkesykkel",
+      "qty": 6,
+      "v": 379,
+      "qty_prev": 1,
+      "v_prev": 63
+    },
+    {
+      "g": "Drikke",
+      "p": "Leskedrikk",
+      "qty": 0,
+      "v": 0,
+      "qty_prev": 10,
+      "v_prev": 264
+    },
+    {
+      "g": "Drikke",
+      "p": "MER P√¶re",
+      "qty": 1,
+      "v": 23,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Snacks",
+      "p": "New Energy",
+      "qty": 1,
+      "v": 23,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Mat & Drikke",
+      "p": "Ostepizza by Dolly (3-4 pers)",
+      "qty": 2,
+      "v": 382,
+      "qty_prev": 1,
+      "v_prev": 191
+    },
+    {
+      "g": "Mat & Drikke",
+      "p": "Pepperonipizza by Dolly (3-4 pers)",
+      "qty": 3,
+      "v": 598,
+      "qty_prev": 3,
+      "v_prev": 598
+    },
+    {
+      "g": "Drikke",
+      "p": "Powerade",
+      "qty": 1,
+      "v": 31,
+      "qty_prev": 2,
+      "v_prev": 62
+    },
+    {
+      "g": "Drikke",
+      "p": "Redbull",
+      "qty": 1,
+      "v": 31,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Drikke",
+      "p": "Redbull Sukkerfri",
+      "qty": 1,
+      "v": 31,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Mat & Drikke",
+      "p": "Royal",
+      "qty": 2,
+      "v": 61,
+      "qty_prev": 2,
+      "v_prev": 61
+    },
+    {
+      "g": "Utstyr",
+      "p": "Rungne Magdust",
+      "qty": 1,
+      "v": 198,
+      "qty_prev": 1,
+      "v_prev": 198
+    },
+    {
+      "g": "Mat & Drikke",
+      "p": "Sandwich",
+      "qty": 1,
+      "v": 24,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Mat & Drikke",
+      "p": "Skinkepizza by Dolly (3-4pers)",
+      "qty": 4,
+      "v": 797,
+      "qty_prev": 1,
+      "v_prev": 199
+    },
+    {
+      "g": "Drikke",
+      "p": "Slush",
+      "qty": 1,
+      "v": 31,
+      "qty_prev": 8,
+      "v_prev": 250
+    },
+    {
+      "g": "Mat & Drikke",
+      "p": "Slush bursdag",
+      "qty": 29,
+      "v": 673,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Drikke",
+      "p": "Slush stor",
+      "qty": 2,
+      "v": 78,
+      "qty_prev": 2,
+      "v_prev": 78
+    },
+    {
+      "g": "Camp",
+      "p": "Sommercamp - Uke 29",
+      "qty": 1,
+      "v": 2946,
+      "qty_prev": 0,
+      "v_prev": 0
+    },
+    {
+      "g": "Drikke",
+      "p": "Sprite",
+      "qty": 1,
+      "v": 28,
+      "qty_prev": 0,
+      "v_prev": 0
+    }
+  ],
+  "ab_produkter": [
+    {
+      "g": "Medlemskap",
+      "p": "M√•nedlig Abonnement",
+      "qty": 1,
+      "v": 686,
+      "qty_prev": 3,
+      "v_prev": 1471
+    },
+    {
+      "g": "Medlemskap",
+      "p": "M√•nedlig Abonnement Familiemedlemskap",
+      "qty": 1,
+      "v": 981,
+      "qty_prev": 10,
+      "v_prev": 8929
+    }
+  ]
+}/* DATA_END */;
+const fmtN=n=>Math.round(n).toLocaleString('no-NO');
+const fmtK=n=>{if(n>=1000)return(n/1000).toFixed(1).replace('.',',')+' k';return fmtN(n);};
+const pct=(a,b)=>b?(((a-b)/b)*100).toFixed(1):'‚Äî';
+const dSpan=(a,b)=>{const d=a-b,p=pct(a,b),cls=d>=0?'up':'down',arr=d>=0?'‚Üë':'‚Üì',s=d>=0?'+':'‚àí';return`<span class="${cls}">${arr} ${s}${Math.abs(d)>0?Math.abs(d)+'&nbsp;':''}(${d>=0?'+':''}${p}%)</span>`;};
+const nSpan=(a,b)=>{const d=a-b,p=pct(a,b),cls=d>=0?'up':'down',arr=d>=0?'‚Üë':'‚Üì',s=d>=0?'+':'‚àí';return`<span class="${cls}">${arr} ${s}NOK ${fmtN(Math.abs(d))} (${d>=0?'+':''}${p}%)</span>`;};
+const CC={'Inngang':'#60a5fa','Leie av Utstyr':'#fbbf24','Kaffe':'#f87171','Bursdag':'#e879f9','Drikke':'#a5b4fc','Mat & Drikke':'#fb923c','Snacks':'#94a3b8','Bedrift':'#34d399','Utstyr':'#c084fc'};
+const cc=g=>CC[g]||'#6b7280';
+const ct=g=>{const m={'Inngang':'t-inngang','Leie av Utstyr':'t-leie','Kaffe':'t-kaffe','Bursdag':'t-bursdag','Drikke':'t-drikke','Mat & Drikke':'t-mat','Snacks':'t-snacks','Bedrift':'t-bedrift','Utstyr':'t-utstyr'};return`<span class="tag ${m[g]||''}">${g}</span>`;};
+document.title=`Playground ‚Äî Salg ${D.dag} ${D.dato_lang}`;
+document.getElementById('h-tittel').textContent=`Playground ‚Äî Salg ${D.dag} ${D.dato_lang}`;
+document.getElementById('h-sub').textContent=`Fullstendig dagsomsetning ¬∑ Generert ${D.generert}`;
+document.getElementById('h-badge').textContent=`‚ûî vs. ${D.prev_dag} ${D.prev_dato_lang}`;
+const sn=D.dropins?Math.round(D.driftsomsetning/D.dropins):0,snp=D.dropins_prev?Math.round(D.driftsomsetning_prev/D.dropins_prev):0;
+document.getElementById('drift-kpis').innerHTML=[{l:'Drop-ins',v:fmtN(D.dropins),d:dSpan(D.dropins,D.dropins_prev),m:`vs ${fmtN(D.dropins_prev)} forrige ${D.prev_dag}`},{l:'Inngang omsetning',v:`<sup>NOK </sup>${fmtN(D.inngang)}`,d:nSpan(D.inngang,D.inngang_prev),m:`vs ${fmtN(D.inngang_prev)} forrige ${D.prev_dag}`},{l:'Leie av utstyr',v:`<sup>NOK </sup>${fmtN(D.leie)}`,d:nSpan(D.leie,D.leie_prev),m:`vs ${fmtN(D.leie_prev)} forrige ${D.prev_dag}`},{l:'Snitt per drop-in',v:`<sup>NOK </sup>${fmtN(sn)}`,d:nSpan(sn,snp),m:`vs ${fmtN(snp)} forrige ${D.prev_dag}`}].map(k=>`<div class="kpi drift-card"><div class="kpi-label">${k.l}</div><div class="kpi-value">${k.v}</div><div class="kpi-delta">${k.d}<span class="muted">${k.m}</span></div></div>`).join('');
+if(D.merknad)document.getElementById('merknad-wrap').innerHTML=`<div class="warn-banner">‚ö†Ô∏è <strong>Merknad:</strong> ${D.merknad}</div>`;
+document.getElementById('b-uke').textContent=D.bursdag_uke;
+document.getElementById('b-uke-label').textContent=`Denne uken (man‚Äì${D.dag})`;
+document.getElementById('b-mnd-ant').textContent=D.bursdag_mnd_antall;
+document.getElementById('b-mnd-label').textContent=D.bursdag_mnd_label;
+const bs=D.bursdag_mnd_antall?Math.round(D.bursdag_mnd_sum/D.bursdag_mnd_antall):0;
+document.getElementById('b-mnd-snitt').textContent=`Snitt NOK ${fmtN(bs)} inkl. tilvalg`;
+document.getElementById('b-mnd-sum').textContent=fmtN(D.bursdag_mnd_sum);
+document.getElementById('b-typer').innerHTML=D.bursdag_typer.map(t=>`<div class="btype"><div class="btype-name">${t.navn}</div><div class="btype-count">${t.antall} <span style="font-size:13px;color:#6b7280;font-weight:400">denne mnd.</span></div></div>`).join('');
+document.getElementById('b-prev-periode').textContent=D.bursdag_prev_periode;
+document.getElementById('b-prev-ant').textContent=`${D.bursdag_prev_antall} bursdager`;
+document.getElementById('b-prev-sum').textContent=`NOK ${fmtN(D.bursdag_prev_sum)} ¬∑ snitt ${fmtN(D.bursdag_prev_antall?Math.round(D.bursdag_prev_sum/D.bursdag_prev_antall):0)}`;
+document.getElementById('b-curr-periode').textContent=D.bursdag_mnd_label;
+document.getElementById('b-curr-ant').textContent=`${D.bursdag_mnd_antall} bursdager`;
+document.getElementById('b-curr-sum').textContent=`NOK ${fmtN(D.bursdag_mnd_sum)} ¬∑ snitt ${fmtN(bs)}`;
+const bDA=D.bursdag_mnd_antall-D.bursdag_prev_antall,bDS=D.bursdag_mnd_sum-D.bursdag_prev_sum;
+document.getElementById('b-delta-ant').className=`bmtd-delta ${bDA>=0?'up':'down'}`;
+document.getElementById('b-delta-ant').innerHTML=`${bDA>=0?'‚Üë':'‚Üì'} ${bDA>=0?'+':''}${bDA} arrangementer (${bDA>=0?'+':''}${D.bursdag_prev_antall?((bDA/D.bursdag_prev_antall)*100).toFixed(1):0}%)`;
+document.getElementById('b-delta-sum').innerHTML=`<span class="${bDS>=0?'up':'down'}">${bDS>=0?'‚Üë':'‚Üì'} ${bDS>=0?'+':'‚àí'}NOK ${fmtN(Math.abs(bDS))} (${bDS>=0?'+':''}${D.bursdag_prev_sum?((bDS/D.bursdag_prev_sum)*100).toFixed(1):0}%)</span> omsetning`;
+document.getElementById('b-bookings').innerHTML=D.bursdager&&D.bursdager.length>0?D.bursdager.map(b=>`<div class="booking-row"><span class="booking-produkt">${b.produkt}</span><span class="booking-kunde">${b.kunde}</span><span class="booking-rom">${b.rom}</span><span class="booking-tid">${b.tid}</span></div>`).join(''):`<div class="no-bursdag">Ingen bursdag-bookinger i dag</div>`;
+document.getElementById('cat-chart-title').textContent=`Omsetning etter kategori ‚Äî ${D.dato_lang}`;
+const cm={};D.produkter.forEach(p=>{cm[p.g]=(cm[p.g]||0)+p.v;});const cs=Object.entries(cm).sort((a,b)=>b[1]-a[1]);
+new Chart(document.getElementById('catChart'),{type:'doughnut',data:{labels:cs.map(c=>c[0]),datasets:[{data:cs.map(c=>c[1]),backgroundColor:cs.map(c=>cc(c[0])),borderColor:'#0f1117',borderWidth:2,hoverOffset:6}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{color:'#8890a8',font:{size:11},boxWidth:10,padding:12}},tooltip:{callbacks:{label:c=>`${c.label}: NOK ${fmtN(c.raw)} (${((c.raw/cs.reduce((s,x)=>s+x[1],0))*100).toFixed(1)}%)`}}}}});
+const t8=[...D.produkter].sort((a,b)=>b.v-a.v).slice(0,8),mx=t8[0]?.v||1;
+document.getElementById('topProds').innerHTML=t8.map((p,i)=>`<div class="pbar"><span class="pbar-rank">${i+1}</span><span class="pbar-name" title="${p.p}">${p.p}</span><div class="pbar-track"><div class="pbar-fill" style="width:${(p.v/mx*100).toFixed(1)}%;background:${cc(p.g)}"></div></div><span class="pbar-val">NOK ${fmtK(p.v)}</span></div>`).join('');
+document.getElementById('drift-table-title').textContent=`Alle driftsprodukter ‚Äî ${D.dato_lang} vs. ${D.prev_dato_lang}`;
+document.getElementById('th-qty-i').textContent=`Ant. ${D.dato_kort}`;document.getElementById('th-rev-i').textContent=`Omsetn. ${D.dato_kort}`;document.getElementById('th-qty-p').textContent=`Ant. ${D.prev_dato_kort}`;document.getElementById('th-rev-p').textContent=`Omsetn. ${D.prev_dato_kort}`;
+let tQ=0,tR=0,tQP=0,tRP=0;
+document.getElementById('driftBody').innerHTML=D.produkter.map(p=>{tQ+=p.qty;tR+=p.v;tQP+=(p.qty_prev||0);tRP+=(p.v_prev||0);const d=p.v-(p.v_prev||0),cls=d>0?'up':d<0?'down':'muted',s=d>=0?'+':'‚àí';return`<tr><td>${ct(p.g)}</td><td>${p.p}</td><td class="num">${p.qty}</td><td class="num">NOK ${fmtN(p.v)}</td><td class="num">${p.qty_prev||'‚Äî'}</td><td class="num">${p.v_prev?'NOK '+fmtN(p.v_prev):'‚Äî'}</td><td class="num"><span class="${cls}">${p.v_prev?s+'NOK '+fmtN(Math.abs(d)):'‚Äî'}</span></td></tr>`;}).join('');
+document.getElementById('d-qty-t').textContent=tQ;document.getElementById('d-rev-t').textContent=`NOK ${fmtN(tR)}`;document.getElementById('d-qty-p').textContent=tQP||'‚Äî';document.getElementById('d-rev-p').textContent=tRP?`NOK ${fmtN(tRP)}`:'‚Äî';const td=tR-tRP;document.getElementById('d-delta').innerHTML=tRP?`<span class="${td>=0?'up':'down'}">${td>=0?'+':'‚àí'}NOK ${fmtN(Math.abs(td))}</span>`:'‚Äî';
+document.getElementById('m-big').textContent=D.aktive_ab;const aD=D.aktive_ab-D.aktive_ab_mnd_start;document.getElementById('m-delta').innerHTML=`<span class="${aD>=0?'up':'down'}">${aD>=0?'‚Üë':'‚Üì'} ${aD>=0?'+':''}${aD} (${((aD/D.aktive_ab_mnd_start)*100).toFixed(1)}%)</span>`;document.getElementById('m-vs').textContent=`vs. ${fmtN(D.aktive_ab_mnd_start)} per 1. mnd`;document.getElementById('m-th-curr').textContent=D.dato_lang;
+document.getElementById('abTyperBody').innerHTML=D.ab_typer.map(t=>{const d=t.antall-t.forrige;return`<tr><td>${t.navn}</td><td class="num highlight">${t.antall}</td><td class="num">${t.forrige}</td><td class="num ${d>=0?'up':'down'}">${d>=0?'+':''}${d}</td></tr>`;}).join('');
+const tA=D.ab_typer.reduce((s,t)=>s+t.antall,0),tAP=D.ab_typer.reduce((s,t)=>s+t.forrige,0),tAD=tA-tAP;document.getElementById('m-tot-curr').textContent=D.aktive_ab;document.getElementById('m-tot-prev').textContent=D.aktive_ab_mnd_start;document.getElementById('m-tot-delta').innerHTML=`<span class="${tAD>=0?'up':'down'}">${tAD>=0?'+':''}${tAD}</span>`;
+if(D.ab_produkter&&D.ab_produkter.length>0){const aS=D.ab_produkter.reduce((s,p)=>s+p.v,0),aSP=D.ab_produkter.reduce((s,p)=>s+(p.v_prev||0),0),aQ=D.ab_produkter.reduce((s,p)=>s+p.qty,0),aQP=D.ab_produkter.reduce((s,p)=>s+(p.qty_prev||0),0);document.getElementById('ab-fornyelser-wrap').innerHTML=`<div class="abonnement-header"><div><strong>RCP-fornyelser ${D.dato_lang} ‚Äî NOK ${fmtN(aS)}</strong><div class="abonnement-note">Treffer tilfeldig p√• ulike dager og reflekterer ikke daglig drift direkte</div></div><div style="margin-left:auto;text-align:right"><div style="font-size:11px;color:#4a7a4a;">vs. ${D.prev_dato_lang}</div><div style="font-size:14px;font-weight:600;color:#86efac;">NOK ${fmtN(aSP)}</div></div></div><div class="abonnement-table-wrap"><table><thead><tr><th>Produkt</th><th class="num">Ant. ${D.dato_kort}</th><th class="num">Omsetn. ${D.dato_kort}</th><th class="num">Ant. ${D.prev_dato_kort}</th><th class="num">Omsetn. ${D.prev_dato_kort}</th></tr></thead><tbody>${D.ab_produkter.map(p=>`<tr><td>${p.p}</td><td class="num">${p.qty}</td><td class="num">NOK ${fmtN(p.v)}</td><td class="num">${p.qty_prev||'‚Äî'}</td><td class="num">${p.v_prev?'NOK '+fmtN(p.v_prev):'‚Äî'}</td></tr>`).join('')}</tbody><tfoot><tr><td>Totalt abonnementer</td><td class="num">${aQ}</td><td class="num">NOK ${fmtN(aS)}</td><td class="num">${aQP||'‚Äî'}</td><td class="num">${aSP?'NOK '+fmtN(aSP):'‚Äî'}</td></tr></tfoot></table></div>`;}
+</script>
+</body>
+</html>
